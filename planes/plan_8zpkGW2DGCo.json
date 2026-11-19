@@ -1,0 +1,1289 @@
+{
+ "version": 2,
+ "resumen": "Free roam de GTA 6 por Vice City y Leonida.",
+ "clips": [
+  {
+   "start": 229,
+   "end": 262,
+   "titulo": "Un NPC de GTA 6 suelta lore de cajas misteriosas",
+   "gancho": "ESTE NPC SABE DEMASIADO",
+   "descripcion": "Jason ayuda a un desconocido y este le cuenta que unos psicópatas le obligan a llevar cajas a los Grassrivers.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "lore",
+    "grassrivers",
+    "jason",
+    "vicecity",
+    "npc"
+   ],
+   "puntuacion": 8,
+   "motivo": "Diálogo con lore real (Grassrivers, cajas misteriosas) que invita a teorizar en comentarios.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Jason deja *KO* a un tipo en la gasolinera."
+    },
+    {
+     "t": 3.9,
+     "texto": "Y entonces aparece un *desconocido*."
+    },
+    {
+     "t": 10.1,
+     "texto": "Jason: parecía que necesitabas una *mano*."
+    },
+    {
+     "t": 22.6,
+     "texto": "Se metió con *psicópatas* y le hacen llevar *cajas* a los Grassrivers."
+    },
+    {
+     "t": 27.2,
+     "texto": "Y Jason, pickup y *a correr*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 11,
+     "texto": "LORE"
+    },
+    {
+     "t": 18,
+     "texto": "GRASSRIVERS"
+    },
+    {
+     "t": 23,
+     "texto": "CAJAS MISTERIOSAS"
+    }
+   ]
+  },
+  {
+   "start": 390,
+   "end": 430,
+   "titulo": "GTA 6 tiene autoservicio: pides comida desde el coche",
+   "gancho": "DRIVE-THRU EN GTA 6",
+   "descripcion": "Jason pide un sándwich de pollo en un autoservicio sin bajarse del coche, algo nunca visto en un GTA.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "drivethru",
+    "jason",
+    "vicecity",
+    "gaming",
+    "novedades"
+   ],
+   "puntuacion": 8,
+   "motivo": "Mecánica nueva y muy clara visualmente, ideal para 'nunca visto en GTA'.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Atentos, que en GTA 6 por fin hay *autoservicio* de comida rápida."
+    },
+    {
+     "t": 5,
+     "texto": "El juego te dice: acércate al *altavoz* para pedir."
+    },
+    {
+     "t": 13,
+     "texto": "Se mete en el carril del *drive-thru* como uno más, tío."
+    },
+    {
+     "t": 18,
+     "texto": "Llega al altavoz y le sale un *menú* para elegir."
+    },
+    {
+     "t": 22.3,
+     "texto": "Pedido hecho: ahora toca ir a la *ventanilla* a recogerlo."
+    },
+    {
+     "t": 26.3,
+     "texto": "Y ahí está: un *sándwich de pollo* en el asiento."
+    },
+    {
+     "t": 30,
+     "texto": "Puedes *comértelo*, inspeccionarlo o guardarlo."
+    },
+    {
+     "t": 34,
+     "texto": "Hambre *saciada*. Nunca visto en un GTA."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 5,
+     "texto": "DRIVE-THRU"
+    },
+    {
+     "t": 26,
+     "texto": "SÁNDWICH DE POLLO"
+    },
+    {
+     "t": 34,
+     "texto": "HAMBRE SACIADA"
+    }
+   ]
+  },
+  {
+   "start": 1422,
+   "end": 1462,
+   "titulo": "El consejo más tóxico de una NPC de GTA 6",
+   "gancho": "EL PEOR CONSEJO",
+   "descripcion": "En un beach club de Vice City una NPC le da a su amiga el consejo más loco sobre el móvil de su novio.",
+   "hashtags": [
+    "gta6",
+    "vicecity",
+    "npc",
+    "gta6gameplay",
+    "humor",
+    "rockstar",
+    "gaming"
+   ],
+   "puntuacion": 8,
+   "motivo": "Frase de NPC muy citable y graciosa, ideal para comentarios.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Ojo, que el prota se mete en un *beach club* de Vice City."
+    },
+    {
+     "t": 14.4,
+     "texto": "¿Has oído eso? Le aconseja a su amiga: si le *miras el móvil*..."
+    },
+    {
+     "t": 19.6,
+     "texto": "...abre su banco y *mándate dinero*. Consejo de experta."
+    },
+    {
+     "t": 23.5,
+     "texto": "Y mira este grupo, cada *NPC* tiene su propio rollo."
+    },
+    {
+     "t": 31,
+     "texto": "Ojo al detalle: ya va con una *bebida* en la mano."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 15,
+     "texto": "MÍRALE EL MÓVIL"
+    },
+    {
+     "t": 20,
+     "texto": "MÁNDATE DINERO"
+    }
+   ]
+  },
+  {
+   "start": 1728,
+   "end": 1788,
+   "titulo": "Se cuela en una mansión de GTA 6 y lo humillan",
+   "gancho": "LO ECHAN DE LA MANSIÓN",
+   "descripcion": "El prota se cuela en una mansión de Vice City y le echan con los insultos más absurdos del juego.",
+   "hashtags": [
+    "gta6",
+    "vicecity",
+    "npc",
+    "mansion",
+    "gta6gameplay",
+    "humor",
+    "rockstar"
+   ],
+   "puntuacion": 8,
+   "motivo": "Insultos absurdos de NPC (silla eléctrica, aliento a carne procesada) y pelea al final.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Atentos: el prota se cuela en una *mansión* de lujo y le pillan."
+    },
+    {
+     "t": 5.2,
+     "texto": "Le invitan a *irse*, y él jura que no buscaba lío."
+    },
+    {
+     "t": 11.4,
+     "texto": "Pero no hay perdón: *te lo has buscado*, le dicen."
+    },
+    {
+     "t": 19.5,
+     "texto": "Le sueltan: *que vuelva la silla eléctrica*. Tremendo."
+    },
+    {
+     "t": 23,
+     "texto": "Y la chica en *bikini* no deja de seguirle."
+    },
+    {
+     "t": 28,
+     "texto": "Mira la *fuente*, el césped, las palmeras... qué nivel de detalle."
+    },
+    {
+     "t": 45.3,
+     "texto": "Le acaban de decir que su aliento huele a *carne procesada* y gingivitis."
+    },
+    {
+     "t": 50.5,
+     "texto": "Ahora va hacia la *entrada principal*, con ese cochazo dorado."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 17,
+     "texto": "SILLA ELÉCTRICA"
+    },
+    {
+     "t": 40,
+     "texto": "CARNE PROCESADA"
+    },
+    {
+     "t": 56,
+     "texto": "PELEA"
+    }
+   ]
+  },
+  {
+   "start": 15,
+   "end": 65,
+   "titulo": "La rutina mañanera de Jason en GTA 6 es una locura",
+   "gancho": "JASON TIENE UNA SERPIENTE",
+   "descripcion": "Café, sudadera y una serpiente en el salón: así de detallada es la casa de Jason en GTA 6.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "jason",
+    "vicecity",
+    "gaming",
+    "rockstar",
+    "detalles"
+   ],
+   "puntuacion": 7,
+   "motivo": "Detalle cotidiano muy realista y la serpiente como sorpresa final; sin diálogo.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Ojo a la *rutina mañanera* de Jason en GTA 6."
+    },
+    {
+     "t": 3.6,
+     "texto": "Se pone la sudadera y va directo a la *cocina*."
+    },
+    {
+     "t": 8,
+     "texto": "Mira la *cafetera*: puedes servirte café de verdad."
+    },
+    {
+     "t": 12,
+     "texto": "Y se lo bebe con una animación *buenísima*."
+    },
+    {
+     "t": 18,
+     "texto": "Le sale la opción de *rellenar* la taza, y repite."
+    },
+    {
+     "t": 22.2,
+     "texto": "Fíjate en cómo cambia la *luz del sol* en la cocina."
+    },
+    {
+     "t": 30,
+     "texto": "Pero lo mejor está aquí: tiene un *terrario*..."
+    },
+    {
+     "t": 33.3,
+     "texto": "con una *serpiente* dentro, y puede interactuar con ella."
+    },
+    {
+     "t": 38.5,
+     "texto": "Este nivel de *detalle* es una locura."
+    },
+    {
+     "t": 43,
+     "texto": "Mira la serpiente, se *mueve* de verdad."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 8,
+     "texto": "SERVIR CAFÉ"
+    },
+    {
+     "t": 18,
+     "texto": "RELLENAR TAZA"
+    },
+    {
+     "t": 33,
+     "texto": "SERPIENTE MASCOTA"
+    }
+   ]
+  },
+  {
+   "start": 189,
+   "end": 228,
+   "titulo": "Una simple visita a la gasolinera acaba a puñetazos",
+   "gancho": "ESTO ACABA FATAL",
+   "descripcion": "Un NPC recibe una bronca por teléfono en la gasolinera y en segundos todo termina en pelea en GTA 6.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "npc",
+    "pelea",
+    "vicecity",
+    "gaming",
+    "rockstar"
+   ],
+   "puntuacion": 7,
+   "motivo": "Diálogo de NPC con bronca real y pelea con animaciones contundentes.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Ojo a esta *gasolinera* de GTA 6, que acaba fatal."
+    },
+    {
+     "t": 4,
+     "texto": "Sale fuera y hay un tipo *hablando por teléfono*."
+    },
+    {
+     "t": 18.1,
+     "texto": "Le gritan que se mueva y él jura que *va ya*."
+    },
+    {
+     "t": 23.8,
+     "texto": "Y de repente, *pelea* a puñetazos en plena gasolinera."
+    },
+    {
+     "t": 27.5,
+     "texto": "Las *animaciones* de los golpes pesan muchísimo."
+    },
+    {
+     "t": 30.8,
+     "texto": "Mira, uno ya ha caído al *suelo*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 8,
+     "texto": "BRONCA AL MÓVIL"
+    },
+    {
+     "t": 24,
+     "texto": "A PUÑETAZOS"
+    },
+    {
+     "t": 31,
+     "texto": "AL SUELO"
+    }
+   ]
+  },
+  {
+   "start": 555,
+   "end": 600,
+   "titulo": "Lo que dicen los NPC del centro comercial de GTA 6",
+   "gancho": "ESCUCHA A ESTAS NPC",
+   "descripcion": "Café en un puesto, paseo por el centro comercial y un cotilleo de NPC sobre una cirugía que salió fatal.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "npc",
+    "vicecity",
+    "jason",
+    "gaming",
+    "humor"
+   ],
+   "puntuacion": 7,
+   "motivo": "Café interactivo y un comentario absurdo de NPC al final; el chiste llega tarde en el clip.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Ojo al *centro comercial* de GTA 6, está vivísimo."
+    },
+    {
+     "t": 6.5,
+     "texto": "Jason va directo a un puesto de *café*."
+    },
+    {
+     "t": 10.5,
+     "texto": "Le sale un *menú* con cafés de verdad para elegir."
+    },
+    {
+     "t": 14.8,
+     "texto": "Pide, paga y se lo lleva en la *mano*."
+    },
+    {
+     "t": 21.9,
+     "texto": "Y fíjate: se lo va *bebiendo* mientras pasea por la terraza."
+    },
+    {
+     "t": 27,
+     "texto": "Y las vistas desde el balcón, con *rascacielos* al fondo."
+    },
+    {
+     "t": 32.5,
+     "texto": "Escucha lo que dicen de una *amiga*:"
+    },
+    {
+     "t": 39.35,
+     "texto": "Pezones mirando a puntos *cardinales*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 12,
+     "texto": "MENÚ DE CAFÉ"
+    },
+    {
+     "t": 36,
+     "texto": "CIRUGÍA FALLIDA"
+    },
+    {
+     "t": 40,
+     "texto": "TIENDA NOLA"
+    }
+   ]
+  },
+  {
+   "start": 603,
+   "end": 649,
+   "titulo": "Así es la tienda de ropa de GTA 6 por dentro",
+   "gancho": "LA ROPA DE GTA 6",
+   "descripcion": "En GTA 6 te pruebas americanas, camisas hawaianas y conjuntos completos como en una tienda de verdad.",
+   "hashtags": [
+    "gta6",
+    "gta6gameplay",
+    "vicecity",
+    "gta6outfits",
+    "rockstargames",
+    "gaming"
+   ],
+   "puntuacion": 7,
+   "motivo": "El sistema de ropa con precios y colores es un detalle nuevo que la comunidad busca mucho.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Ojo, que en GTA 6 te pruebas la ropa *color a color*, como en una tienda real."
+    },
+    {
+     "t": 7,
+     "texto": "Y te mueves libre por la tienda, *percha por percha*."
+    },
+    {
+     "t": 12,
+     "texto": "Camisas de vestir: de *139* a casi *900 dólares*."
+    },
+    {
+     "t": 19,
+     "texto": "Y aquí viene lo bueno: las *camisas hawaianas*."
+    },
+    {
+     "t": 22.5,
+     "texto": "Estampado de *tigre*, flores, palmeras... puro *Vice City*."
+    },
+    {
+     "t": 31,
+     "texto": "El dependiente le dice que *se tome su tiempo*."
+    },
+    {
+     "t": 36,
+     "texto": "Y ahora a por el *maniquí*: conjunto completo."
+    },
+    {
+     "t": 39.4,
+     "texto": "Camisa de *cocodrilo* y lino: *2.229 dólares*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 12,
+     "texto": "HASTA $879"
+    },
+    {
+     "t": 22,
+     "texto": "CAMISAS HAWAIANAS"
+    },
+    {
+     "t": 40,
+     "texto": "NECESITA CUENTA BANCARIA"
+    }
+   ]
+  },
+  {
+   "start": 740,
+   "end": 775,
+   "titulo": "Choca contra un camión en GTA 6 y acaba a puñetazos",
+   "gancho": "NO DES OTRO PASO",
+   "descripcion": "El prota se estampa contra un camión de Candybox, el conductor se encara y acaba en el suelo de un golpe.",
+   "hashtags": [
+    "gta6",
+    "gta6gameplay",
+    "vicecity",
+    "gta6npc",
+    "rockstargames",
+    "gaming"
+   ],
+   "puntuacion": 7,
+   "motivo": "Choque más pelea rápida con reacción del NPC, corto y con remate claro.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Mira cómo va el prota con esta *ranchera* por el centro."
+    },
+    {
+     "t": 4.5,
+     "texto": "*Pum*, contra el camión de Candybox."
+    },
+    {
+     "t": 8,
+     "texto": "Y se baja *como si nada*."
+    },
+    {
+     "t": 10.6,
+     "texto": "El conductor sale *cabreado*."
+    },
+    {
+     "t": 16.5,
+     "texto": "Le dice que *no dé otro paso*... y acaba *en el suelo*."
+    },
+    {
+     "t": 21.5,
+     "texto": "Y el prota vuelve a su coche *tan tranquilo*."
+    },
+    {
+     "t": 25.5,
+     "texto": "Y a seguir *de paseo* por Vice City, aquí no ha pasado nada."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 4,
+     "texto": "CHOQUE"
+    },
+    {
+     "t": 15,
+     "texto": "KO DE UN GOLPE"
+    }
+   ]
+  },
+  {
+   "start": 920,
+   "end": 973,
+   "titulo": "Fotos con filtros y robo de superdeportivo en GTA 6",
+   "gancho": "EL MÓVIL TIENE FILTROS",
+   "descripcion": "El prota hace fotos con filtros a un superdeportivo y luego saca a un conductor de su coche y se lo lleva.",
+   "hashtags": [
+    "gta6",
+    "gta6gameplay",
+    "vicecity",
+    "gta6cars",
+    "rockstargames",
+    "gaming",
+    "superdeportivos"
+   ],
+   "puntuacion": 7,
+   "motivo": "La cámara del móvil con filtros es novedad y el robo de coche da el remate.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Atentos, que el *móvil* de GTA 6 tiene cámara con *filtros*."
+    },
+    {
+     "t": 5,
+     "texto": "Modo vertical, cuadrícula, *selfie*, zoom... como un móvil de verdad."
+    },
+    {
+     "t": 9.3,
+     "texto": "Y cada *filtro* cambia el coche por completo."
+    },
+    {
+     "t": 18,
+     "texto": "Un NPC le suelta: *¿te gusta mi corte de pelo* o qué?"
+    },
+    {
+     "t": 24,
+     "texto": "Pero el prota no quiere fotos: quiere *robar* uno de estos."
+    },
+    {
+     "t": 38.5,
+     "texto": "*¡Sal del coche!* Y lo saca a la fuerza."
+    },
+    {
+     "t": 44.5,
+     "texto": "Y a los dos segundos, *choque* contra otro deportivo."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 6,
+     "texto": "CÁMARA CON FILTROS"
+    },
+    {
+     "t": 36,
+     "texto": "ROBO EXPRÉS"
+    },
+    {
+     "t": 43,
+     "texto": "CHOQUE"
+    }
+   ]
+  },
+  {
+   "start": 1241,
+   "end": 1290,
+   "titulo": "Se cuela en un yate ajeno en GTA 6 y acaba fatal",
+   "gancho": "SE CUELA EN UN YATE",
+   "descripcion": "El prota se mete en un yate lleno de gente, le preguntan si está loco y acaba dejando a dos KO y registrando el cuerpo.",
+   "hashtags": [
+    "gta6",
+    "gta6gameplay",
+    "vicecity",
+    "gta6npc",
+    "rockstargames",
+    "gaming"
+   ],
+   "puntuacion": 7,
+   "motivo": "Reacción de los NPCs, pelea y la mecánica de saquear cuerpos enganchan.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Atentos, que el prota se *cuela* en un yate lleno de gente."
+    },
+    {
+     "t": 5,
+     "texto": "Y se planta ahí en medio, *sin invitación*."
+    },
+    {
+     "t": 8.5,
+     "texto": "Mira las caras de los NPCs, nadie entiende nada."
+    },
+    {
+     "t": 16.8,
+     "texto": "Le dicen: *¿estás loco o qué?* Que están montando una escena."
+    },
+    {
+     "t": 23.4,
+     "texto": "Y la respuesta del prota... *puñetazos*."
+    },
+    {
+     "t": 26,
+     "texto": "Dos tíos *KO* en la cubierta en un segundo."
+    },
+    {
+     "t": 31,
+     "texto": "Y ojo: puedes *registrar* el cuerpo y llevarte lo que tenga."
+    },
+    {
+     "t": 36.4,
+     "texto": "Ahora entra al interior del yate, a por el *timón*."
+    },
+    {
+     "t": 40.5,
+     "texto": "El yate es *suyo*... o eso cree él."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 13,
+     "texto": "¿ESTÁS LOCO?"
+    },
+    {
+     "t": 24,
+     "texto": "DOBLE KO"
+    },
+    {
+     "t": 31,
+     "texto": "SAQUEO"
+    }
+   ]
+  },
+  {
+   "start": 1984,
+   "end": 2030,
+   "titulo": "Pelea callejera en GTA 6 y se lleva la moto",
+   "gancho": "LE BUSCA BRONCA",
+   "descripcion": "Un NPC le busca bronca al prota en plena calle, acaba KO y los mirones piden que le den en el estómago.",
+   "hashtags": [
+    "gta6",
+    "vicecity",
+    "pelea",
+    "npc",
+    "gta6gameplay",
+    "moto",
+    "gaming"
+   ],
+   "puntuacion": 7,
+   "motivo": "Pelea rápida con frases de NPC chulas y reacción graciosa de los mirones.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Ojo, que el prota sale de una *tienda de música* y se lía."
+    },
+    {
+     "t": 12.2,
+     "texto": "Este tipo quiere *bronca* con él."
+    },
+    {
+     "t": 16.4,
+     "texto": "Dice que se *carga* a tipos como él cada día."
+    },
+    {
+     "t": 22,
+     "texto": "Y *pum*, lo tumba de un golpe."
+    },
+    {
+     "t": 25.3,
+     "texto": "Tipo *KO*, y va directo a por la moto."
+    },
+    {
+     "t": 30.8,
+     "texto": "Los mirones gritan: *al estómago*, no a la cara. Qué peligro."
+    },
+    {
+     "t": 35.2,
+     "texto": "Se monta en la *moto* y sale a toda pastilla."
+    },
+    {
+     "t": 39.5,
+     "texto": "Pelea y moto nueva en *treinta segundos*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 14,
+     "texto": "BRONCA"
+    },
+    {
+     "t": 23,
+     "texto": "KO"
+    },
+    {
+     "t": 31,
+     "texto": "AL ESTÓMAGO"
+    }
+   ]
+  },
+  {
+   "start": 2090,
+   "end": 2140,
+   "titulo": "GTA 6 tiene gimnasio en la playa con repeticiones",
+   "gancho": "GIMNASIO EN GTA 6",
+   "descripcion": "El prota hace sentadillas en un gimnasio en plena playa de Vice City con contador de repeticiones.",
+   "hashtags": [
+    "gta6",
+    "vicecity",
+    "gimnasio",
+    "gta6gameplay",
+    "musclebeach",
+    "gaming"
+   ],
+   "puntuacion": 7,
+   "motivo": "Mecánica nueva que recuerda a San Andreas, aunque el clip es repetitivo.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Atentos, en *GTA 6* hay gimnasio en la playa."
+    },
+    {
+     "t": 4,
+     "texto": "El prota se acerca al *rack de sentadillas*, mira."
+    },
+    {
+     "t": 8,
+     "texto": "Se coloca la *barra* en la espalda y empieza."
+    },
+    {
+     "t": 12,
+     "texto": "Abajo a la derecha sale un *contador de repeticiones*."
+    },
+    {
+     "t": 17,
+     "texto": "Fíjate en la *técnica*: baja y sube como en la vida real."
+    },
+    {
+     "t": 24,
+     "texto": "Y fijaos en los *discos*, con su marca y todo."
+    },
+    {
+     "t": 31,
+     "texto": "Recuerda a *San Andreas*, donde ya podías ponerte cachas."
+    },
+    {
+     "t": 39,
+     "texto": "Gira la cámara y se ve la *playa* llena de gente."
+    },
+    {
+     "t": 43.5,
+     "texto": "Gafas de sol y *sentadillas*. Puro Vice City."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 8,
+     "texto": "SENTADILLAS"
+    },
+    {
+     "t": 13,
+     "texto": "REPETICIONES"
+    },
+    {
+     "t": 40,
+     "texto": "GYM EN LA PLAYA"
+    }
+   ]
+  },
+  {
+   "start": 2150,
+   "end": 2182,
+   "titulo": "GTA 6: la influencer que graba dentro de un contenedor",
+   "gancho": "INFLUENCER EN UN CONTENEDOR",
+   "descripcion": "En el gimnasio de la playa de GTA 6 un culturista te motiva y una chica busca clics escondida en un contenedor.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "vicecity",
+    "gaming",
+    "rockstar",
+    "influencer",
+    "gym"
+   ],
+   "puntuacion": 7,
+   "motivo": "El gag de la influencer pidiendo clics es meme puro y el gym de playa es reconocible.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Ojo, que en GTA 6 la playa tiene *gimnasio* de verdad."
+    },
+    {
+     "t": 4.6,
+     "texto": "Mira al *culturista* dándolo todo con las mancuernas."
+    },
+    {
+     "t": 10.3,
+     "texto": "Le suelta '*dale, tío*', motivación gratis de gimnasio."
+    },
+    {
+     "t": 13.6,
+     "texto": "Ahora el prota entra en un *contenedor* lleno de pelotas."
+    },
+    {
+     "t": 17.8,
+     "texto": "Dentro, una chica sentada en el *suelo*."
+    },
+    {
+     "t": 22.6,
+     "texto": "Quiere *clics*. Influencer hasta dentro de un contenedor."
+    },
+    {
+     "t": 25.9,
+     "texto": "Y el prota flipa: '¿qué *hace* esta?'"
+    }
+   ],
+   "carteles": [
+    {
+     "t": 8.9,
+     "texto": "PUSH IT BRO"
+    },
+    {
+     "t": 13.6,
+     "texto": "CONTENEDOR SECRETO"
+    },
+    {
+     "t": 21.6,
+     "texto": "BUSCA CLICS"
+    }
+   ]
+  },
+  {
+   "start": 1291,
+   "end": 1340,
+   "titulo": "Paseo en yate robado por Vice City en GTA 6",
+   "gancho": "MIRA ESTE AGUA",
+   "descripcion": "El prota se lleva un yate robado por la bahía de Vice City y los gráficos del agua son una locura.",
+   "hashtags": [
+    "gta6",
+    "vicecity",
+    "gta6gameplay",
+    "yate",
+    "graficos",
+    "rockstar",
+    "gaming"
+   ],
+   "puntuacion": 6,
+   "motivo": "Visualmente brutal pero sin acción ni diálogo; tira de gráficos.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Atentos, que el prota acaba de *robar un yate* y se lo lleva de paseo."
+    },
+    {
+     "t": 6,
+     "texto": "Mira cómo *sale del puerto* esquivando los demás barcos."
+    },
+    {
+     "t": 11,
+     "texto": "Y ojo a la *estela del agua*, tío, parece real."
+    },
+    {
+     "t": 18,
+     "texto": "De fondo, el *skyline de Vice City* con las palmeras."
+    },
+    {
+     "t": 25,
+     "texto": "Fíjate en los *reflejos* de los edificios sobre el agua."
+    },
+    {
+     "t": 30,
+     "texto": "Ahora pasa *por debajo del puente*, y las sombras son una locura."
+    },
+    {
+     "t": 38,
+     "texto": "Kayaks de colores junto al *hotel*, qué vida."
+    },
+    {
+     "t": 42,
+     "texto": "Mar abierto. Esto es *GTA 6*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 6,
+     "texto": "YATE ROBADO"
+    },
+    {
+     "t": 19,
+     "texto": "VICE CITY"
+    },
+    {
+     "t": 30,
+     "texto": "BAJO EL PUENTE"
+    }
+   ]
+  },
+  {
+   "start": 2283,
+   "end": 2336,
+   "titulo": "GTA 6: pides una copa y te paseas por la pool party",
+   "gancho": "FIESTA EN LA PISCINA",
+   "descripcion": "En GTA 6 puedes pedir en la barra del Ocean View y pasearte copa en mano por la fiesta de la piscina.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "vicecity",
+    "oceanview",
+    "gaming",
+    "rockstar",
+    "poolparty"
+   ],
+   "puntuacion": 6,
+   "motivo": "Mecánica de pedir bebida y ambientazo de Vice City, pero poca acción.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Atentos, que esto es la fiesta de piscina del *Ocean View*."
+    },
+    {
+     "t": 5,
+     "texto": "Jason llega a la barra y le sale un *menú de bebidas*."
+    },
+    {
+     "t": 15.3,
+     "texto": "La camarera le dice '*salud, cariño*' y le agradece la compra."
+    },
+    {
+     "t": 20.8,
+     "texto": "Y sí, puedes pasear con la *copa en la mano*."
+    },
+    {
+     "t": 25,
+     "texto": "Mirad el detalle: *piscina*, flotadores y gente en los sofás."
+    },
+    {
+     "t": 29.2,
+     "texto": "Ojo, que hasta le da un *trago* a la copa."
+    },
+    {
+     "t": 33.3,
+     "texto": "Los *reflejos* del agua y la luz son una locura."
+    },
+    {
+     "t": 39.5,
+     "texto": "Se oye '*qué bien os lo pasáis*'."
+    },
+    {
+     "t": 43.5,
+     "texto": "Gente por todas partes, parece *Miami*."
+    },
+    {
+     "t": 47.5,
+     "texto": "Y sale entre *seguratas*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 6,
+     "texto": "MENU DE BEBIDAS"
+    },
+    {
+     "t": 20.8,
+     "texto": "COPA EN MANO"
+    },
+    {
+     "t": 29.2,
+     "texto": "PUEDES BEBER"
+    }
+   ]
+  },
+  {
+   "start": 2337,
+   "end": 2375,
+   "titulo": "GTA 6: se sube a un superdeportivo y se va en moto",
+   "gancho": "PUERTAS DE TIJERA",
+   "descripcion": "El prota se mete en un superdeportivo azul de puertas de tijera en Vice City y al final se larga en moto.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "vicecity",
+    "supercar",
+    "gaming",
+    "rockstar",
+    "coches"
+   ],
+   "puntuacion": 6,
+   "motivo": "El coche luce brutal con la cámara orbitando, pero el giro final es flojo.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Atentos, que el prota sale disparado a la *calle*."
+    },
+    {
+     "t": 3.8,
+     "texto": "Cruza entre *coches de lujo* aparcados."
+    },
+    {
+     "t": 7,
+     "texto": "Ahí está: un *superdeportivo azul* que es una pasada."
+    },
+    {
+     "t": 10.7,
+     "texto": "Se mete dentro: puertas *de tijera*, tipo Lambo."
+    },
+    {
+     "t": 14,
+     "texto": "Mirad los *reflejos* en la carrocería."
+    },
+    {
+     "t": 27.4,
+     "texto": "Un NPC se queja: van *sudados* al club."
+    },
+    {
+     "t": 31.4,
+     "texto": "Pasa del coche y se lleva una *moto*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 7,
+     "texto": "SUPERDEPORTIVO"
+    },
+    {
+     "t": 11,
+     "texto": "PUERTAS TIJERA"
+    },
+    {
+     "t": 28,
+     "texto": "MEJOR LA MOTO"
+    }
+   ]
+  },
+  {
+   "start": 2513,
+   "end": 2560,
+   "titulo": "GTA 6: hasta los NPC se quejan de la inflación",
+   "gancho": "LA INFLACION LLEGA A GTA",
+   "descripcion": "Paseando por la playa de GTA 6 un NPC se queja de que suben precios por la inflación y Jason acaba subiéndose a un buggy.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "vicecity",
+    "inflacion",
+    "playa",
+    "gaming",
+    "rockstar"
+   ],
+   "puntuacion": 6,
+   "motivo": "La queja de la inflación conecta con la vida real y da para comentarios.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Atentos: playa de *Vice City*, y aquí pasa de todo."
+    },
+    {
+     "t": 4.5,
+     "texto": "Jason echa a *correr* entre toallas y bañistas."
+    },
+    {
+     "t": 11,
+     "texto": "Ojo al *lío*: hay un tipo tirado en el suelo."
+    },
+    {
+     "t": 15.2,
+     "texto": "Y escuchad a este *bañista*:"
+    },
+    {
+     "t": 19.5,
+     "texto": "Mirad cuánta *gente* hay en la arena, la playa está viva."
+    },
+    {
+     "t": 30.1,
+     "texto": "Que su colega sube precios 'por la *inflación*'. Hasta en Vice City."
+    },
+    {
+     "t": 37,
+     "texto": "Y ahí, unos *buggies* de playa aparcados."
+    },
+    {
+     "t": 39.9,
+     "texto": "Se *sube* a uno sin pedir permiso."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 11,
+     "texto": "LIO EN LA PLAYA"
+    },
+    {
+     "t": 26.8,
+     "texto": "INFLACION"
+    },
+    {
+     "t": 37,
+     "texto": "BUGGY DE PLAYA"
+    }
+   ]
+  },
+  {
+   "start": 2395,
+   "end": 2450,
+   "titulo": "GTA 6: quemando rueda en la arena de Vice City",
+   "gancho": "MOTO POR LA PLAYA",
+   "descripcion": "En GTA 6 puedes meter la moto en la playa y levantar arena entre bañistas y torres de socorrista.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "vicecity",
+    "moto",
+    "playa",
+    "gaming",
+    "rockstar"
+   ],
+   "puntuacion": 5,
+   "motivo": "Visualmente precioso (arena, primer plano del prota), pero sin momento sorpresa.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Ojo, que en GTA 6 puedes llevar la *moto* hasta la playa."
+    },
+    {
+     "t": 5.5,
+     "texto": "Y entra en la *arena*, con la playa llena de gente."
+    },
+    {
+     "t": 10.2,
+     "texto": "Para y se *baja* de la moto."
+    },
+    {
+     "t": 18,
+     "texto": "Y mirad este *primer plano*: las gafas, la camisa, la barba."
+    },
+    {
+     "t": 22.5,
+     "texto": "El nivel de detalle del *personaje* es otra liga."
+    },
+    {
+     "t": 27,
+     "texto": "Vuelve a la moto, que toca *quemar rueda*."
+    },
+    {
+     "t": 31,
+     "texto": "Mirad cómo levanta la *arena* al acelerar."
+    },
+    {
+     "t": 34,
+     "texto": "Pasa entre sombrillas y *bañistas*."
+    },
+    {
+     "t": 38.5,
+     "texto": "Y aquí las míticas *torres de socorrista*, puro Miami."
+    },
+    {
+     "t": 43.5,
+     "texto": "Conos, *bañistas* y la ciudad al fondo, qué mapa."
+    },
+    {
+     "t": 47.5,
+     "texto": "¿Te imaginas *carreras* por la playa online?"
+    }
+   ],
+   "carteles": [
+    {
+     "t": 6,
+     "texto": "ARENA REAL"
+    },
+    {
+     "t": 18,
+     "texto": "PRIMER PLANO"
+    },
+    {
+     "t": 38.5,
+     "texto": "TORRE SOCORRISTA"
+    }
+   ]
+  },
+  {
+   "start": 1072,
+   "end": 1109,
+   "titulo": "Te puedes subir a la noria de Vice City en GTA 6",
+   "gancho": "LA NORIA DE VICE CITY",
+   "descripcion": "El prota hace la cola de la noria Dock Ring y se sube a una cabina con un detalle brutal.",
+   "hashtags": [
+    "gta6",
+    "gta6gameplay",
+    "vicecity",
+    "gta6details",
+    "rockstargames",
+    "gaming"
+   ],
+   "puntuacion": 4,
+   "motivo": "Mucho paseo por la cola y no llegan a verse las vistas desde arriba; solo salva el detalle de la cabina.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Atentos, que en GTA 6 te puedes subir a la *noria* del puerto."
+    },
+    {
+     "t": 5.5,
+     "texto": "Se llama *Dock Ring*, y tiene hasta *cola* con vallas."
+    },
+    {
+     "t": 19.2,
+     "texto": "Atrás, un tío criticaba a su ex por *enseñarlo todo* en redes."
+    },
+    {
+     "t": 24,
+     "texto": "Y dentro de la *cabina*, mira el detalle de la cara del prota."
+    },
+    {
+     "t": 29.3,
+     "texto": "Cristales, asientos, *reflejos*... todo con ray tracing."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 6,
+     "texto": "DOCK RING"
+    },
+    {
+     "t": 20,
+     "texto": "A BORDO"
+    },
+    {
+     "t": 25,
+     "texto": "CABINA DETALLADA"
+    }
+   ]
+  }
+ ]
+}

@@ -4,8 +4,9 @@ Pegas un link de YouTube y te devuelve clips verticales (9:16) listos para TikTo
 
 - **Narración en español con contexto**: Gemini primero resume de qué va el vídeo entero y, para cada clip, ve la imagen y el audio y escribe una narración que empieza poniéndote en situación ("Este tío lleva 10 minutos buscando pelea en Vice City...") y luego cuenta lo que pasa (golpes, reacciones, mecánicas nuevas), traduciendo lo importante del inglés.
 - **Voz en español gratis** (edge-tts). El audio original queda de fondo, más bajo.
-- **Cartel de gancho arriba** (texto negro sobre amarillo, tipo "SE VAN A PEGAR").
-- **Subtítulos grandes y claros**: 3 palabras a la vez, la que suena en amarillo.
+- **Estilo "dato de GTA 6"**: gameplay a pantalla completa, letra gruesa en el centro (2 palabras a la vez) y las palabras clave en amarillo.
+- **Carteles**: el gancho arriba al empezar (amarillo) y carteles rojos con el dato clave justo cuando el narrador lo dice ("2 PISTOLAS", "6 ESTRELLAS").
+- **Cierre**: "Sígueme, cada día un dato de GTA 6" (cámbialo con `CTA`).
 - **`resumen.md`** con título, descripción, hashtags, minuto original y crédito al creador.
 
 Todo es gratis: yt-dlp, Whisper, ffmpeg y edge-tts son libres, y Gemini tiene plan gratuito.
@@ -51,8 +52,11 @@ Los clips salen en `C:\clipper\clips\ID_DEL_VIDEO\`. Si lo relanzas con el mismo
 | `VOZ` | es-ES-AlvaroNeural | Otra voz: `es-MX-JorgeNeural`, `es-ES-ElviraNeural`... |
 | `VELOCIDAD` | 8 | % extra de velocidad de la voz |
 | `VOL_ORIGINAL` | 0.15 | Volumen del audio original bajo la narración |
-| `FUENTE` | Arial Black | Fuente de los subtítulos (`Impact`, `Arial`...) |
-| `TITULO` | 1 | `0` quita el cartel de arriba |
+| `FORMATO` | lleno | `barras` = vídeo en el centro con fondo difuminado |
+| `FUENTE` | Impact | Fuente de los subtítulos (`Arial Black`...) |
+| `TITULO` | 1 | `0` quita el cartel del gancho |
+| `CTA` | Sigueme, cada dia un dato de GTA 6 | Frase final que dice el narrador (`setx CTA ""` para quitarla) |
+| `LOGO` | (vacío) | Ruta a un PNG tuyo para ponerlo arriba, ej `C:\clipper\logo.png` |
 | `NARRAR` | 1 | `0` = sin narración, subtítulos del audio original |
 | `WHISPER` | small | `medium` / `large-v3` transcriben mejor (lento sin GPU) |
 | `COOKIES_BROWSER` | (vacío) | `chrome`/`edge`/`firefox` si YouTube pide iniciar sesión |

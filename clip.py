@@ -25,8 +25,11 @@ NARRAR = os.environ.get("NARRAR", "1") == "1"          # 0 = sin narracion
 VOZ = os.environ.get("VOZ", "es-ES-AlvaroNeural")      # ej: es-MX-JorgeNeural, es-ES-ElviraNeural
 VELOCIDAD = int(os.environ.get("VELOCIDAD", "8"))      # % extra de velocidad de la voz (ritmo TikTok)
 VOL_ORIGINAL = os.environ.get("VOL_ORIGINAL", "0.15")  # volumen del audio original bajo la narracion
-FUENTE = os.environ.get("FUENTE", "Arial Black")       # fuente de subtitulos (Impact, Arial...)
-TITULO = os.environ.get("TITULO", "1") == "1"          # cartel con el gancho arriba del video
+FUENTE = os.environ.get("FUENTE", "Impact")            # fuente de subtitulos (Impact, Arial Black...)
+TITULO = os.environ.get("TITULO", "1") == "1"          # cartel con el gancho arriba los primeros segundos
+FORMATO = os.environ.get("FORMATO", "lleno")           # lleno = gameplay a pantalla completa; barras = con fondo difuminado
+LOGO = os.environ.get("LOGO", "")                    # ruta a un PNG tuyo (marca de agua arriba)
+CTA = os.environ.get("CTA", "Sigueme, cada dia un dato de GTA 6")  # frase final (vacio = sin)
 
 
 # ---------------------------------------------------------------- utilidades
@@ -182,12 +185,19 @@ def narracion(wd, i, clip, segmentos, resumen, info):
         "2) Narra lo que ocurre al ritmo de la imagen: golpes, reacciones, jugadas, mecanicas nuevas. "
         "Si alguien dice algo importante en ingles, cuentalo traducido en tus palabras.\n"
         "3) Cierra con un remate corto (opinion, pregunta al espectador o dato).\n"
+        "Marca entre asteriscos las 1-2 palabras clave de cada frase (numeros, nombres, la palabra "
+        "que impacta), ejemplo: 'Vuelven las *6 estrellas*, antes el maximo era *5*'.\n"
         "No inventes nada que no se vea ni se oiga. Frases cortas. Sin emojis ni hashtags.\n"
         f"El clip dura {dur:.0f} segundos: usa como MAXIMO {max_pal} palabras.\n"
-        'Responde SOLO con JSON: {"narracion": "..."}'
+        "Ademas, elige 2-4 CARTELES: textos cortos (max 3 palabras, MAYUSCULAS) con el dato clave "
+        "que aparecen en pantalla cuando el narrador dice una palabra concreta de la narracion "
+        "(ej: palabra 'pistolas' -> cartel '2 PISTOLAS').\n"
+        'Responde SOLO con JSON: {"narracion": "...", '
+        '"carteles": [{"palabra": "palabra exacta de la narracion", "texto": "CARTEL"}]}'
     )
     out = gemini([{"inline_data": {"mime_type": "video/mp4", "data": data}}, {"text": prompt}])
-    return json_de(out, r"\{.*\}")["narracion"].strip()
+    d = json_de(out, r"\{.*\}")
+    return d["narracion"].strip(), d.get("carteles") or []
 
 
 # ---------------------------------------------------------------- voz
@@ -208,8 +218,18 @@ async def _tts(texto, mp3, rate):
     return pal
 
 
+def claves(texto):
+    """Palabras marcadas con *asteriscos* por Gemini -> se pintan en amarillo."""
+    return {norm(w) for frag in re.findall(r"\*([^*]+)\*", texto) for w in frag.split()}
+
+
+def norm(w):
+    return re.sub(r"[^\w]", "", w.lower())
+
+
 def locutar(texto, mp3, dur_clip):
     """Genera la voz; si se pasa del clip, la acelera (hasta +35%) para que encaje."""
+    texto = texto.replace("*", "")
     rate = VELOCIDAD
     pal = asyncio.run(_tts(texto, mp3, rate))
     nd = duracion(mp3)
@@ -239,40 +259,50 @@ def cabecera():
             "[V4+ Styles]\nFormat: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,"
             "BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,"
             "Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding\n"
-            # subtitulos: grandes, borde negro grueso, sombra, un poco por debajo del centro
-            f"Style: Default,{FUENTE},92,&H00FFFFFF,&H00FFFFFF,&H00000000,&H99000000,1,0,0,0,"
-            "100,100,0,0,1,10,4,2,60,60,560,1\n"
+            # subtitulos: letra gruesa en el centro, borde negro y sombra
+            f"Style: Default,{FUENTE},128,&H00FFFFFF,&H00FFFFFF,&H00000000,&HA0000000,0,0,0,0,"
+            "100,100,1,0,1,7,5,5,70,70,0,1\n"
             # cartel de arriba: texto negro sobre caja amarilla
             f"Style: Titulo,{FUENTE},74,&H00000000,&H00000000,&H0000D5FF,&H00000000,1,0,0,0,"
-            "100,100,0,0,3,22,0,8,70,70,230,1\n\n"
+            "100,100,0,0,3,22,0,8,70,70,230,1\n"
+            # carteles de dato: texto blanco sobre caja roja
+            f"Style: Cartel,{FUENTE},84,&H00FFFFFF,&H00FFFFFF,&H003C14E6,&H00000000,1,0,0,0,"
+            "100,100,0,0,3,18,0,8,70,70,330,1\n\n"
             "[Events]\nFormat: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text\n")
 
 
 def limpia(w):
-    return w.upper().replace("{", "").replace("}", "").replace("\\", "")
+    return w.upper().replace("*", "").replace("{", "").replace("}", "").replace("\\", "")
 
 
-def lineas_subs(pal):
-    """3 palabras a la vez, la que suena en amarillo con un pequeno 'pop'."""
+def lineas_subs(pal, clave=frozenset()):
+    """2 palabras a la vez en el centro, con 'pop' al entrar; las palabras clave en amarillo."""
     lineas = []
-    for g0 in range(0, len(pal), 3):
-        g = pal[g0:g0 + 3]
-        sig = pal[g0 + 3][0] if g0 + 3 < len(pal) else g[-1][1] + 0.3
-        for j, (a, b, w) in enumerate(g):
-            fin = g[j + 1][0] if j + 1 < len(g) else sig
-            txt = " ".join(
-                (r"{\c&H00E5FF&\fscx112\fscy112}" + limpia(x[2]) + r"{\c&HFFFFFF&\fscx100\fscy100}")
-                if k == j else limpia(x[2]) for k, x in enumerate(g))
-            lineas.append(f"Dialogue: 0,{t_ass(a)},{t_ass(fin)},Default,,0,0,0,,{txt}")
+    for g0 in range(0, len(pal), 2):
+        g = pal[g0:g0 + 2]
+        fin = pal[g0 + 2][0] if g0 + 2 < len(pal) else g[-1][1] + 0.4
+        txt = " ".join((r"{\c&H00D5FF&}" + limpia(w) + r"{\c&HFFFFFF&}") if norm(w) in clave
+                       else limpia(w) for _, _, w in g)
+        pop = r"{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}"
+        lineas.append(f"Dialogue: 0,{t_ass(g[0][0])},{t_ass(fin)},Default,,0,0,0,,{pop}{txt}")
     return lineas
 
 
-def crear_ass(pal, total, gancho, out):
+def crear_ass(pal, total, gancho, out, clave=frozenset(), carteles=()):
     lineas = []
+    usados = set()
+    for ct in carteles:
+        objetivo = norm(str(ct.get("palabra", "")).split()[0]) if ct.get("palabra") else ""
+        for k, (a, _, w) in enumerate(pal):
+            if k not in usados and objetivo and norm(w) == objetivo and a > 3.5:
+                usados.add(k)
+                lineas.append(f"Dialogue: 1,{t_ass(a)},{t_ass(min(a + 2.5, total))},Cartel,,0,0,0,,"
+                              + r"{\fscx70\fscy70\t(0,120,\fscx100\fscy100)}" + limpia(str(ct.get("texto", ""))))
+                break
     if TITULO and gancho:
-        lineas.append(f"Dialogue: 1,{t_ass(0)},{t_ass(total)},Titulo,,0,0,0,,"
-                      + r"{\fad(200,0)}" + limpia(gancho))
-    lineas += lineas_subs(pal)
+        lineas.append(f"Dialogue: 1,{t_ass(0)},{t_ass(min(3.5, total))},Titulo,,0,0,0,,"
+                      + r"{\fad(150,250)}" + limpia(gancho))
+    lineas += lineas_subs(pal, clave)
     Path(out).write_text(cabecera() + "\n".join(lineas) + "\n", encoding="utf-8")
 
 
@@ -284,18 +314,27 @@ def palabras_orig(palabras, ini, fin):
 def render(wd, i, clip, total, mp3):
     slug = re.sub(r"[^a-z0-9]+", "-", clip["titulo"].lower()).strip("-")[:40] or "clip"
     out = f"{i:02d}_{slug}.mp4"
-    video = ("[0:v]split[a][b];"
-             "[a]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=25,"
-             "eq=brightness=-0.08[bg];"
-             "[b]scale=1080:-2[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2,"
-             f"ass=s{i}.ass,format=yuv420p[v]")
+    if FORMATO == "lleno":
+        video = ("[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,"
+                 f"eq=brightness=-0.10:saturation=1.1,ass=s{i}.ass,format=yuv420p[v]")
+    else:
+        video = ("[0:v]split[a][b];"
+                 "[a]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=25,"
+                 "eq=brightness=-0.08[bg];"
+                 "[b]scale=1080:-2[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2,"
+                 f"ass=s{i}.ass,format=yuv420p[v]")
+    entradas = []
+    if LOGO and Path(LOGO).exists():
+        entradas = ["-i", str(Path(LOGO).resolve())]
+        video = video.replace("[v]", "[pre]") + ";[1:v]scale=360:-1[lg];[pre][lg]overlay=(W-w)/2:90[v]"
+    na = len(entradas) // 2 + 1  # indice de la entrada de la narracion
     if mp3:
         # el audio original baja mientras habla el narrador y se mezcla de fondo
-        audio = (f"[0:a]volume={VOL_ORIGINAL}[o];[1:a]volume=1.6,apad[n];"
+        audio = (f"[0:a]volume={VOL_ORIGINAL}[o];[{na}:a]volume=1.6,apad[n];"
                  "[o][n]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5[a]")
-        entradas = ["-i", mp3]
+        entradas += ["-i", mp3]
     else:
-        audio, entradas = "[0:a]loudnorm=I=-14:TP=-1.5[a]", []
+        audio = "[0:a]loudnorm=I=-14:TP=-1.5[a]"
     run(["ffmpeg", "-y", "-ss", str(clip["start"]), "-t", f"{total:.2f}", "-i", "src.mp4", *entradas,
          "-filter_complex", video + ";" + audio, "-map", "[v]", "-map", "[a]", "-t", f"{total:.2f}",
          "-c:v", "libx264", "-crf", "21", "-preset", "veryfast", "-r", "30",
@@ -342,19 +381,22 @@ def procesar(url, desde=None, hasta=None):
           f"- De que va: {resumen}\n"]
     for i, c in enumerate(clips, 1):
         dur = c["end"] - c["start"]
-        mp3, texto_nar, total, pal = None, None, dur, None
+        mp3, texto_nar, total, pal, clave, carteles = None, None, dur, None, frozenset(), []
         if NARRAR:
             try:
-                texto_nar = narracion(wd, i, c, segmentos, resumen, info)
+                texto_nar, carteles = narracion(wd, i, c, segmentos, resumen, info)
+                if CTA:
+                    texto_nar = texto_nar.rstrip() + " " + CTA + "."
+                clave = claves(texto_nar)
                 mp3 = f"n{i}.mp3"
                 pal, nd = locutar(texto_nar, str(Path(wd) / mp3), dur)
                 total = min(max(dur, nd + 0.6), dur_video - c["start"])
             except Exception as e:
                 print(f"   (clip {i} sin narracion: {str(e)[:200]})")
-                mp3, texto_nar = None, None
+                mp3, texto_nar, clave, carteles = None, None, frozenset(), []
         if not mp3:
             pal, total = palabras_orig(palabras, c["start"], c["end"]), dur
-        crear_ass(pal, total, c.get("gancho", ""), Path(wd) / f"s{i}.ass")
+        crear_ass(pal, total, c.get("gancho", ""), Path(wd) / f"s{i}.ass", clave, carteles)
         f = render(wd, i, c, total, mp3)
         tags = " ".join("#" + str(h).lstrip("#") for h in c.get("hashtags", []))
         md.append(f"## {i}. {c['titulo']}  ({f})\n"
@@ -363,7 +405,7 @@ def procesar(url, desde=None, hasta=None):
                   f"- Cartel: {c.get('gancho', '')}\n"
                   f"- Descripcion: {c.get('descripcion', '')} {tags}\n"
                   f"- Credito: video original de {info['canal']} ({url})\n"
-                  + (f"- Narracion: {texto_nar}\n" if texto_nar else ""))
+                  + (f"- Narracion: {texto_nar.replace('*', '')}\n" if texto_nar else ""))
         print(f"   listo: {f}")
     (wd / "resumen.md").write_text("\n".join(md), encoding="utf-8")
     print(f"\nTerminado. Clips y resumen.md en: {wd.resolve()}\n")

@@ -1,0 +1,318 @@
+<title>Dato Vice City Planner</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: una columna de "tarjetas de emisión" agrupadas por día, como la parrilla de una tele de Vice City de noche. */
+:root {
+  color-scheme: dark;
+  --bg: #120a1f;
+  --panel: #1c1230;
+  --panel-2: #251840;
+  --line: #3a2a5c;
+  --fg: #f4ecff;
+  --muted: #b3a2d1;
+  --pink: #ff4fa8;
+  --orange: #ffa94d;
+  --cyan: #5fe1ff;
+  --ok: #4ade80;
+  --ok-bg: #12321f;
+  --display: "Bowlby One SC", "Arial Black", Impact, sans-serif;
+  --body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--body);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding-block: 24px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+header { display: flex; flex-direction: column; gap: 14px; }
+.stars { color: var(--fg); letter-spacing: 6px; font-size: 18px; }
+h1 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(30px, 7vw, 52px);
+  line-height: 1;
+  margin: 0;
+  background: linear-gradient(180deg, var(--pink), var(--orange));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-wrap: balance;
+}
+.sub { color: var(--muted); margin: 0; }
+.progress { display: flex; flex-direction: column; gap: 8px; }
+.progress-row { display: flex; justify-content: space-between; gap: 12px; font-variant-numeric: tabular-nums; }
+.progress-row strong { font-family: var(--mono); }
+.bar { height: 10px; border-radius: 99px; background: var(--panel-2); overflow: hidden; }
+.bar > span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--pink), var(--orange)); transition: width .3s; }
+.status { font-size: 13px; color: var(--muted); }
+.status[data-kind="warn"] { color: var(--orange); }
+
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  font: 600 14px var(--body);
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--fg);
+  border-radius: 99px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.chip[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.chip:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+
+details.canal { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; }
+details.canal summary { cursor: pointer; padding: 14px 16px; font-weight: 700; }
+.canal-body { padding: 0 16px 16px; display: flex; flex-direction: column; gap: 14px; }
+
+.day { display: flex; flex-direction: column; gap: 12px; }
+.day h2 {
+  font-family: var(--display); font-weight: 400; font-size: 20px; margin: 0;
+  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+}
+.day h2 small { font-family: var(--body); font-size: 13px; color: var(--muted); font-weight: 500; }
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+.card.done { background: var(--ok-bg); border-color: #24583a; }
+.card.done .field { opacity: .55; }
+.top { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.time {
+  font-family: var(--mono); font-weight: 700; font-size: 20px;
+  color: var(--bg); background: var(--cyan); border-radius: 8px; padding: 2px 10px;
+  font-variant-numeric: tabular-nums;
+}
+.tz { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.file { font-family: var(--mono); font-size: 13px; color: var(--orange); overflow-wrap: anywhere; }
+.score { margin-left: auto; font-size: 13px; color: var(--muted); }
+.score b { color: var(--fg); }
+
+.field { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.label { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.copyrow { display: flex; gap: 8px; align-items: flex-start; }
+.text {
+  flex: 1; min-width: 0; white-space: pre-wrap; overflow-wrap: anywhere;
+  background: var(--panel-2); border-radius: 8px; padding: 8px 10px;
+}
+.text.title { font-weight: 700; font-size: 16px; }
+.copy {
+  flex: none; font: 600 13px var(--body); cursor: pointer;
+  background: transparent; color: var(--cyan); border: 1px solid var(--cyan);
+  border-radius: 8px; padding: 7px 10px;
+}
+.copy.ok { color: var(--ok); border-color: var(--ok); }
+
+.toggle {
+  align-self: flex-start;
+  font: 700 15px var(--body); cursor: pointer;
+  border-radius: 10px; padding: 10px 16px;
+  border: 2px solid var(--pink); background: transparent; color: var(--pink);
+}
+.toggle[aria-pressed="true"] { background: var(--ok); border-color: var(--ok); color: #06200f; }
+.toggle:disabled { opacity: .5; cursor: not-allowed; }
+
+.empty { background: var(--panel); border: 1px dashed var(--line); border-radius: 14px; padding: 24px; color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { .bar > span { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="stars" aria-hidden="true">★★★★★★</div>
+    <h1>Dato Vice City</h1>
+    <p class="sub">Parrilla de Shorts: copia el título, la descripción y el comentario, prográmalo en YouTube Studio y márcalo.</p>
+    <div class="progress">
+      <div class="progress-row"><span>Programados</span><strong id="count">0 / 0</strong></div>
+      <div class="bar"><span id="barfill"></span></div>
+      <div class="status" id="status">Cargando la parrilla…</div>
+    </div>
+  </header>
+
+  <details class="canal">
+    <summary>Datos del canal (descripción y palabras clave)</summary>
+    <div class="canal-body" id="canal"></div>
+  </details>
+
+  <div class="filters" role="group" aria-label="Filtrar">
+    <button class="chip" id="f-pend" aria-pressed="true">Pendientes</button>
+    <button class="chip" id="f-all" aria-pressed="false">Todos</button>
+    <button class="chip" id="f-done" aria-pressed="false">Programados</button>
+  </div>
+
+  <main id="list">
+    <div class="empty">La parrilla aparecerá aquí en cuanto cargue. Cada Short tendrá su hora, su título, su descripción y un botón para marcarlo como programado.</div>
+  </main>
+</div>
+
+<script>
+const LOCAL = [{"orden": 202611201400, "video": "072Z5TcIVUY", "archivo": "03_la-polic-a-para-a-un-t-o-que-quiere-poli.mp4", "titulo": "GTA 6: Le para la poli y pregunta por los CABALLOS 🐴🚓", "descripcion": "La policía de Vice City para a un tío… y él solo quiere saber por qué ya no van a caballo 😂\nLa policía de GTA 6 vive su propia vida.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Policía a caballo en GTA 6, sí o no? 🐴", "fecha": "2026-11-20", "hora": "14:00", "puntuacion": 7, "programado": false, "id": "072-03"}, {"orden": 202611201900, "video": "072Z5TcIVUY", "archivo": "02_bronca-en-la-playa-de-vice-city-acaba-a-.mp4", "titulo": "GTA 6: Los NPCs ya NO se dejan 😤👊", "descripcion": "Le dice que se aparte… y acaban a puñetazos en plena playa de Vice City 💥\nLos NPCs de GTA 6 tienen carácter.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Quién ganó la pelea? 🤔", "fecha": "2026-11-20", "hora": "19:00", "puntuacion": 7, "programado": false, "id": "072-02"}, {"orden": 202611202300, "video": "072Z5TcIVUY", "archivo": "01_roba-un-jet-privado-bajo-fuego-y-vuela-s.mp4", "titulo": "GTA 6: Roba un JET PRIVADO bajo fuego 😳✈️", "descripcion": "Jason roba un jet privado con la policía disparando y se lo lleva sobre Vice City 🔥\n¿Lo habrías conseguido tú?\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Qué robarías primero en GTA 6: jet, helicóptero o yate? 👇", "fecha": "2026-11-20", "hora": "23:00", "puntuacion": 8, "programado": false, "id": "072-01"}, {"orden": 202611211400, "video": "072Z5TcIVUY", "archivo": "06_en-gta-6-puedes-acariciar-perros.mp4", "titulo": "GTA 6: POR FIN puedes acariciar perros 🐶❤️", "descripcion": "Lo que todos pedíamos desde GTA 5: en GTA 6 puedes acariciar a los perros 🐾\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "Like si lo primero que vas a hacer en GTA 6 es acariciar a todos los perros 🐶", "fecha": "2026-11-21", "hora": "14:00", "puntuacion": 6, "programado": false, "id": "072-06"}, {"orden": 202611211900, "video": "072Z5TcIVUY", "archivo": "04_se-estrella-en-la-autopista-y-roba-otro-.mp4", "titulo": "GTA 6: Siniestro total y coche nuevo en 5 segundos 🚗💥", "descripcion": "Se estampa contra una pickup en la autopista y en nada ya va en un deportivo nuevo 😂\nAsí se conduce en Vice City.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Tú también conduces así en GTA? 😂", "fecha": "2026-11-21", "hora": "19:00", "puntuacion": 7, "programado": false, "id": "072-04"}, {"orden": 202611212300, "video": "072Z5TcIVUY", "archivo": "05_gta-6-un-influencer-acaba-con-40-influen.mp4", "titulo": "GTA 6: Un INFLUENCER acabó con 40 influencers 💀", "descripcion": "Escucha bien lo que se oye en la playa de Vice City… Rockstar no perdona a los influencers 😂\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "Rockstar trolleando a los influencers otra vez 😂 ¿Lo habías oído?", "fecha": "2026-11-21", "hora": "23:00", "puntuacion": 7, "programado": false, "id": "072-05"}, {"orden": 202611221400, "video": "072Z5TcIVUY", "archivo": "07_va-a-pintar-el-coche-y-no-le-llega-el-di.mp4", "titulo": "GTA 6: Va a pintar el coche y NO LE LLEGA 💸", "descripcion": "Vuelve el Pay 'n' Spray a Vice City… pero sale caro 😅\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿De qué color lo habrías pintado? 🎨", "fecha": "2026-11-22", "hora": "14:00", "puntuacion": 6, "programado": false, "id": "072-07"}, {"orden": 202611221900, "video": "072Z5TcIVUY", "archivo": "09_volando-boca-abajo-sobre-la-costa-de-vic.mp4", "titulo": "GTA 6: Vice City desde el aire es OTRO NIVEL 🌴✈️", "descripcion": "Volando boca abajo sobre la costa y las islas de Vice City. Mira qué gráficos 🤯\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Es el mapa más bonito de la historia de GTA? 🌴", "fecha": "2026-11-22", "hora": "19:00", "puntuacion": 6, "programado": false, "id": "072-09"}, {"orden": 202611222300, "video": "072Z5TcIVUY", "archivo": "08_roba-un-helic-ptero-en-la-azotea-del-aer.mp4", "titulo": "GTA 6: Roba un HELICÓPTERO en el aeropuerto 🚁", "descripcion": "Sube a la azotea del aeropuerto de Vice City y se lleva el helicóptero sin pedir permiso 😎\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Helicóptero o jet? ✈️🚁", "fecha": "2026-11-22", "hora": "23:00", "puntuacion": 6, "programado": false, "id": "072-08"}, {"orden": 202611231400, "video": "072Z5TcIVUY", "archivo": "11_as-es-el-gimnasio-ajax-de-gta-6-por-dent.mp4", "titulo": "GTA 6: Así es el GIMNASIO por dentro 💪", "descripcion": "Entramos al Ajax Gym de Vice City: cuota, pesas y NPCs entrenando de verdad 🏋️\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Vas a ir al gym en GTA 6 o solo en la vida real? 😂", "fecha": "2026-11-23", "hora": "14:00", "puntuacion": 6, "programado": false, "id": "072-11"}, {"orden": 202611231900, "video": "072Z5TcIVUY", "archivo": "12_los-npcs-de-gta-6-hablan-de-leonida-y-de.mp4", "titulo": "GTA 6: Los NPCs hablan de ROBAR a la gente 😳", "descripcion": "Escucha lo que dicen los NPCs de Leonida… En GTA 6 cada conversación cuenta una historia 👀\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #Leonida #GTAVI", "comentario": "Los NPCs de GTA 6 tienen más vida que algunos protas 😂", "fecha": "2026-11-23", "hora": "19:00", "puntuacion": 6, "programado": false, "id": "072-12"}, {"orden": 202611232300, "video": "072Z5TcIVUY", "archivo": "10_se-cuela-en-un-edificio-de-lujo-y-acaba-.mp4", "titulo": "GTA 6: Se cuela en un edificio de LUJO… ojo al final 👀", "descripcion": "Pasillos art déco, recepción y… el guardia acaba en el suelo 😳\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Qué le ha pasado al guardia? 🤔", "fecha": "2026-11-23", "hora": "23:00", "puntuacion": 6, "programado": false, "id": "072-10"}, {"orden": 202611241400, "video": "072Z5TcIVUY", "archivo": "13_el-piropo-m-s-raro-de-gta-6-los-aliens.mp4", "titulo": "GTA 6: El PIROPO más raro del juego 👽😂", "descripcion": "En un bar de playa de Vice City le sueltan un piropo con aliens incluidos 😂\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "Escribe el piropo más raro que te hayan dicho 👇😂", "fecha": "2026-11-24", "hora": "14:00", "puntuacion": 6, "programado": false, "id": "072-13"}, {"orden": 202611241900, "video": "072Z5TcIVUY", "archivo": "15_una-npc-de-gta-6-menciona-liberty-city.mp4", "titulo": "GTA 6: Una NPC nombra LIBERTY CITY 👀", "descripcion": "Escucha al final… ¿Pista de Liberty City en GTA 6 o solo un guiño? 🗽\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #LibertyCity #GTAVI", "comentario": "¿Veremos Liberty City en GTA 6? Sí o no 👇", "fecha": "2026-11-24", "hora": "19:00", "puntuacion": 5, "programado": false, "id": "072-15"}, {"orden": 202611242300, "video": "072Z5TcIVUY", "archivo": "14_roba-el-buggy-de-la-polic-a-de-la-playa-.mp4", "titulo": "GTA 6: Roba el BUGGY de la policía de la playa 🏖️🚓", "descripcion": "Pasa del muscle car… porque lo que quiere es el buggy de la policía de Vice Beach 😂\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Cuánto tarda en llegar la policía? 🚨", "fecha": "2026-11-24", "hora": "23:00", "puntuacion": 6, "programado": false, "id": "072-14"}, {"orden": 202611251400, "video": "072Z5TcIVUY", "archivo": "16_choca-con-un-suv-y-saca-al-conductor-a-g.mp4", "titulo": "GTA 6: Le saca del coche SIN MEDIAR PALABRA 😳", "descripcion": "Para junto a un SUV, saca al conductor y se va tan tranquilo 😂\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "Jason no tiene paciencia 😂", "fecha": "2026-11-25", "hora": "14:00", "puntuacion": 5, "programado": false, "id": "072-16"}, {"orden": 202611251900, "video": "072Z5TcIVUY", "archivo": "18_parkour-por-los-tejados-de-vice-city-en-.mp4", "titulo": "GTA 6: Parkour por los tejados de Vice City 🏃‍♂️", "descripcion": "Saltos, escaleras y vistas de Vice City desde las azoteas 🌇\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Hay parkour de verdad en GTA 6? 🤔", "fecha": "2026-11-25", "hora": "19:00", "puntuacion": 4, "programado": false, "id": "072-18"}, {"orden": 202611252300, "video": "072Z5TcIVUY", "archivo": "17_gta-6-invitaci-n-a-una-fiesta-en-un-avi-.mp4", "titulo": "GTA 6: Le invitan a una FIESTA en un avión 🛩️🎉", "descripcion": "Los NPCs de la playa de Vice City cotillean de todo… y hay una fiesta en un avión de carga 👀\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Será una misión? 🤔✈️", "fecha": "2026-11-25", "hora": "23:00", "puntuacion": 5, "programado": false, "id": "072-17"}, {"orden": 202611261400, "video": "8zpkGW2DGCo", "archivo": "15_paseo-en-yate-robado-por-vice-city-en-gt.mp4", "titulo": "GTA 6: Yate por Vice City, mira el AGUA 🌊", "descripcion": "El prota se lleva un yate robado por la bahía de Vice City y los gráficos del agua son una locura.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Los mejores gráficos de agua de la historia? 🌊", "fecha": "2026-11-26", "hora": "14:00", "puntuacion": 6, "programado": false, "id": "8z-15"}, {"orden": 202611261900, "video": "8zpkGW2DGCo", "archivo": "08_as-es-la-tienda-de-ropa-de-gta-6-por-den.mp4", "titulo": "GTA 6: Así es la TIENDA DE ROPA por dentro 👔", "descripcion": "En GTA 6 te pruebas americanas, camisas hawaianas y conjuntos completos como en una tienda de verdad.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Qué outfit le pondrías a Jason? 👇", "fecha": "2026-11-26", "hora": "19:00", "puntuacion": 7, "programado": false, "id": "8z-08"}, {"orden": 202611262300, "video": "8zpkGW2DGCo", "archivo": "01_un-npc-de-gta-6-suelta-lore-de-cajas-mis.mp4", "titulo": "GTA 6: Un NPC suelta LORE de cajas misteriosas 📦👀", "descripcion": "Jason ayuda a un desconocido y este le cuenta que unos psicópatas le obligan a llevar cajas a los Grassrivers.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Qué crees que hay en esas cajas? 👇", "fecha": "2026-11-26", "hora": "23:00", "puntuacion": 8, "programado": false, "id": "8z-01"}, {"orden": 202611271400, "video": "8zpkGW2DGCo", "archivo": "16_gta-6-pides-una-copa-y-te-paseas-por-la-.mp4", "titulo": "GTA 6: Así es la POOL PARTY del Ocean View 🍹", "descripcion": "En GTA 6 puedes pedir en la barra del Ocean View y pasearte copa en mano por la fiesta de la piscina.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Plan de viernes en Vice City? 🍹", "fecha": "2026-11-27", "hora": "14:00", "puntuacion": 6, "programado": false, "id": "8z-16"}, {"orden": 202611271900, "video": "8zpkGW2DGCo", "archivo": "09_choca-contra-un-cami-n-en-gta-6-y-acaba-.mp4", "titulo": "GTA 6: Choca contra un camión y acaba KO 🚚👊", "descripcion": "El prota se estampa contra un camión de Candybox, el conductor se encara y acaba en el suelo de un golpe.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Quién tenía la culpa del choque? 🤔", "fecha": "2026-11-27", "hora": "19:00", "puntuacion": 7, "programado": false, "id": "8z-09"}, {"orden": 202611272300, "video": "8zpkGW2DGCo", "archivo": "02_gta-6-tiene-autoservicio-pides-comida-de.mp4", "titulo": "GTA 6 tiene AUTOSERVICIO 🍔🚗 ¡Por fin!", "descripcion": "Jason pide un sándwich de pollo en un autoservicio sin bajarse del coche, algo nunca visto en un GTA.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Qué pedirías tú en el autoservicio de GTA 6? 🍔", "fecha": "2026-11-27", "hora": "23:00", "puntuacion": 8, "programado": false, "id": "8z-02"}, {"orden": 202611281400, "video": "8zpkGW2DGCo", "archivo": "17_gta-6-se-sube-a-un-superdeportivo-y-se-v.mp4", "titulo": "GTA 6: Superdeportivo de puertas de TIJERA 🚘", "descripcion": "El prota se mete en un superdeportivo azul de puertas de tijera en Vice City y al final se larga en moto.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Superdeportivo o moto? 👇", "fecha": "2026-11-28", "hora": "14:00", "puntuacion": 6, "programado": false, "id": "8z-17"}, {"orden": 202611281900, "video": "8zpkGW2DGCo", "archivo": "10_fotos-con-filtros-y-robo-de-superdeporti.mp4", "titulo": "GTA 6: Le hace FOTOS al coche… y se lo roba 📸🚗", "descripcion": "El prota hace fotos con filtros a un superdeportivo y luego saca a un conductor de su coche y se lo lleva.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Usarás la cámara del móvil en GTA 6? 📸", "fecha": "2026-11-28", "hora": "19:00", "puntuacion": 7, "programado": false, "id": "8z-10"}, {"orden": 202611282300, "video": "8zpkGW2DGCo", "archivo": "03_el-consejo-m-s-t-xico-de-una-npc-de-gta-.mp4", "titulo": "GTA 6: El consejo MÁS TÓXICO de una NPC 💀📱", "descripcion": "En un beach club de Vice City una NPC le da a su amiga el consejo más loco sobre el móvil de su novio.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Consejo de amiga o red flag? 😂", "fecha": "2026-11-28", "hora": "23:00", "puntuacion": 8, "programado": false, "id": "8z-03"}, {"orden": 202611291400, "video": "8zpkGW2DGCo", "archivo": "18_gta-6-hasta-los-npc-se-quejan-de-la-infl.mp4", "titulo": "GTA 6: Hasta los NPCs se quejan de la INFLACIÓN 💸", "descripcion": "Paseando por la playa de GTA 6 un NPC se queja de que suben precios por la inflación y Jason acaba subiéndose a un buggy.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "Ni en Vice City te libras de la inflación 😂", "fecha": "2026-11-29", "hora": "14:00", "puntuacion": 6, "programado": false, "id": "8z-18"}, {"orden": 202611291900, "video": "8zpkGW2DGCo", "archivo": "11_se-cuela-en-un-yate-ajeno-en-gta-6-y-aca.mp4", "titulo": "GTA 6: Se cuela en un YATE y acaba fatal 🛥️😳", "descripcion": "El prota se mete en un yate lleno de gente, le preguntan si está loco y acaba dejando a dos KO y registrando el cuerpo.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Se puede robar un yate en GTA 6? 👇", "fecha": "2026-11-29", "hora": "19:00", "puntuacion": 7, "programado": false, "id": "8z-11"}, {"orden": 202611292300, "video": "8zpkGW2DGCo", "archivo": "04_se-cuela-en-una-mansi-n-de-gta-6-y-lo-hu.mp4", "titulo": "GTA 6: Se cuela en una MANSIÓN y lo humillan 😂", "descripcion": "El prota se cuela en una mansión de Vice City y le echan con los insultos más absurdos del juego.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "El insulto de la carne procesada me ha matado 💀", "fecha": "2026-11-29", "hora": "23:00", "puntuacion": 8, "programado": false, "id": "8z-04"}, {"orden": 202611301400, "video": "8zpkGW2DGCo", "archivo": "19_gta-6-quemando-rueda-en-la-arena-de-vice.mp4", "titulo": "GTA 6: Derrapes en moto por la PLAYA 🏍️🏖️", "descripcion": "En GTA 6 puedes meter la moto en la playa y levantar arena entre bañistas y torres de socorrista.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Moto en la arena o jet ski? 👇", "fecha": "2026-11-30", "hora": "14:00", "puntuacion": 5, "programado": false, "id": "8z-19"}, {"orden": 202611301900, "video": "8zpkGW2DGCo", "archivo": "12_pelea-callejera-en-gta-6-y-se-lleva-la-m.mp4", "titulo": "GTA 6: Pelea callejera y se lleva la MOTO 🏍️👊", "descripcion": "Un NPC le busca bronca al prota en plena calle, acaba KO y los mirones piden que le den en el estómago.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "Los mirones de GTA 6 son lo mejor 😂", "fecha": "2026-11-30", "hora": "19:00", "puntuacion": 7, "programado": false, "id": "8z-12"}, {"orden": 202611302300, "video": "8zpkGW2DGCo", "archivo": "05_la-rutina-ma-anera-de-jason-en-gta-6-es-.mp4", "titulo": "GTA 6: La rutina mañanera de Jason ☕🐍", "descripcion": "Café, sudadera y una serpiente en el salón: así de detallada es la casa de Jason en GTA 6.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Tendrías una serpiente de mascota en GTA 6? 🐍", "fecha": "2026-11-30", "hora": "23:00", "puntuacion": 7, "programado": false, "id": "8z-05"}, {"orden": 202612011400, "video": "8zpkGW2DGCo", "archivo": "20_te-puedes-subir-a-la-noria-de-vice-city-.mp4", "titulo": "GTA 6: Te puedes subir a la NORIA 🎡", "descripcion": "El prota hace la cola de la noria Dock Ring y se sube a una cabina con un detalle brutal.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Qué más atracciones habrá en Vice City? 🎡", "fecha": "2026-12-01", "hora": "14:00", "puntuacion": 4, "programado": false, "id": "8z-20"}, {"orden": 202612011900, "video": "8zpkGW2DGCo", "archivo": "13_gta-6-tiene-gimnasio-en-la-playa-con-rep.mp4", "titulo": "GTA 6 tiene GIMNASIO en la playa 💪🏖️", "descripcion": "El prota hace sentadillas en un gimnasio en plena playa de Vice City con contador de repeticiones.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "¿Vuelve el músculo de San Andreas? 💪", "fecha": "2026-12-01", "hora": "19:00", "puntuacion": 7, "programado": false, "id": "8z-13"}, {"orden": 202612012300, "video": "8zpkGW2DGCo", "archivo": "06_una-simple-visita-a-la-gasolinera-acaba-.mp4", "titulo": "GTA 6: Ir a la gasolinera y acabar a PUÑETAZOS ⛽👊", "descripcion": "Un NPC recibe una bronca por teléfono en la gasolinera y en segundos todo termina en pelea en GTA 6.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "En Vice City no se puede ni echar gasolina 😂", "fecha": "2026-12-01", "hora": "23:00", "puntuacion": 7, "programado": false, "id": "8z-06"}, {"orden": 202612021900, "video": "8zpkGW2DGCo", "archivo": "14_gta-6-la-influencer-que-graba-dentro-de-.mp4", "titulo": "GTA 6: La INFLUENCER del contenedor 😂📹", "descripcion": "En el gimnasio de la playa de GTA 6 un culturista te motiva y una chica busca clics escondida en un contenedor.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "Rockstar trolleando a los influencers otra vez 😂", "fecha": "2026-12-02", "hora": "19:00", "puntuacion": 7, "programado": false, "id": "8z-14"}, {"orden": 202612022300, "video": "8zpkGW2DGCo", "archivo": "07_lo-que-dicen-los-npc-del-centro-comercia.mp4", "titulo": "GTA 6: Lo que dicen los NPCs del centro comercial 😂", "descripcion": "Café en un puesto, paseo por el centro comercial y un cotilleo de NPC sobre una cirugía que salió fatal.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI", "comentario": "Los diálogos de GTA 6 están a otro nivel 💀", "fecha": "2026-12-02", "hora": "23:00", "puntuacion": 7, "programado": false, "id": "8z-07"}];
+const CANAL = [
+  ["Descripción del canal", "Cada día un dato, un secreto o un momentazo de GTA 6 contado en español 🌴🚓\nVice City, Leonida, NPCs que te sorprenden, persecuciones y detalles que nadie ve.\nActiva la campanita y no te pierdas ni uno.\n\n#GTA6 #ViceCity #GTAVI"],
+  ["Palabras clave", "gta 6, gta vi, vice city, leonida, gta 6 español, gta 6 gameplay, gta 6 secretos, gta 6 detalles, jason y lucia, rockstar games, gta 6 shorts, gta 6 noticias"]
+];
+const DIAS = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
+const MESES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+let filtro = "pend";
+let filas = [];
+let db = null;
+let soloLectura = false;
+const enCurso = new Set();
+
+const $ = (id) => document.getElementById(id);
+
+function botonCopiar(texto) {
+  const b = document.createElement("button");
+  b.className = "copy"; b.type = "button"; b.textContent = "Copiar";
+  b.addEventListener("click", () => {
+    const hecho = () => { b.textContent = "Copiado"; b.classList.add("ok"); setTimeout(() => { b.textContent = "Copiar"; b.classList.remove("ok"); }, 1400); };
+    try {
+      navigator.clipboard.writeText(texto).then(hecho, () => seleccionar(b));
+    } catch (e) { seleccionar(b); }
+  });
+  return b;
+}
+function seleccionar(b) {
+  const t = b.parentElement.querySelector(".text");
+  const r = document.createRange(); r.selectNodeContents(t);
+  const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+  b.textContent = "Pulsa Ctrl+C";
+}
+function campo(etiqueta, texto, extra) {
+  const f = document.createElement("div"); f.className = "field";
+  const l = document.createElement("div"); l.className = "label"; l.textContent = etiqueta;
+  const row = document.createElement("div"); row.className = "copyrow";
+  const t = document.createElement("div"); t.className = "text" + (extra ? " " + extra : ""); t.textContent = texto;
+  row.append(t, botonCopiar(texto)); f.append(l, row);
+  return f;
+}
+function horaMexico(hora) {
+  const [h, m] = hora.split(":").map(Number);
+  const mx = (h - 7 + 24) % 24, ar = (h - 4 + 24) % 24;
+  const f = (x) => String(x).padStart(2, "0") + ":" + String(m).padStart(2, "0");
+  return `México ${f(mx)} · Argentina ${f(ar)}`;
+}
+function nombreDia(fecha) {
+  const d = new Date(fecha + "T12:00:00");
+  return `${DIAS[d.getDay()]} ${d.getDate()} ${MESES[d.getMonth()]}`;
+}
+
+function pintarCanal() {
+  const c = $("canal"); c.textContent = "";
+  for (const [k, v] of CANAL) c.append(campo(k, v));
+}
+
+function pintar() {
+  const total = filas.length, hechos = filas.filter((r) => r.programado).length;
+  $("count").textContent = `${hechos} / ${total}`;
+  $("barfill").style.width = total ? (hechos / total * 100) + "%" : "0";
+  const lista = $("list"); lista.textContent = "";
+  const visibles = filas.filter((r) => filtro === "all" || (filtro === "done" ? r.programado : !r.programado));
+  if (!total) {
+    lista.innerHTML = '<div class="empty">Todavía no hay Shorts en la parrilla. Cuando Claude prepare los clips de un vídeo, aparecerán aquí con su día y su hora.</div>';
+    return;
+  }
+  if (!visibles.length) {
+    const e = document.createElement("div"); e.className = "empty";
+    e.textContent = filtro === "pend" ? "Todo programado. Pásale a Claude otro vídeo para llenar la semana que viene." : "Aún no has marcado ninguno como programado.";
+    lista.append(e); return;
+  }
+  const porDia = new Map();
+  for (const r of visibles) { if (!porDia.has(r.fecha)) porDia.set(r.fecha, []); porDia.get(r.fecha).push(r); }
+  for (const [fecha, items] of porDia) {
+    const sec = document.createElement("section"); sec.className = "day";
+    const h = document.createElement("h2");
+    const hechosDia = filas.filter((r) => r.fecha === fecha && r.programado).length;
+    const totalDia = filas.filter((r) => r.fecha === fecha).length;
+    h.textContent = nombreDia(fecha);
+    const s = document.createElement("small"); s.textContent = `${hechosDia}/${totalDia} programados`; h.append(s);
+    sec.append(h);
+    for (const r of items) sec.append(tarjeta(r));
+    lista.append(sec);
+  }
+}
+
+function tarjeta(r) {
+  const c = document.createElement("article"); c.className = "card" + (r.programado ? " done" : "");
+  const top = document.createElement("div"); top.className = "top";
+  const t = document.createElement("span"); t.className = "time"; t.textContent = r.hora;
+  const tz = document.createElement("span"); tz.className = "tz"; tz.textContent = horaMexico(r.hora);
+  const f = document.createElement("span"); f.className = "file"; f.textContent = r.archivo;
+  const sc = document.createElement("span"); sc.className = "score"; sc.innerHTML = "Potencial <b></b>/10"; sc.querySelector("b").textContent = r.puntuacion ?? "–";
+  top.append(t, tz, f, sc);
+  const btn = document.createElement("button");
+  btn.className = "toggle"; btn.type = "button";
+  btn.setAttribute("aria-pressed", r.programado ? "true" : "false");
+  btn.textContent = r.programado ? "✓ Programado" : "Marcar como programado";
+  btn.disabled = soloLectura || enCurso.has(r.id);
+  btn.addEventListener("click", () => alternar(r, btn));
+  c.append(top, campo("Título", r.titulo, "title"), campo("Descripción", r.descripcion), campo("Comentario para fijar", r.comentario), btn);
+  return c;
+}
+
+function leerMarcas() { try { return JSON.parse(localStorage.getItem("dvc-marcas") || "{}"); } catch (e) { return {}; } }
+function modoLocal() {
+  const m = leerMarcas();
+  filas = LOCAL.map((r) => ({ ...r, programado: !!m[r.id] }));
+  aviso("Modo sin conexión: lo que marques se guarda en este navegador.");
+  pintar();
+}
+async function alternar(r, btn) {
+  if (!db) {
+    const m = leerMarcas(); m[r.id] = !r.programado;
+    try { localStorage.setItem("dvc-marcas", JSON.stringify(m)); } catch (e) {}
+    r.programado = !r.programado; pintar(); return;
+  }
+  if (enCurso.has(r.id)) return;
+  enCurso.add(r.id); btn.disabled = true;
+  try {
+    await db.doc("shorts/" + r.id).update({ programado: !r.programado });
+  } catch (e) {
+    if (e && e.code === "invalid_argument") { soloLectura = true; aviso("Solo el dueño del canal puede marcar Shorts.", "warn"); }
+    else aviso("No se pudo guardar. Inténtalo otra vez en un momento.", "warn");
+  } finally { enCurso.delete(r.id); pintar(); }
+}
+
+function aviso(txt, kind) { const s = $("status"); s.textContent = txt; s.dataset.kind = kind || ""; }
+
+for (const [id, val] of [["f-pend", "pend"], ["f-all", "all"], ["f-done", "done"]]) {
+  $(id).addEventListener("click", () => {
+    filtro = val;
+    for (const b of document.querySelectorAll(".chip")) b.setAttribute("aria-pressed", b.id === id ? "true" : "false");
+    pintar();
+  });
+}
+
+pintarCanal();
+
+(async () => {
+  db = await (window.claude?.use?.("db") ?? Promise.resolve(null));
+  if (!db) { modoLocal(); return; }
+  const timer = setTimeout(() => aviso("La parrilla tarda en cargar; puede que no esté al día.", "warn"), 10000);
+  db.collection("shorts").orderBy("orden").onSnapshot((snap) => {
+    filas = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+    if (!snap.metadata.fromCache) { clearTimeout(timer); aviso("Guardado en la nube: se ve igual en el PC y en el móvil."); }
+    pintar();
+  }, (e) => { clearTimeout(timer); aviso("No se pudo cargar la parrilla. Recarga la página.", "warn"); });
+})();
+</script>

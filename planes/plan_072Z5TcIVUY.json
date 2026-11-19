@@ -1,0 +1,60 @@
+{
+ "resumen": "Free roam de GTA 6 por Vice City y Leonida: bares, playa, gimnasio, talleres y muchas conversaciones de NPCs que reaccionan a todo.",
+ "clips": [
+  {
+   "start": 1497, "end": 1552,
+   "titulo": "Los NPCs de GTA 6 ya no se dejan",
+   "gancho": "SE VAN A PEGAR",
+   "descripcion": "En GTA 6 si molestas a un NPC en la playa, te planta cara. Te lo cuento.",
+   "hashtags": ["gta6", "gta", "gtavi", "vicecity", "rockstar", "gaming", "npc"],
+   "puntuacion": 9,
+   "motivo": "Tension creciente, insultos y empujones: gancho de pelea.",
+   "narracion": "Estamos en la *playa* de Vice City y este tío no para de molestar a la gente. Pero ojo, porque en GTA 6 los NPCs ya *no se callan*. Mira cómo le planta cara: échate para atrás, no lo vuelvas a hacer. Y él sigue, y sigue. Le dice que se calle, que ni le conoce. Y cuando parece que se va a liar, *se le encara*. Los NPCs ahora *recuerdan* lo que les haces y reaccionan. ¿Tú le habrías pegado?",
+   "carteles": [{"palabra": "callan", "texto": "NPCS CON CARÁCTER"}, {"palabra": "recuerdan", "texto": "TE RECUERDAN"}]
+  },
+  {
+   "start": 1838, "end": 1878,
+   "titulo": "Un NPC de GTA 6 nombra Liberty City",
+   "gancho": "¿LIBERTY CITY EN GTA 6?",
+   "descripcion": "Escucha lo que dice esta chica en Vice City... ¿pista de Liberty City?",
+   "hashtags": ["gta6", "libertycity", "gtavi", "vicecity", "gtanews", "rockstar"],
+   "puntuacion": 9,
+   "motivo": "Mencion a Liberty City: dato que genera debate en comentarios.",
+   "narracion": "Escucha bien a esta chica de Vice City. Está mosqueadísima porque su madre le ha cortado el grifo y ya no le compra nada. Hasta ahí normal. Pero luego pregunta cuántos likes tiene su último post, el de cuando estaba en *Liberty City* con su amiga Mel. Sí, *Liberty City*, la ciudad de GTA 4. ¿Pista de algo más grande o solo un guiño? Te leo en comentarios.",
+   "carteles": [{"palabra": "Liberty", "texto": "LIBERTY CITY"}, {"palabra": "grifo", "texto": "SIN DINERO"}]
+  },
+  {
+   "start": 1652, "end": 1690,
+   "titulo": "En GTA 6 puedes acariciar perros",
+   "gancho": "PUEDES ACARICIAR PERROS",
+   "descripcion": "Por fin: en GTA 6 puedes agacharte y acariciar a los perros.",
+   "hashtags": ["gta6", "gtavi", "perros", "gaming", "rockstar", "detalles"],
+   "puntuacion": 8,
+   "motivo": "Detalle tierno muy compartible.",
+   "narracion": "Paseando por la playa de Vice City nos encontramos con este perro, y mira lo que hace. Se agacha y lo *acaricia*. En GTA 6 por fin puedes *acariciar perros*. Y fíjate en lo que le dice: quién es el ladronzuelo más bueno. Los detalles de Rockstar no tienen fin.",
+   "carteles": [{"palabra": "acaricia", "texto": "ACARICIAR PERROS"}]
+  },
+  {
+   "start": 120, "end": 168,
+   "titulo": "La policía de GTA 6 detiene a cualquiera",
+   "gancho": "LA POLICÍA YA NO PERDONA",
+   "descripcion": "La policía de GTA 6 detiene a un skater delante de ti y los NPCs reaccionan.",
+   "hashtags": ["gta6", "gtavi", "policia", "leonida", "rockstar", "gaming"],
+   "puntuacion": 8,
+   "motivo": "Policia en accion en la calle y reacciones de NPCs.",
+   "narracion": "Atardecer en Leonida y la *policía* acaba de parar a un chaval en monopatín en mitad de la carretera. Fíjate en la gente de alrededor: uno te suelta que no te metas y sigas andando. Y el poli, cuando se le escapa el sospechoso, grita que le sigan, que *no lo pueden perder*. La policía de GTA 6 vive su propia vida aunque tú no hagas nada.",
+   "carteles": [{"palabra": "policía", "texto": "POLICÍA ACTIVA"}, {"palabra": "pueden", "texto": "PERSECUCIÓN"}]
+  },
+  {
+   "start": 1150, "end": 1205,
+   "titulo": "Pintar el coche en GTA 6 cuesta 1000$",
+   "gancho": "VUELVE EL TALLER DE PINTURA",
+   "descripcion": "Robamos un muscle car y lo llevamos al taller de pintura de GTA 6.",
+   "hashtags": ["gta6", "gtavi", "coches", "payandspray", "rockstar", "gaming"],
+   "puntuacion": 7,
+   "motivo": "Dato util de jugabilidad con robo de coche incluido.",
+   "narracion": "Nos acabamos de llevar este muscle car amarillo por las calles de Vice City. Y como está buscado, toca esconderlo. Entramos en el taller y mira: vuelve el *taller de pintura*. Lo puedes dejar azul, pero cuesta *mil dólares* y no nos llega. Y atento, porque si la policía está cerca, *no te deja entrar*.",
+   "carteles": [{"palabra": "taller", "texto": "TALLER DE PINTURA"}, {"palabra": "mil", "texto": "1000 $"}]
+  }
+ ]
+}

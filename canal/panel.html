@@ -257,7 +257,7 @@ function tarjeta(r) {
   const top = document.createElement("div"); top.className = "top";
   const t = document.createElement("span"); t.className = "time"; t.textContent = r.hora;
   const tz = document.createElement("span"); tz.className = "tz"; tz.textContent = horaMexico(r.hora);
-  const f = document.createElement("span"); f.className = "file"; f.textContent = r.archivo;
+  const f = document.createElement("span"); f.className = "file"; f.textContent = "C:\\clipper\\clips\\" + r.video + "\\" + r.archivo;
   const sc = document.createElement("span"); sc.className = "score"; sc.innerHTML = "Potencial <b></b>/10"; sc.querySelector("b").textContent = r.puntuacion ?? "–";
   top.append(t, tz, f, sc);
   const btn = document.createElement("button");

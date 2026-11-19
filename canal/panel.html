@@ -1,0 +1,305 @@
+<title>Dato Vice City Planner</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: una columna de "tarjetas de emisión" agrupadas por día, como la parrilla de una tele de Vice City de noche. */
+:root {
+  color-scheme: dark;
+  --bg: #120a1f;
+  --panel: #1c1230;
+  --panel-2: #251840;
+  --line: #3a2a5c;
+  --fg: #f4ecff;
+  --muted: #b3a2d1;
+  --pink: #ff4fa8;
+  --orange: #ffa94d;
+  --cyan: #5fe1ff;
+  --ok: #4ade80;
+  --ok-bg: #12321f;
+  --display: "Bowlby One SC", "Arial Black", Impact, sans-serif;
+  --body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--body);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding-block: 24px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+header { display: flex; flex-direction: column; gap: 14px; }
+.stars { color: var(--fg); letter-spacing: 6px; font-size: 18px; }
+h1 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(30px, 7vw, 52px);
+  line-height: 1;
+  margin: 0;
+  background: linear-gradient(180deg, var(--pink), var(--orange));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-wrap: balance;
+}
+.sub { color: var(--muted); margin: 0; }
+.progress { display: flex; flex-direction: column; gap: 8px; }
+.progress-row { display: flex; justify-content: space-between; gap: 12px; font-variant-numeric: tabular-nums; }
+.progress-row strong { font-family: var(--mono); }
+.bar { height: 10px; border-radius: 99px; background: var(--panel-2); overflow: hidden; }
+.bar > span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--pink), var(--orange)); transition: width .3s; }
+.status { font-size: 13px; color: var(--muted); }
+.status[data-kind="warn"] { color: var(--orange); }
+
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  font: 600 14px var(--body);
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--fg);
+  border-radius: 99px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.chip[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.chip:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+
+details.canal { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; }
+details.canal summary { cursor: pointer; padding: 14px 16px; font-weight: 700; }
+.canal-body { padding: 0 16px 16px; display: flex; flex-direction: column; gap: 14px; }
+
+.day { display: flex; flex-direction: column; gap: 12px; }
+.day h2 {
+  font-family: var(--display); font-weight: 400; font-size: 20px; margin: 0;
+  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+}
+.day h2 small { font-family: var(--body); font-size: 13px; color: var(--muted); font-weight: 500; }
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+.card.done { background: var(--ok-bg); border-color: #24583a; }
+.card.done .field { opacity: .55; }
+.top { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.time {
+  font-family: var(--mono); font-weight: 700; font-size: 20px;
+  color: var(--bg); background: var(--cyan); border-radius: 8px; padding: 2px 10px;
+  font-variant-numeric: tabular-nums;
+}
+.tz { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.file { font-family: var(--mono); font-size: 13px; color: var(--orange); overflow-wrap: anywhere; }
+.score { margin-left: auto; font-size: 13px; color: var(--muted); }
+.score b { color: var(--fg); }
+
+.field { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.label { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.copyrow { display: flex; gap: 8px; align-items: flex-start; }
+.text {
+  flex: 1; min-width: 0; white-space: pre-wrap; overflow-wrap: anywhere;
+  background: var(--panel-2); border-radius: 8px; padding: 8px 10px;
+}
+.text.title { font-weight: 700; font-size: 16px; }
+.copy {
+  flex: none; font: 600 13px var(--body); cursor: pointer;
+  background: transparent; color: var(--cyan); border: 1px solid var(--cyan);
+  border-radius: 8px; padding: 7px 10px;
+}
+.copy.ok { color: var(--ok); border-color: var(--ok); }
+
+.toggle {
+  align-self: flex-start;
+  font: 700 15px var(--body); cursor: pointer;
+  border-radius: 10px; padding: 10px 16px;
+  border: 2px solid var(--pink); background: transparent; color: var(--pink);
+}
+.toggle[aria-pressed="true"] { background: var(--ok); border-color: var(--ok); color: #06200f; }
+.toggle:disabled { opacity: .5; cursor: not-allowed; }
+
+.empty { background: var(--panel); border: 1px dashed var(--line); border-radius: 14px; padding: 24px; color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { .bar > span { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="stars" aria-hidden="true">★★★★★★</div>
+    <h1>Dato Vice City</h1>
+    <p class="sub">Parrilla de Shorts: copia el título, la descripción y el comentario, prográmalo en YouTube Studio y márcalo.</p>
+    <div class="progress">
+      <div class="progress-row"><span>Programados</span><strong id="count">0 / 0</strong></div>
+      <div class="bar"><span id="barfill"></span></div>
+      <div class="status" id="status">Cargando la parrilla…</div>
+    </div>
+  </header>
+
+  <details class="canal">
+    <summary>Datos del canal (descripción y palabras clave)</summary>
+    <div class="canal-body" id="canal"></div>
+  </details>
+
+  <div class="filters" role="group" aria-label="Filtrar">
+    <button class="chip" id="f-pend" aria-pressed="true">Pendientes</button>
+    <button class="chip" id="f-all" aria-pressed="false">Todos</button>
+    <button class="chip" id="f-done" aria-pressed="false">Programados</button>
+  </div>
+
+  <main id="list">
+    <div class="empty">La parrilla aparecerá aquí en cuanto cargue. Cada Short tendrá su hora, su título, su descripción y un botón para marcarlo como programado.</div>
+  </main>
+</div>
+
+<script>
+const CANAL = [
+  ["Descripción del canal", "Cada día un dato, un secreto o un momentazo de GTA 6 contado en español 🌴🚓\nVice City, Leonida, NPCs que te sorprenden, persecuciones y detalles que nadie ve.\nActiva la campanita y no te pierdas ni uno.\n\n#GTA6 #ViceCity #GTAVI"],
+  ["Palabras clave", "gta 6, gta vi, vice city, leonida, gta 6 español, gta 6 gameplay, gta 6 secretos, gta 6 detalles, jason y lucia, rockstar games, gta 6 shorts, gta 6 noticias"]
+];
+const DIAS = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
+const MESES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+let filtro = "pend";
+let filas = [];
+let db = null;
+let soloLectura = false;
+const enCurso = new Set();
+
+const $ = (id) => document.getElementById(id);
+
+function botonCopiar(texto) {
+  const b = document.createElement("button");
+  b.className = "copy"; b.type = "button"; b.textContent = "Copiar";
+  b.addEventListener("click", () => {
+    const hecho = () => { b.textContent = "Copiado"; b.classList.add("ok"); setTimeout(() => { b.textContent = "Copiar"; b.classList.remove("ok"); }, 1400); };
+    try {
+      navigator.clipboard.writeText(texto).then(hecho, () => seleccionar(b));
+    } catch (e) { seleccionar(b); }
+  });
+  return b;
+}
+function seleccionar(b) {
+  const t = b.parentElement.querySelector(".text");
+  const r = document.createRange(); r.selectNodeContents(t);
+  const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+  b.textContent = "Pulsa Ctrl+C";
+}
+function campo(etiqueta, texto, extra) {
+  const f = document.createElement("div"); f.className = "field";
+  const l = document.createElement("div"); l.className = "label"; l.textContent = etiqueta;
+  const row = document.createElement("div"); row.className = "copyrow";
+  const t = document.createElement("div"); t.className = "text" + (extra ? " " + extra : ""); t.textContent = texto;
+  row.append(t, botonCopiar(texto)); f.append(l, row);
+  return f;
+}
+function horaMexico(hora) {
+  const [h, m] = hora.split(":").map(Number);
+  const mx = (h - 7 + 24) % 24, ar = (h - 4 + 24) % 24;
+  const f = (x) => String(x).padStart(2, "0") + ":" + String(m).padStart(2, "0");
+  return `México ${f(mx)} · Argentina ${f(ar)}`;
+}
+function nombreDia(fecha) {
+  const d = new Date(fecha + "T12:00:00");
+  return `${DIAS[d.getDay()]} ${d.getDate()} ${MESES[d.getMonth()]}`;
+}
+
+function pintarCanal() {
+  const c = $("canal"); c.textContent = "";
+  for (const [k, v] of CANAL) c.append(campo(k, v));
+}
+
+function pintar() {
+  const total = filas.length, hechos = filas.filter((r) => r.programado).length;
+  $("count").textContent = `${hechos} / ${total}`;
+  $("barfill").style.width = total ? (hechos / total * 100) + "%" : "0";
+  const lista = $("list"); lista.textContent = "";
+  const visibles = filas.filter((r) => filtro === "all" || (filtro === "done" ? r.programado : !r.programado));
+  if (!total) {
+    lista.innerHTML = '<div class="empty">Todavía no hay Shorts en la parrilla. Cuando Claude prepare los clips de un vídeo, aparecerán aquí con su día y su hora.</div>';
+    return;
+  }
+  if (!visibles.length) {
+    const e = document.createElement("div"); e.className = "empty";
+    e.textContent = filtro === "pend" ? "Todo programado. Pásale a Claude otro vídeo para llenar la semana que viene." : "Aún no has marcado ninguno como programado.";
+    lista.append(e); return;
+  }
+  const porDia = new Map();
+  for (const r of visibles) { if (!porDia.has(r.fecha)) porDia.set(r.fecha, []); porDia.get(r.fecha).push(r); }
+  for (const [fecha, items] of porDia) {
+    const sec = document.createElement("section"); sec.className = "day";
+    const h = document.createElement("h2");
+    const hechosDia = filas.filter((r) => r.fecha === fecha && r.programado).length;
+    const totalDia = filas.filter((r) => r.fecha === fecha).length;
+    h.textContent = nombreDia(fecha);
+    const s = document.createElement("small"); s.textContent = `${hechosDia}/${totalDia} programados`; h.append(s);
+    sec.append(h);
+    for (const r of items) sec.append(tarjeta(r));
+    lista.append(sec);
+  }
+}
+
+function tarjeta(r) {
+  const c = document.createElement("article"); c.className = "card" + (r.programado ? " done" : "");
+  const top = document.createElement("div"); top.className = "top";
+  const t = document.createElement("span"); t.className = "time"; t.textContent = r.hora;
+  const tz = document.createElement("span"); tz.className = "tz"; tz.textContent = horaMexico(r.hora);
+  const f = document.createElement("span"); f.className = "file"; f.textContent = r.archivo;
+  const sc = document.createElement("span"); sc.className = "score"; sc.innerHTML = "Potencial <b></b>/10"; sc.querySelector("b").textContent = r.puntuacion ?? "–";
+  top.append(t, tz, f, sc);
+  const btn = document.createElement("button");
+  btn.className = "toggle"; btn.type = "button";
+  btn.setAttribute("aria-pressed", r.programado ? "true" : "false");
+  btn.textContent = r.programado ? "✓ Programado" : "Marcar como programado";
+  btn.disabled = soloLectura || enCurso.has(r.id);
+  btn.addEventListener("click", () => alternar(r, btn));
+  c.append(top, campo("Título", r.titulo, "title"), campo("Descripción", r.descripcion), campo("Comentario para fijar", r.comentario), btn);
+  return c;
+}
+
+async function alternar(r, btn) {
+  if (!db || enCurso.has(r.id)) return;
+  enCurso.add(r.id); btn.disabled = true;
+  try {
+    await db.doc("shorts/" + r.id).update({ programado: !r.programado });
+  } catch (e) {
+    if (e && e.code === "invalid_argument") { soloLectura = true; aviso("Solo el dueño del canal puede marcar Shorts.", "warn"); }
+    else aviso("No se pudo guardar. Inténtalo otra vez en un momento.", "warn");
+  } finally { enCurso.delete(r.id); pintar(); }
+}
+
+function aviso(txt, kind) { const s = $("status"); s.textContent = txt; s.dataset.kind = kind || ""; }
+
+for (const [id, val] of [["f-pend", "pend"], ["f-all", "all"], ["f-done", "done"]]) {
+  $(id).addEventListener("click", () => {
+    filtro = val;
+    for (const b of document.querySelectorAll(".chip")) b.setAttribute("aria-pressed", b.id === id ? "true" : "false");
+    pintar();
+  });
+}
+
+pintarCanal();
+
+(async () => {
+  db = await (window.claude?.use?.("db") ?? Promise.resolve(null));
+  if (!db) { aviso("Inicia sesión en Claude para ver y marcar la parrilla.", "warn"); return; }
+  const timer = setTimeout(() => aviso("La parrilla tarda en cargar; puede que no esté al día.", "warn"), 10000);
+  db.collection("shorts").orderBy("orden").onSnapshot((snap) => {
+    filas = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+    if (!snap.metadata.fromCache) { clearTimeout(timer); aviso("Guardado en la nube: se ve igual en el PC y en el móvil."); }
+    pintar();
+  }, (e) => { clearTimeout(timer); aviso("No se pudo cargar la parrilla. Recarga la página.", "warn"); });
+})();
+</script>

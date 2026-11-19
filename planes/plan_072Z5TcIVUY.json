@@ -1,60 +1,1181 @@
 {
- "resumen": "Free roam de GTA 6 por Vice City y Leonida: bares, playa, gimnasio, talleres y muchas conversaciones de NPCs que reaccionan a todo.",
+ "version": 2,
+ "resumen": "Free roam de GTA 6 por Vice City y Leonida.",
  "clips": [
   {
-   "start": 1497, "end": 1552,
-   "titulo": "Los NPCs de GTA 6 ya no se dejan",
+   "start": 828,
+   "end": 888,
+   "titulo": "Roba un jet privado bajo fuego y vuela sobre Vice City",
+   "gancho": "ROBA UN JET PRIVADO",
+   "descripcion": "Jason se mete en un jet privado acribillado a balazos, despega con la policía encima y vuela de canto entre los rascacielos de Vice City.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "vicecity",
+    "avion",
+    "gtavi",
+    "gaming",
+    "rockstargames",
+    "jetprivado"
+   ],
+   "puntuacion": 8,
+   "motivo": "Robo de avión con tiroteo, despegue y vuelo entre rascacielos: muy visual y épico.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Atentos, que Jason va a robar un *jet privado* con la policía disparando."
+    },
+    {
+     "t": 5.5,
+     "texto": "Mira los *agujeros de bala* en el fuselaje."
+    },
+    {
+     "t": 9.5,
+     "texto": "Arranca motores mientras la cosa se calienta."
+    },
+    {
+     "t": 18,
+     "texto": "Llegan los *helicópteros de la poli* a por él."
+    },
+    {
+     "t": 22,
+     "texto": "Y él, tan tranquilo, *rodando* hacia la pista."
+    },
+    {
+     "t": 25.5,
+     "texto": "Detrás, los *aviones de pasajeros* aparcados."
+    },
+    {
+     "t": 30,
+     "texto": "Pista libre y *a fondo* con Vice City delante."
+    },
+    {
+     "t": 36,
+     "texto": "¡Y *despega*!"
+    },
+    {
+     "t": 38,
+     "texto": "Mira el *skyline de Vice City* desde el aire."
+    },
+    {
+     "t": 48,
+     "texto": "Ahora pasa *de canto* entre los rascacielos, tío."
+    },
+    {
+     "t": 52,
+     "texto": "Esto parece una peli, no un *videojuego*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 6,
+     "texto": "JET ROBADO"
+    },
+    {
+     "t": 18,
+     "texto": "POLICÍA AÉREA"
+    },
+    {
+     "t": 36,
+     "texto": "DESPEGUE"
+    },
+    {
+     "t": 48,
+     "texto": "VUELO EXTREMO"
+    }
+   ]
+  },
+  {
+   "start": 1495,
+   "end": 1555,
+   "titulo": "Bronca en la playa de Vice City acaba a puñetazos",
    "gancho": "SE VAN A PEGAR",
-   "descripcion": "En GTA 6 si molestas a un NPC en la playa, te planta cara. Te lo cuento.",
-   "hashtags": ["gta6", "gta", "gtavi", "vicecity", "rockstar", "gaming", "npc"],
-   "puntuacion": 9,
-   "motivo": "Tension creciente, insultos y empujones: gancho de pelea.",
-   "narracion": "Estamos en la *playa* de Vice City y este tío no para de molestar a la gente. Pero ojo, porque en GTA 6 los NPCs ya *no se callan*. Mira cómo le planta cara: échate para atrás, no lo vuelvas a hacer. Y él sigue, y sigue. Le dice que se calle, que ni le conoce. Y cuando parece que se va a liar, *se le encara*. Los NPCs ahora *recuerdan* lo que les haces y reaccionan. ¿Tú le habrías pegado?",
-   "carteles": [{"palabra": "callan", "texto": "NPCS CON CARÁCTER"}, {"palabra": "recuerdan", "texto": "TE RECUERDAN"}]
+   "descripcion": "Un tío de la playa se pone chulo y la discusión termina en pelea a puñetazos sobre la arena.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "vicecity",
+    "gaming",
+    "pelea",
+    "gta6gameplay",
+    "rockstar"
+   ],
+   "puntuacion": 7,
+   "motivo": "Pelea con NPC con insultos reales y escalada clara, muy de reacción.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Atentos, que este tío de la playa se cree el *más duro* de Vice City."
+    },
+    {
+     "t": 9,
+     "texto": "Le dice que *se aparte* y que no lo vuelva a hacer."
+    },
+    {
+     "t": 14,
+     "texto": "Y mira, empiezan los *empujones*."
+    },
+    {
+     "t": 26.6,
+     "texto": "Se acabó la charla: *puñetazos* en plena playa."
+    },
+    {
+     "t": 30,
+     "texto": "*Al suelo* a la primera, tío."
+    },
+    {
+     "t": 32.8,
+     "texto": "Pero se levanta y sigue *repartiendo*."
+    },
+    {
+     "t": 37.2,
+     "texto": "Le pregunta si se cree *intocable*."
+    },
+    {
+     "t": 42,
+     "texto": "Ahora se *agarran* en el suelo, encima de las toallas."
+    },
+    {
+     "t": 48,
+     "texto": "Y los bañistas de fondo, tan *tranquilos*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 14,
+     "texto": "EMPUJONES"
+    },
+    {
+     "t": 26,
+     "texto": "PELEA"
+    },
+    {
+     "t": 30,
+     "texto": "DERRIBADO"
+    },
+    {
+     "t": 42,
+     "texto": "CUERPO A CUERPO"
+    }
+   ]
   },
   {
-   "start": 1838, "end": 1878,
-   "titulo": "Un NPC de GTA 6 nombra Liberty City",
-   "gancho": "¿LIBERTY CITY EN GTA 6?",
-   "descripcion": "Escucha lo que dice esta chica en Vice City... ¿pista de Liberty City?",
-   "hashtags": ["gta6", "libertycity", "gtavi", "vicecity", "gtanews", "rockstar"],
-   "puntuacion": 9,
-   "motivo": "Mencion a Liberty City: dato que genera debate en comentarios.",
-   "narracion": "Escucha bien a esta chica de Vice City. Está mosqueadísima porque su madre le ha cortado el grifo y ya no le compra nada. Hasta ahí normal. Pero luego pregunta cuántos likes tiene su último post, el de cuando estaba en *Liberty City* con su amiga Mel. Sí, *Liberty City*, la ciudad de GTA 4. ¿Pista de algo más grande o solo un guiño? Te leo en comentarios.",
-   "carteles": [{"palabra": "Liberty", "texto": "LIBERTY CITY"}, {"palabra": "grifo", "texto": "SIN DINERO"}]
+   "start": 118,
+   "end": 172,
+   "titulo": "La policía para a un tío que quiere polis a caballo",
+   "gancho": "QUIERE POLIS A CABALLO",
+   "descripcion": "La policía para a un tío en la carretera, le detienen... y tumba al agente y sale corriendo.",
+   "hashtags": [
+    "gta6",
+    "policia",
+    "gta",
+    "vicecity",
+    "gaming",
+    "gta6gameplay",
+    "npc"
+   ],
+   "puntuacion": 7,
+   "motivo": "Diálogos absurdos de NPC más detención que sale mal: muy compartible.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Atardecer en Vice City y la *policía* ha parado a este tío."
+    },
+    {
+     "t": 5.4,
+     "texto": "Bajamos a mirar el *espectáculo*."
+    },
+    {
+     "t": 14.5,
+     "texto": "Les pregunta a los polis por qué ya no van a *caballo*."
+    },
+    {
+     "t": 26,
+     "texto": "El poli nos dice que *no nos metamos* y sigamos andando."
+    },
+    {
+     "t": 30.4,
+     "texto": "Y al tío le pillan *rebuscando* donde no debe."
+    },
+    {
+     "t": 40,
+     "texto": "Le *detienen*... y tumba al poli y sale *corriendo*."
+    },
+    {
+     "t": 44.2,
+     "texto": "Y los polis, a la carrera detrás de él."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 15,
+     "texto": "CABALLOS"
+    },
+    {
+     "t": 26,
+     "texto": "NO TE METAS"
+    },
+    {
+     "t": 39,
+     "texto": "DETENIDO"
+    },
+    {
+     "t": 44,
+     "texto": "SE ESCAPA"
+    }
+   ]
   },
   {
-   "start": 1652, "end": 1690,
+   "start": 395,
+   "end": 432,
+   "titulo": "Se estrella en la autopista y roba otro coche al momento",
+   "gancho": "CAMBIO DE COCHE EXPRÉS",
+   "descripcion": "Jason destroza su muscle car en la autopista de Vice City y en segundos ya va en un deportivo rojo robado.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "vicecity",
+    "gtavi",
+    "gaming",
+    "rockstargames",
+    "robodecoches"
+   ],
+   "puntuacion": 7,
+   "motivo": "Accidente espectacular + robo de coche a pulso en 15 s, acción clara y rápida.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Ojo, que este *muscle car* va a durar poquísimo en la autopista."
+    },
+    {
+     "t": 5,
+     "texto": "Mira, *volantazo* y se lo come entero."
+    },
+    {
+     "t": 9.5,
+     "texto": "*Siniestro total* contra la pickup roja."
+    },
+    {
+     "t": 13,
+     "texto": "Pero tío, ni se inmuta: sale del coche."
+    },
+    {
+     "t": 16.5,
+     "texto": "Salta el capó y va a por el *deportivo rojo*."
+    },
+    {
+     "t": 22,
+     "texto": "¡Y saca al conductor *a pulso*!"
+    },
+    {
+     "t": 25,
+     "texto": "Coche nuevo y a seguir rodando, *como si nada*."
+    },
+    {
+     "t": 28.8,
+     "texto": "Así se cambia de coche en *GTA 6*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 9.5,
+     "texto": "SINIESTRO TOTAL"
+    },
+    {
+     "t": 22,
+     "texto": "ROBO EXPRÉS"
+    },
+    {
+     "t": 25,
+     "texto": "COCHE NUEVO"
+    }
+   ]
+  },
+  {
+   "start": 1338,
+   "end": 1380,
+   "titulo": "GTA 6: un influencer acaba con 40 influencers",
+   "gancho": "ACABÓ CON 40 INFLUENCERS",
+   "descripcion": "Paseando por la playa de Vice City se escucha que el sospechoso es un influencer que acabó con 40 influencers.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "vicecity",
+    "influencers",
+    "gaming",
+    "rockstar",
+    "humor"
+   ],
+   "puntuacion": 7,
+   "motivo": "La sátira de redes sociales es muy compartible y el dato es corto y potente.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Ojo a lo que se oye en la playa de *GTA 6*."
+    },
+    {
+     "t": 5.3,
+     "texto": "Pasa junto a la gente en bikini y, de repente..."
+    },
+    {
+     "t": 15,
+     "texto": "El sospechoso es un *influencer* que acabó con *40 influencers*."
+    },
+    {
+     "t": 19.5,
+     "texto": "La sátira de GTA con las redes sociales vuelve más *fuerte* que nunca."
+    },
+    {
+     "t": 25,
+     "texto": "Mientras, sigue paseando hacia la caseta de *socorristas*."
+    },
+    {
+     "t": 33.2,
+     "texto": "Se oye: ¿te quedas en el *hotel* esta noche?"
+    }
+   ],
+   "carteles": [
+    {
+     "t": 10,
+     "texto": "40 INFLUENCERS"
+    },
+    {
+     "t": 19.5,
+     "texto": "SÁTIRA"
+    },
+    {
+     "t": 31.2,
+     "texto": "HOTEL"
+    }
+   ]
+  },
+  {
+   "start": 1650,
+   "end": 1692,
    "titulo": "En GTA 6 puedes acariciar perros",
    "gancho": "PUEDES ACARICIAR PERROS",
-   "descripcion": "Por fin: en GTA 6 puedes agacharte y acariciar a los perros.",
-   "hashtags": ["gta6", "gtavi", "perros", "gaming", "rockstar", "detalles"],
-   "puntuacion": 8,
-   "motivo": "Detalle tierno muy compartible.",
-   "narracion": "Paseando por la playa de Vice City nos encontramos con este perro, y mira lo que hace. Se agacha y lo *acaricia*. En GTA 6 por fin puedes *acariciar perros*. Y fíjate en lo que le dice: quién es el ladronzuelo más bueno. Los detalles de Rockstar no tienen fin.",
-   "carteles": [{"palabra": "acaricia", "texto": "ACARICIAR PERROS"}]
+   "descripcion": "Entre las palmeras de la playa aparece un perrito en un campamento y, claro, toca acariciarlo.",
+   "hashtags": [
+    "gta6",
+    "perros",
+    "gta",
+    "vicecity",
+    "gaming",
+    "gta6gameplay"
+   ],
+   "puntuacion": 6,
+   "motivo": "Los animales y los detalles tiernos funcionan muy bien en TikTok.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Paseando entre palmeras en GTA 6, ojo a quién se encuentra."
+    },
+    {
+     "t": 9.8,
+     "texto": "Un *perrito* en un campamento entre los arbustos."
+    },
+    {
+     "t": 13,
+     "texto": "Y sí, en GTA 6 puedes *acariciar perros*."
+    },
+    {
+     "t": 16.5,
+     "texto": "Mira cómo se deja, tío."
+    },
+    {
+     "t": 22.8,
+     "texto": "Le llama *pequeño ladrón*, que tiene su gracia."
+    },
+    {
+     "t": 30,
+     "texto": "Y de paso cotillea las cosas del *campamento*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 8,
+     "texto": "PERRO"
+    },
+    {
+     "t": 14,
+     "texto": "SE PUEDE ACARICIAR"
+    },
+    {
+     "t": 20,
+     "texto": "BUEN LADRÓN"
+    }
+   ]
   },
   {
-   "start": 120, "end": 168,
-   "titulo": "La policía de GTA 6 detiene a cualquiera",
-   "gancho": "LA POLICÍA YA NO PERDONA",
-   "descripcion": "La policía de GTA 6 detiene a un skater delante de ti y los NPCs reaccionan.",
-   "hashtags": ["gta6", "gtavi", "policia", "leonida", "rockstar", "gaming"],
-   "puntuacion": 8,
-   "motivo": "Policia en accion en la calle y reacciones de NPCs.",
-   "narracion": "Atardecer en Leonida y la *policía* acaba de parar a un chaval en monopatín en mitad de la carretera. Fíjate en la gente de alrededor: uno te suelta que no te metas y sigas andando. Y el poli, cuando se le escapa el sospechoso, grita que le sigan, que *no lo pueden perder*. La policía de GTA 6 vive su propia vida aunque tú no hagas nada.",
-   "carteles": [{"palabra": "policía", "texto": "POLICÍA ACTIVA"}, {"palabra": "pueden", "texto": "PERSECUCIÓN"}]
+   "start": 1158,
+   "end": 1206,
+   "titulo": "Va a pintar el coche y no le llega el dinero",
+   "gancho": "NO LE LLEGA EL DINERO",
+   "descripcion": "Llevamos el muscle car al Pay 'n' Spray de Ocean Beach para cambiarle el color y... sin dinero suficiente.",
+   "hashtags": [
+    "gta6",
+    "payandspray",
+    "gta",
+    "vicecity",
+    "coches",
+    "gaming"
+   ],
+   "puntuacion": 6,
+   "motivo": "Enseña el taller de pintura y sus colores, con remate gracioso de no tener dinero.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Vamos con este *muscle car* directos a pintarlo."
+    },
+    {
+     "t": 6,
+     "texto": "Mira qué gozada conducir por las calles de *Vice City*."
+    },
+    {
+     "t": 16,
+     "texto": "Se mete por un callejón hasta el *Pay 'n' Spray*."
+    },
+    {
+     "t": 20.3,
+     "texto": "Menú del taller: reparar o *repintar*."
+    },
+    {
+     "t": 25,
+     "texto": "Rojo, gris, *azul*, negro... a ver cuál elige."
+    },
+    {
+     "t": 30,
+     "texto": "Pero sale *no hay dinero suficiente*. Ni para pintura, tío."
+    },
+    {
+     "t": 35,
+     "texto": "Vuelve el *amarillo* de siempre."
+    },
+    {
+     "t": 39,
+     "texto": "Y sale del taller *derrapando* como si nada."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 20,
+     "texto": "PAY 'N' SPRAY"
+    },
+    {
+     "t": 30,
+     "texto": "SIN DINERO"
+    },
+    {
+     "t": 41,
+     "texto": "DERRAPE"
+    }
+   ]
   },
   {
-   "start": 1150, "end": 1205,
-   "titulo": "Pintar el coche en GTA 6 cuesta 1000$",
-   "gancho": "VUELVE EL TALLER DE PINTURA",
-   "descripcion": "Robamos un muscle car y lo llevamos al taller de pintura de GTA 6.",
-   "hashtags": ["gta6", "gtavi", "coches", "payandspray", "rockstar", "gaming"],
-   "puntuacion": 7,
-   "motivo": "Dato util de jugabilidad con robo de coche incluido.",
-   "narracion": "Nos acabamos de llevar este muscle car amarillo por las calles de Vice City. Y como está buscado, toca esconderlo. Entramos en el taller y mira: vuelve el *taller de pintura*. Lo puedes dejar azul, pero cuesta *mil dólares* y no nos llega. Y atento, porque si la policía está cerca, *no te deja entrar*.",
-   "carteles": [{"palabra": "taller", "texto": "TALLER DE PINTURA"}, {"palabra": "mil", "texto": "1000 $"}]
+   "start": 715,
+   "end": 772,
+   "titulo": "Roba un helicóptero en la azotea del aeropuerto",
+   "gancho": "SE LLEVA EL HELICÓPTERO",
+   "descripcion": "Jason sube al helipuerto del aeropuerto de Vice City, despega en un helicóptero y se le echa la policía encima.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "vicecity",
+    "helicoptero",
+    "gtavi",
+    "gaming",
+    "rockstargames"
+   ],
+   "puntuacion": 6,
+   "motivo": "Robo de helicóptero con vistas del aeropuerto, aunque tiene un tramo parado antes del despegue.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Atentos: Jason sube a la *azotea del aeropuerto* a por algo gordo."
+    },
+    {
+     "t": 5,
+     "texto": "Mira lo que hay ahí: un *helicóptero*."
+    },
+    {
+     "t": 8.5,
+     "texto": "Y se lo lleva sin pedir permiso."
+    },
+    {
+     "t": 13,
+     "texto": "Ojo al *helipuerto*: las vistas de la terminal son brutales."
+    },
+    {
+     "t": 21,
+     "texto": "Despega y salta el aviso: *delito denunciado*."
+    },
+    {
+     "t": 24.5,
+     "texto": "Ya tiene a la *policía* detrás, tío."
+    },
+    {
+     "t": 29,
+     "texto": "Mira la *torre de control* y los aviones ahí abajo."
+    },
+    {
+     "t": 36,
+     "texto": "Vuelo rasante por encima de *las pistas*."
+    },
+    {
+     "t": 43,
+     "texto": "La pinta del aeropuerto en *GTA 6* es una locura."
+    },
+    {
+     "t": 51,
+     "texto": "Ojo, aparecen *más helicópteros* al fondo."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 5,
+     "texto": "HELICÓPTERO"
+    },
+    {
+     "t": 21,
+     "texto": "DELITO DENUNCIADO"
+    },
+    {
+     "t": 51,
+     "texto": "MÁS HELIS"
+    }
+   ]
+  },
+  {
+   "start": 897,
+   "end": 942,
+   "titulo": "Volando boca abajo sobre la costa de Vice City",
+   "gancho": "BOCA ABAJO SOBRE VICE CITY",
+   "descripcion": "Con el jet robado y la policía detrás, Jason hace piruetas sobre la bahía, las islas y el puerto de Vice City.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "vicecity",
+    "avion",
+    "gtavi",
+    "gaming",
+    "paisajes"
+   ],
+   "puntuacion": 6,
+   "motivo": "Paisajes preciosos de la costa e islas, pero es solo vuelo sin un momento clave.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Seguimos en el *jet robado*, ahora sobre la bahía de Vice City."
+    },
+    {
+     "t": 5,
+     "texto": "Mira cómo *se tumba* sobre el agua."
+    },
+    {
+     "t": 9,
+     "texto": "Casi *boca abajo* encima de las islas, tío."
+    },
+    {
+     "t": 15,
+     "texto": "Ojo a la *costa*: rascacielos, puentes e islas."
+    },
+    {
+     "t": 21,
+     "texto": "Ese *nivel de detalle* en el agua es increíble."
+    },
+    {
+     "t": 30,
+     "texto": "Y sigue con la *poli* detrás, que no se olvide."
+    },
+    {
+     "t": 36,
+     "texto": "Ojo, ¿qué es esa *línea roja*?"
+    },
+    {
+     "t": 38.6,
+     "texto": "Pasada final sobre el *puerto*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 9,
+     "texto": "BOCA ABAJO"
+    },
+    {
+     "t": 15,
+     "texto": "COSTA DE VICE CITY"
+    },
+    {
+     "t": 38.6,
+     "texto": "PUERTO"
+    }
+   ]
+  },
+  {
+   "start": 1922,
+   "end": 1956,
+   "titulo": "Se cuela en un edificio de lujo y acaba con un guardia",
+   "gancho": "OJO AL GUARDIA",
+   "descripcion": "Jason pasea por un edificio de lujo hasta que un guardia de seguridad acaba en el suelo amenazándole con una descarga.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "vicecity",
+    "gtavi",
+    "gaming",
+    "rockstargames",
+    "npc"
+   ],
+   "puntuacion": 6,
+   "motivo": "Interiores muy detallados y un giro gracioso con el guardia, aunque la pelea es corta.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Atentos: Jason se cuela en un *edificio de lujo*, ojo al final."
+    },
+    {
+     "t": 5,
+     "texto": "Mira la *decoración art déco* de los pasillos."
+    },
+    {
+     "t": 9,
+     "texto": "Pasa por la *recepción* como si nada."
+    },
+    {
+     "t": 14,
+     "texto": "Y se mete hacia la *zona privada*..."
+    },
+    {
+     "t": 18.5,
+     "texto": "¡Guardia *al suelo*!"
+    },
+    {
+     "t": 22.6,
+     "texto": "Le amenaza con *una descarga*."
+    },
+    {
+     "t": 24.8,
+     "texto": "Y Jason *sale pitando* de allí."
+    },
+    {
+     "t": 27.5,
+     "texto": "Misión: *no volver* por aquí."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 9,
+     "texto": "RECEPCIÓN"
+    },
+    {
+     "t": 18.5,
+     "texto": "SEGURIDAD"
+    },
+    {
+     "t": 22.6,
+     "texto": "UNA DESCARGA"
+    }
+   ]
+  },
+  {
+   "start": 2026,
+   "end": 2080,
+   "titulo": "Así es el gimnasio Ajax de GTA 6 por dentro",
+   "gancho": "EL GIMNASIO DE GTA 6",
+   "descripcion": "Jason entra al Ajax Gym de Vice City: recepción, sala de pesas y NPCs con frases muy locas.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "vicecity",
+    "gimnasio",
+    "gtavi",
+    "gaming",
+    "npc"
+   ],
+   "puntuacion": 6,
+   "motivo": "Interior nuevo y NPCs con frases graciosas, pero ritmo pausado.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Jason entra al *Ajax Gym*."
+    },
+    {
+     "t": 3.3,
+     "texto": "Recepción: ¿quieres *purificar tu salud*?"
+    },
+    {
+     "t": 7.7,
+     "texto": "Y para entrenar hay que *pagar la cuota*."
+    },
+    {
+     "t": 14,
+     "texto": "Mira el *vestíbulo*: vestuarios, sofás y gente."
+    },
+    {
+     "t": 18,
+     "texto": "Sube las escaleras: *come, duerme, levanta, repite*."
+    },
+    {
+     "t": 24,
+     "texto": "Y llega a la *sala de pesas*."
+    },
+    {
+     "t": 30,
+     "texto": "Cada NPC hace su *propia rutina*, tío."
+    },
+    {
+     "t": 35,
+     "texto": "Mira a estos con las *mancuernas*."
+    },
+    {
+     "t": 44.2,
+     "texto": "Bomberos y enfermeras no: los héroes son los *promotores*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 8,
+     "texto": "MEMBRESÍA"
+    },
+    {
+     "t": 24,
+     "texto": "SALA DE PESAS"
+    },
+    {
+     "t": 44.2,
+     "texto": "HÉROES: PROMOTORES"
+    }
+   ]
+  },
+  {
+   "start": 1694,
+   "end": 1745,
+   "titulo": "Los NPCs de GTA 6 hablan de Leonida y de robar",
+   "gancho": "BUSCAN GENTE PARA ROBAR",
+   "descripcion": "Paseando con un perro por el parque, los NPCs sueltan perlas sobre Leonida, el barrio y un tal Jerry Acton.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "leonida",
+    "vicecity",
+    "gaming",
+    "rockstar",
+    "npc"
+   ],
+   "puntuacion": 6,
+   "motivo": "Diálogos ambientales con lore (Leonida, robos, Jerry Acton) y perro adorable, pero ritmo tranquilo.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Ojo, que en GTA 6 puedes *acariciar perros* y escuchar a toda la peña."
+    },
+    {
+     "t": 5.9,
+     "texto": "Mientras pasea, dos tíos hablan del *barrio*."
+    },
+    {
+     "t": 14.6,
+     "texto": "En diez años, todo serán *pijas ricas*."
+    },
+    {
+     "t": 21.6,
+     "texto": "La gente de *Leonida* tiene fama, y no de buena."
+    },
+    {
+     "t": 37.2,
+     "texto": "Le pregunta si busca más gente para *robar*."
+    },
+    {
+     "t": 45.1,
+     "texto": "Buscan a *Jerry Acton*, el cachas."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 17.8,
+     "texto": "LEONIDA"
+    },
+    {
+     "t": 34,
+     "texto": "GENTE PARA ROBAR"
+    },
+    {
+     "t": 43.7,
+     "texto": "JERRY ACTON"
+    }
+   ]
+  },
+  {
+   "start": 18,
+   "end": 60,
+   "titulo": "El piropo más raro de GTA 6: los aliens",
+   "gancho": "LE SUELTAN UN PIROPAZO",
+   "descripcion": "En un bar de playa de GTA 6 un cliente le dice que los aliens harían híbridos guapísimos con él.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "vicecity",
+    "npc",
+    "gaming",
+    "humor",
+    "rockstar"
+   ],
+   "puntuacion": 6,
+   "motivo": "Frase absurda y graciosa de NPC más ambiente nocturno de bar y menú de bebidas.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Atentos, que en este bar de playa de GTA 6 le sueltan un *piropazo*."
+    },
+    {
+     "t": 15.3,
+     "texto": "Le ha dicho que con él los *aliens* harían híbridos guapísimos."
+    },
+    {
+     "t": 26,
+     "texto": "Llega a la barra y le sale el *menú de bebidas*."
+    },
+    {
+     "t": 31,
+     "texto": "El camarero, todo amable, le atiende en la *barra*."
+    },
+    {
+     "t": 35.8,
+     "texto": "Y a *beber* de la botella."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 9,
+     "texto": "PIROPO ALIEN"
+    },
+    {
+     "t": 26,
+     "texto": "MENÚ BEBIDAS"
+    },
+    {
+     "t": 36,
+     "texto": "A BEBER"
+    }
+   ]
+  },
+  {
+   "start": 1274,
+   "end": 1330,
+   "titulo": "Roba el buggy de la policía de la playa en GTA 6",
+   "gancho": "ROBA EL BUGGY POLICIAL",
+   "descripcion": "Tras una bronca en la playa, se lleva el buggy de Vice Beach Police y cruza Vice City hasta los jardines.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "vicecity",
+    "policia",
+    "gaming",
+    "buggy",
+    "rockstar"
+   ],
+   "puntuacion": 6,
+   "motivo": "Robo del vehículo policial y recorrido variado por playa, calle y jardines.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Mira, tras una bronca en la playa, el prota va a liarla."
+    },
+    {
+     "t": 6,
+     "texto": "Pasa de largo de este *muscle car* amarillo, ojo."
+    },
+    {
+     "t": 15,
+     "texto": "Porque lo que quiere es este *buggy* de la policía."
+    },
+    {
+     "t": 19.5,
+     "texto": "Pone *Vice Beach Police*."
+    },
+    {
+     "t": 22,
+     "texto": "Se monta y se lo lleva por la *arena*."
+    },
+    {
+     "t": 30,
+     "texto": "Sube al paseo, esquivando a la *gente*."
+    },
+    {
+     "t": 34,
+     "texto": "Cruza la calle delante del autobús de *Vice City*."
+    },
+    {
+     "t": 40,
+     "texto": "Y se mete por la plaza como si fuera suyo."
+    },
+    {
+     "t": 46,
+     "texto": "Hasta acabar por los jardines, *rumbo a la playa*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 15,
+     "texto": "BUGGY POLICIAL"
+    },
+    {
+     "t": 22,
+     "texto": "ROBADO"
+    },
+    {
+     "t": 34,
+     "texto": "VICE CITY"
+    }
+   ]
+  },
+  {
+   "start": 1836,
+   "end": 1878,
+   "titulo": "Una NPC de GTA 6 menciona Liberty City",
+   "gancho": "MENCIONA LIBERTY CITY",
+   "descripcion": "Paseando por un concesionario de Vice City, una NPC de fondo suelta que estuvo en Liberty City.",
+   "hashtags": [
+    "gta6",
+    "libertycity",
+    "vicecity",
+    "gta",
+    "gta6leaks",
+    "gaming"
+   ],
+   "puntuacion": 5,
+   "motivo": "La mención a Liberty City engancha a fans, pero la imagen es solo paseo.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Paseando por Vice City, escucha a esta NPC que está *cabreadísima*."
+    },
+    {
+     "t": 6.2,
+     "texto": "Mira qué *deportivos* en el concesionario."
+    },
+    {
+     "t": 16.9,
+     "texto": "Vive con ella y la lleva en coche, pero ya *no le compra nada*."
+    },
+    {
+     "t": 28.9,
+     "texto": "Dice que necesita *dinero*. Escucha lo que dice ahora."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 12,
+     "texto": "ULTRA STATUS"
+    },
+    {
+     "t": 32,
+     "texto": "MOTO"
+    },
+    {
+     "t": 37.5,
+     "texto": "LIBERTY CITY"
+    }
+   ]
+  },
+  {
+   "start": 588,
+   "end": 624,
+   "titulo": "Choca con un SUV y saca al conductor a golpes",
+   "gancho": "LE SACA DEL COCHE",
+   "descripcion": "Cerca del aeropuerto se cruza con un SUV negro, saca al conductor a empujones y se larga tan tranquilo.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "vicecity",
+    "gaming",
+    "gta6gameplay",
+    "caos"
+   ],
+   "puntuacion": 5,
+   "motivo": "Caos rápido y claro, pero sin diálogo ni giro sorprendente.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Ojo, que este va con prisa por la zona del *aeropuerto*."
+    },
+    {
+     "t": 8,
+     "texto": "Para junto a un *SUV* y va a por el conductor."
+    },
+    {
+     "t": 12,
+     "texto": "Le saca a *empujones*, sin mediar palabra."
+    },
+    {
+     "t": 15,
+     "texto": "Le suelta un *puñetazo*."
+    },
+    {
+     "t": 18,
+     "texto": "Conductor *al suelo*."
+    },
+    {
+     "t": 20,
+     "texto": "Y se encara con *otro más*."
+    },
+    {
+     "t": 25,
+     "texto": "Luego vuelve a su coche tan *tranquilo*."
+    },
+    {
+     "t": 28.2,
+     "texto": "Y se larga como si no hubiera pasado *nada*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 10,
+     "texto": "A POR ÉL"
+    },
+    {
+     "t": 18,
+     "texto": "AL SUELO"
+    },
+    {
+     "t": 28,
+     "texto": "HUIDA"
+    }
+   ]
+  },
+  {
+   "start": 1438,
+   "end": 1478,
+   "titulo": "GTA 6: invitación a una fiesta en un avión de carga",
+   "gancho": "FIESTA EN UN AVIÓN",
+   "descripcion": "En la playa de GTA 6 los NPCs cotillean de citas y alguien tiene invitación para una fiesta en un avión de carga.",
+   "hashtags": [
+    "gta6",
+    "gta",
+    "vicecity",
+    "npc",
+    "gaming",
+    "playa"
+   ],
+   "puntuacion": 5,
+   "motivo": "Dato curioso (fiesta en avión de carga) y playa preciosa, pero diálogos poco claros.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Ojo, que en la playa de GTA 6 los NPCs *cotillean* de todo."
+    },
+    {
+     "t": 12,
+     "texto": "Cotillean sobre la *cita* de una chica."
+    },
+    {
+     "t": 15.5,
+     "texto": "Mira, se acerca a una *pickup* rosa y azul."
+    },
+    {
+     "t": 19.2,
+     "texto": "Y aquí, junto a las *tumbonas*, la cosa se pone interesante."
+    },
+    {
+     "t": 33.5,
+     "texto": "Fiesta en un *avión de carga*, nada menos."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 12,
+     "texto": "COTILLEO"
+    },
+    {
+     "t": 15.5,
+     "texto": "PICKUP"
+    },
+    {
+     "t": 28.8,
+     "texto": "AVIÓN DE CARGA"
+    }
+   ]
+  },
+  {
+   "start": 2300,
+   "end": 2360,
+   "titulo": "Parkour por los tejados de Vice City en GTA 6",
+   "gancho": "PARKOUR POR LOS TEJADOS",
+   "descripcion": "Corriendo, saltando y trepando por las azoteas de Vice City con unas vistas brutales.",
+   "hashtags": [
+    "gta6",
+    "parkour",
+    "vicecity",
+    "gta",
+    "gaming",
+    "openworld"
+   ],
+   "puntuacion": 4,
+   "motivo": "Bonito y fluido pero sin momento cumbre ni diálogo; depende de las vistas.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Mira, tío: *parkour* por los tejados de GTA 6."
+    },
+    {
+     "t": 4.5,
+     "texto": "Baja corriendo y cruza la azotea a toda pastilla."
+    },
+    {
+     "t": 9,
+     "texto": "Ojo, salta el conducto *sin frenar*."
+    },
+    {
+     "t": 13,
+     "texto": "Se para a mirar: el detalle de la *cara* es una locura."
+    },
+    {
+     "t": 18,
+     "texto": "Y sigue corriendo hacia otra escalera."
+    },
+    {
+     "t": 23,
+     "texto": "Sube por la *escalerilla* como si nada."
+    },
+    {
+     "t": 27,
+     "texto": "Ahora va por el *borde* del tejado."
+    },
+    {
+     "t": 32,
+     "texto": "Mira las vistas desde aquí arriba: la *ciudad entera*."
+    },
+    {
+     "t": 36.5,
+     "texto": "Se ve el *puente*, el río y los coches pasando abajo."
+    },
+    {
+     "t": 42,
+     "texto": "Y vuelta a correr, de tejado en tejado."
+    },
+    {
+     "t": 48,
+     "texto": "Sube las escaleras de incendios sin perder *ritmo*."
+    },
+    {
+     "t": 52,
+     "texto": "Así de grande es cada azotea en *GTA 6*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 9,
+     "texto": "SALTO"
+    },
+    {
+     "t": 23,
+     "texto": "ESCALERILLA"
+    },
+    {
+     "t": 36.5,
+     "texto": "VISTAS"
+    }
+   ]
   }
  ]
 }

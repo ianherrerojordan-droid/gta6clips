@@ -95,22 +95,55 @@ def transcribir(path):
 
 
 # ---------------------------------------------------------------- Gemini
+MODELOS_RESERVA = [m for m in os.environ.get(
+    "GEMINI_RESERVA", "gemini-flash-lite-latest,gemini-2.5-flash,gemini-2.5-flash-lite").split(",") if m]
+_agotados = set()
+
+
 def gemini(parts):
+    """Llama a Gemini; si un modelo agota su cupo diario gratis, pasa al siguiente."""
     if not GEMINI_KEY:
         raise RuntimeError("Falta GEMINI_API_KEY (mira el README).")
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
+    for modelo in [GEMINI_MODEL, *MODELOS_RESERVA]:
+        if modelo in _agotados:
+            continue
+        try:
+            return _gemini(parts, modelo)
+        except CupoDiario:
+            _agotados.add(modelo)
+            print(f"   {modelo}: cupo diario gratis agotado, pruebo con otro modelo...")
+    raise RuntimeError("Todos los modelos gratis de Gemini han agotado el cupo de hoy. "
+                       "Se renueva cada dia (sobre las 9:00 en Espana) o usa otra clave.")
+
+
+class CupoDiario(Exception):
+    pass
+
+
+def _gemini(parts, modelo):
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{modelo}:generateContent"
     body = {"contents": [{"parts": parts}], "generationConfig": {"responseMimeType": "application/json"}}
-    for intento in range(5):
+    for intento in range(4):
         try:
             r = requests.post(url, headers={"x-goog-api-key": GEMINI_KEY}, json=body, timeout=600)
         except requests.exceptions.RequestException:
             print("   Gemini no contesta, reintentando...")
             time.sleep(5)
             continue
-        if r.status_code == 429 or r.status_code >= 500:
-            espera = 20 * (intento + 1)
-            print(f"   Limite de Gemini, espero {espera}s...")
+        if r.status_code == 429:
+            txt = r.text
+            if "PerDay" in txt or "per day" in txt.lower():
+                raise CupoDiario()
+            m = re.search(r'"retryDelay":\s*"(\d+)', txt)
+            espera = int(m.group(1)) + 2 if m else 20 * (intento + 1)
+            print(f"   Limite por minuto de Gemini ({modelo}), espero {espera}s...")
             time.sleep(espera)
+            continue
+        if r.status_code == 404:
+            raise CupoDiario()  # modelo no disponible para esta clave: probar el siguiente
+        if r.status_code >= 500:
+            print(f"   Gemini saturado ({r.status_code}), reintento...")
+            time.sleep(10 * (intento + 1))
             continue
         if r.status_code >= 400:
             raise RuntimeError(f"Gemini {r.status_code}: {r.text[:300]}")
@@ -118,7 +151,7 @@ def gemini(parts):
             return r.json()["candidates"][0]["content"]["parts"][0]["text"]
         except (KeyError, IndexError):
             raise RuntimeError(f"Gemini bloqueo la respuesta: {r.text[:300]}")
-    raise RuntimeError("Gemini no responde (limite del plan gratuito). Prueba en unos minutos.")
+    raise CupoDiario()
 
 
 def elegir_clips(segmentos, info, dur_video):

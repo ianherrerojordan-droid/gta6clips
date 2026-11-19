@@ -97,10 +97,15 @@ while x < W:
 d.rectangle([0, 1180, W, H], fill=(16, 3, 26))
 for px, alto, inc, g in [(150, 1000, 110, 34), (420, 760, -70, 26), (2150, 780, 80, 26), (2420, 1040, -120, 34)]:
     palmera(d, px, 1300, alto, inc, g)
-estrellas(im, W // 2, 545, 44)
-palabra_gta(im, (W // 2, 700), "DATO VICE CITY", ImageFont.truetype(F + "BowlbyOneSC-Regular.ttf", 190), ROSA_NARANJA, prof=18, borde=12)
-fs = ImageFont.truetype(F + "Anton.ttf", 70)
-ImageDraw.Draw(im).text((W // 2 + 3, 873), "CADA DÍA UN DATO DE GTA 6", font=fs, fill=(10, 2, 15), anchor="mm")
-ImageDraw.Draw(im).text((W // 2, 870), "CADA DÍA UN DATO DE GTA 6", font=fs, fill=(255, 255, 255), anchor="mm")
+# zona visible en TODOS los dispositivos: 1546x423 centrada -> x 507-2053, y 508-931
+ZX0, ZX1, ZY0, ZY1 = 507 + 60, 2053 - 60, 508 + 18, 931 - 18
+fb = ImageFont.truetype(F + "BowlbyOneSC-Regular.ttf", 200)
+while ImageDraw.Draw(im).textbbox((0, 0), "DATO VICE CITY", font=fb, stroke_width=12)[2] > (ZX1 - ZX0) - 40:
+    fb = ImageFont.truetype(F + "BowlbyOneSC-Regular.ttf", fb.size - 4)
+estrellas(im, W // 2, ZY0 + 34, 30)
+palabra_gta(im, (W // 2, 712), "DATO VICE CITY", fb, ROSA_NARANJA, prof=14, borde=12)
+fs = ImageFont.truetype(F + "Anton.ttf", 64)
+ImageDraw.Draw(im).text((W // 2 + 3, ZY1 - 32 + 3), "CADA DÍA UN DATO DE GTA 6", font=fs, fill=(10, 2, 15), anchor="mm")
+ImageDraw.Draw(im).text((W // 2, ZY1 - 32), "CADA DÍA UN DATO DE GTA 6", font=fs, fill=(255, 255, 255), anchor="mm")
 im.convert("RGB").save(OUT + "banner.png")
 print("ok")

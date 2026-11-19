@@ -46,10 +46,11 @@ Los clips salen en `C:\clipper\clips\ID_DEL_VIDEO\`. Si lo relanzas con el mismo
 
 ## Modo Claude (por defecto, sin gastar Gemini)
 
-1. Abre `clipear.bat` y pega el link. Tu PC descarga, transcribe y crea `para_claude\ID.zip` (se abre la carpeta sola).
-2. Arrastra ese ZIP al chat de Claude Code y escribe **plan**.
-3. Claude te devuelve `plan_ID.json`: guárdalo en **Descargas**.
-4. Vuelve a `clipear.bat` y pega el mismo link: crea los clips con esa narración.
+Siempre es lo mismo: abres `clipear.bat`, pegas el link y arrastras al chat de Claude el ZIP que se abre.
+
+1. **Vista general**: tu PC descarga, transcribe y crea `para_claude\ID.zip`. Claude elige todos los clips con potencial y te devuelve `cortes_ID.json`. Guárdalo en **Descargas**.
+2. **Detalle**: pega el mismo link. Se crea `para_claude\ID_detalle.zip` con un fotograma por segundo de cada clip. Claude escribe la narración frase a frase con el segundo exacto y te devuelve `plan_ID.json`. Guárdalo en **Descargas**.
+3. **Clips**: pega el mismo link y se crean todos los clips, con la voz sincronizada con la imagen.
 
 Para que lo haga todo Gemini solo: `setx MODO gemini`.
 

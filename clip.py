@@ -24,7 +24,7 @@ OUT = Path(os.environ.get("OUT_DIR", "clips"))
 NARRAR = os.environ.get("NARRAR", "1") == "1"          # 0 = sin narracion
 VOZ = os.environ.get("VOZ", "es-ES-AlvaroNeural")      # ej: es-MX-JorgeNeural, es-ES-ElviraNeural
 VELOCIDAD = int(os.environ.get("VELOCIDAD", "8"))      # % extra de velocidad de la voz (ritmo TikTok)
-VOL_ORIGINAL = os.environ.get("VOL_ORIGINAL", "0.15")  # volumen del audio original bajo la narracion
+VOL_ORIGINAL = os.environ.get("VOL_ORIGINAL", "0.6")   # volumen del audio original (baja solo cuando habla el narrador)
 FUENTE = os.environ.get("FUENTE", "Impact")            # fuente de subtitulos (Impact, Arial Black...)
 TITULO = os.environ.get("TITULO", "1") == "1"          # cartel con el gancho arriba los primeros segundos
 FORMATO = os.environ.get("FORMATO", "lleno")           # lleno = gameplay a pantalla completa; barras = con fondo difuminado
@@ -276,6 +276,45 @@ def locutar(texto, mp3, dur_clip):
     return pal, nd
 
 
+def pista_narracion(wd, i, lineas, dur_clip):
+    """Locuta cada frase en su segundo exacto. lineas = [{"t": seg_desde_inicio_clip, "texto": ...}].
+    Devuelve (wav, palabras con tiempos absolutos, fin de la ultima frase)."""
+    lineas = sorted([l for l in lineas if str(l.get("texto", "")).strip()], key=lambda l: float(l["t"]))
+    if CTA:
+        lineas.append({"t": None, "texto": CTA + "."})
+    palabras, trozos, fin_prev = [], [], 0.0
+    for k, l in enumerate(lineas):
+        t = fin_prev + 0.25 if l["t"] is None else max(float(l["t"]), fin_prev + 0.1 if k else 0.0)
+        sig = next((float(x["t"]) for x in lineas[k + 1:] if x["t"] is not None), None)
+        hueco = (sig - t - 0.1) if sig is not None else max(dur_clip - t, 3.0) + 1.5
+        texto = str(l["texto"]).replace("*", "")
+        mp3 = str((Path(wd) / f"l{i}_{k}.mp3").resolve())
+        rate = VELOCIDAD
+        pal = asyncio.run(_tts(texto, mp3, rate))
+        nd = duracion(mp3)
+        if nd > hueco and hueco > 0.5:          # no cabe: acelerar (hasta +45%)
+            rate = min(45, rate + int((nd / hueco - 1) * 100) + 4)
+            pal = asyncio.run(_tts(texto, mp3, rate))
+            nd = duracion(mp3)
+        if not pal:
+            pal = repartir(texto, nd)
+        palabras += [(a + t, b + t, w) for a, b, w in pal]
+        trozos.append((mp3, t))
+        fin_prev = t + nd
+    wav = f"n{i}.wav"
+    ins, filt = [], []
+    for k, (mp3, t) in enumerate(trozos):
+        ins += ["-i", mp3]
+        ms = int(t * 1000)
+        filt.append(f"[{k}:a]aresample=48000,adelay={ms}|{ms}[a{k}]")
+    filt.append("".join(f"[a{k}]" for k in range(len(trozos)))
+                + f"amix=inputs={len(trozos)}:normalize=0:duration=longest[o]")
+    run(["ffmpeg", "-y", *ins, "-filter_complex", ";".join(filt), "-map", "[o]", "-ac", "2", wav], cwd=wd)
+    for mp3, _ in trozos:
+        Path(mp3).unlink(missing_ok=True)
+    return wav, palabras, fin_prev
+
+
 def repartir(texto, dur):
     ws = texto.split()
     paso = dur / max(len(ws), 1)
@@ -326,6 +365,11 @@ def crear_ass(pal, total, gancho, out, clave=frozenset(), carteles=()):
     lineas = []
     usados = set()
     for ct in carteles:
+        if ct.get("t") is not None:
+            a = float(ct["t"])
+            lineas.append(f"Dialogue: 1,{t_ass(a)},{t_ass(min(a + 2.5, total))},Cartel,,0,0,0,,"
+                          + r"{\fscx70\fscy70\t(0,120,\fscx100\fscy100)}" + limpia(str(ct.get("texto", ""))))
+            continue
         objetivo = norm(str(ct.get("palabra", "")).split()[0]) if ct.get("palabra") else ""
         for k, (a, _, w) in enumerate(pal):
             if k not in usados and objetivo and norm(w) == objetivo and a > 3.5:
@@ -364,8 +408,10 @@ def render(wd, i, clip, total, mp3):
     na = len(entradas) // 2 + 1  # indice de la entrada de la narracion
     if mp3:
         # el audio original baja mientras habla el narrador y se mezcla de fondo
-        audio = (f"[0:a]volume={VOL_ORIGINAL}[o];[{na}:a]volume=1.6,apad[n];"
-                 "[o][n]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5[a]")
+        # el audio original se oye normal y baja solo mientras habla el narrador
+        audio = (f"[0:a]volume={VOL_ORIGINAL}[o];[{na}:a]volume=1.6,apad,asplit[n1][n2];"
+                 "[o][n1]sidechaincompress=threshold=0.015:ratio=12:attack=15:release=350[d];"
+                 "[d][n2]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5[a]")
         entradas += ["-i", mp3]
     else:
         audio = "[0:a]loudnorm=I=-14:TP=-1.5[a]"
@@ -384,7 +430,7 @@ def preparar_paquete(wd, info, url, segmentos, dur_video, desde, hasta):
     """Crea para_claude/ID.zip con transcript + hojas de fotogramas para pasarselo a Claude."""
     import zipfile
     a, b = desde or 0, hasta or dur_video
-    paso = max(5, int((b - a) / 160) + 1)              # como mucho ~160 fotogramas
+    paso = max(4, int((b - a) / 240) + 1)              # como mucho ~240 fotogramas
     tmp = wd / "hojas"
     tmp.mkdir(exist_ok=True)
     for f in tmp.glob("*"):
@@ -413,21 +459,55 @@ def preparar_paquete(wd, info, url, segmentos, dur_video, desde, hasta):
             z.write(h, h.name)
     if os.name == "nt":
         subprocess.run(["explorer", "/select,", str(zp.resolve())])
-    print(f"\n>>> Arrastra este archivo al chat de Claude: {zp.resolve()}")
-    print(">>> Claude te devolvera un archivo plan_" + info["id"] + ".json. Guardalo en Descargas")
+    print(f"\n>>> PASO 1 de 2. Arrastra este archivo al chat de Claude: {zp.resolve()}")
+    print(f">>> Claude te devolvera cortes_{info['id']}.json. Guardalo en Descargas")
+    print(">>> y vuelve a pegar este mismo link aqui.\n")
+
+
+def preparar_detalle(wd, info, url, segmentos, cortes):
+    """PASO 2: un fotograma por segundo de cada clip elegido, para cuadrar la narracion al segundo."""
+    import zipfile
+    tmp = wd / "detalle"
+    tmp.mkdir(exist_ok=True)
+    for f in tmp.glob("*"):
+        f.unlink()
+    leeme = [f"VIDEO: {info['titulo']}\nCANAL: {info['canal']}\nLINK: {url}\nID: {info['id']}\n",
+             "Cada hoja: 30 fotogramas (6 columnas x 5 filas, izquierda a derecha, arriba abajo), "
+             "UNO POR SEGUNDO. El primer fotograma de la hoja N de un clip es el segundo 30*(N-1) del clip.\n"]
+    for i, c in enumerate(cortes, 1):
+        a, b = float(c["start"]), float(c["end"])
+        run(["ffmpeg", "-y", "-ss", str(a), "-t", str(b - a), "-i", "src.mp4",
+             "-vf", "fps=1,scale=256:144:force_original_aspect_ratio=decrease,"
+                    "pad=256:144:(ow-iw)/2:(oh-ih)/2,tile=6x5",
+             "-q:v", "4", f"detalle/clip{i:02d}_hoja_%d.jpg"], cwd=wd)
+        habla = "\n".join(f"  [{s['start'] - a:.1f}-{s['end'] - a:.1f}] {s['text']}" for s in segmentos
+                          if s["end"] > a and s["start"] < b) or "  (nadie habla)"
+        leeme.append(f"CLIP {i}: original {a:.0f}-{b:.0f} s ({b - a:.0f} s). Idea: {c.get('idea', c.get('titulo', ''))}\n"
+                     f"Lo que se dice (segundos desde el inicio del clip):\n{habla}\n")
+    destino = Path("para_claude")
+    destino.mkdir(exist_ok=True)
+    zp = destino / f"{info['id']}_detalle.zip"
+    with zipfile.ZipFile(zp, "w", zipfile.ZIP_DEFLATED) as z:
+        z.writestr("LEEME.txt", "\n".join(leeme))
+        for h in sorted(tmp.glob("*.jpg")):
+            z.write(h, h.name)
+    if os.name == "nt":
+        subprocess.run(["explorer", "/select,", str(zp.resolve())])
+    print(f"\n>>> PASO 2 de 2. Arrastra este archivo al chat de Claude: {zp.resolve()}")
+    print(f">>> Claude te devolvera plan_{info['id']}.json. Guardalo en Descargas")
     print(">>> y vuelve a pegar este mismo link aqui: se crearan los clips.\n")
 
 
-def buscar_plan(wd, vid):
-    cands = [wd / "plan.json", *Path.home().joinpath("Downloads").glob(f"plan_{vid}*.json"),
-             *Path(".").glob(f"plan_{vid}*.json")]
+def buscar_plan(wd, vid, tipo="plan"):
+    cands = [wd / f"{tipo}.json", *Path.home().joinpath("Downloads").glob(f"{tipo}_{vid}*.json"),
+             *Path(".").glob(f"{tipo}_{vid}*.json")]
     cands = [c for c in cands if c.exists()]
     if not cands:
         return None
     mejor = max(cands, key=lambda c: c.stat().st_mtime)
     plan = json.loads(mejor.read_text(encoding="utf-8"))
-    if mejor != wd / "plan.json":
-        (wd / "plan.json").write_text(json.dumps(plan, ensure_ascii=False, indent=1), encoding="utf-8")
+    if mejor != wd / f"{tipo}.json":
+        (wd / f"{tipo}.json").write_text(json.dumps(plan, ensure_ascii=False, indent=1), encoding="utf-8")
         try:
             mejor.unlink()   # ya esta copiado; asi el siguiente plan no se confunde
         except OSError:
@@ -458,6 +538,13 @@ def procesar(url, desde=None, hasta=None):
         segmentos = [s for s in segmentos if s["start"] >= a and s["end"] <= b]
         print(f"   (solo el tramo {minuto(a)} - {minuto(b)})")
     plan = buscar_plan(wd, info["id"])
+    if plan and plan.get("version", 1) < 2:
+        plan = None                       # plan antiguo (sin tiempos): no vale
+    cortes = None if plan else buscar_plan(wd, info["id"], "cortes")
+    if cortes and MODO != "gemini":
+        print("[3/4] Preparando los fotogramas segundo a segundo de cada clip...")
+        preparar_detalle(wd, info, url, segmentos, cortes.get("clips", []))
+        return
     if plan:
         print("[3/4] Usando el plan de Claude...")
         resumen = plan.get("resumen", "")
@@ -466,7 +553,7 @@ def procesar(url, desde=None, hasta=None):
             c["start"], c["end"] = float(c["start"]), min(float(c["end"]), dur_video)
             c.setdefault("titulo", "clip")
     elif MODO != "gemini":
-        print("[3/4] Preparando el paquete para Claude...")
+        print("[3/4] Preparando la vista general para Claude...")
         preparar_paquete(wd, info, url, segmentos, dur_video, desde, hasta)
         return
     else:
@@ -486,15 +573,14 @@ def procesar(url, desde=None, hasta=None):
         mp3, texto_nar, total, pal, clave, carteles = None, None, dur, None, frozenset(), []
         if NARRAR:
             try:
-                if c.get("narracion"):
-                    texto_nar, carteles = c["narracion"].strip(), c.get("carteles") or []
-                else:
-                    texto_nar, carteles = narracion(wd, i, c, segmentos, resumen, info)
-                if CTA:
-                    texto_nar = texto_nar.rstrip() + " " + CTA + "."
+                if isinstance(c.get("narracion"), list):          # plan de Claude: frases con tiempo
+                    lineas, carteles = c["narracion"], c.get("carteles") or []
+                else:                                              # Gemini: un bloque desde el segundo 0
+                    texto, carteles = narracion(wd, i, c, segmentos, resumen, info)
+                    lineas = [{"t": 0, "texto": texto}]
+                texto_nar = " ".join(str(l["texto"]) for l in lineas)
                 clave = claves(texto_nar)
-                mp3 = f"n{i}.mp3"
-                pal, nd = locutar(texto_nar, str(Path(wd) / mp3), dur)
+                mp3, pal, nd = pista_narracion(wd, i, lineas, dur)
                 total = min(max(dur, nd + 0.6), dur_video - c["start"])
             except Exception as e:
                 print(f"   (clip {i} sin narracion: {str(e)[:200]})")

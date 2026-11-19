@@ -313,3 +313,24 @@ Gameplay: DubStepZz (YouTube)
 #GTA6 #ViceCity #GTAVI
 ```
 **Comentario fijado:** `¿Hay parkour de verdad en GTA 6? 🤔`
+
+---
+
+## 7. Calendario: 3 Shorts al día (hora de España)
+
+| Hora España | México | Argentina | Por qué |
+|---|---|---|---|
+| **14:00** | 07:00 | 10:00 | Comida en España, mañana en LATAM |
+| **19:00** | 12:00 | 15:00 | Salida de clase/trabajo en España, mediodía en México |
+| **23:00** | 16:00 | 19:00 | Noche en España, tarde en LATAM (el mejor hueco) |
+
+| Día | 14:00 | 19:00 | 23:00 |
+|---|---|---|---|
+| Vie 20 nov | 03 Polis a caballo | 02 Pelea playa | **01 Jet privado** |
+| Sáb 21 nov | 06 Perros | 04 Chocazo autopista | **05 Influencers** |
+| Dom 22 nov | 07 Taller pintura | 09 Vice City desde el aire | **08 Helicóptero** |
+| Lun 23 nov | 11 Gimnasio | 12 NPCs roban | **10 Edificio de lujo** |
+| Mar 24 nov | 13 Piropo aliens | 15 Liberty City | **14 Buggy policía** |
+| Mié 25 nov | 16 Saca al conductor | 18 Parkour | **17 Fiesta en avión** |
+
+El mejor clip de cada día va a las 23:00.

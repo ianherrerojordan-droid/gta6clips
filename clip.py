@@ -1,0 +1,391 @@
+"""Clipper GTA 6: link de YouTube -> clips verticales narrados en espanol con contexto.
+
+Uso:  py -3.13 clip.py LINK [LINK2 ...]
+      py -3.13 clip.py LINK --desde 2:14 --hasta 20:00   (solo ese tramo)
+"""
+try:  # usar los certificados de Windows (antivirus/proxy que intercepta HTTPS)
+    import truststore
+    truststore.inject_into_ssl()
+except Exception:
+    pass
+
+import os, re, sys, json, time, base64, asyncio, subprocess
+from pathlib import Path
+
+import requests
+
+YTDLP = [sys.executable, "-m", "yt_dlp"]
+GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
+N_CLIPS = int(os.environ.get("N_CLIPS", "5"))
+WHISPER = os.environ.get("WHISPER", "small")
+COOKIES = os.environ.get("COOKIES_BROWSER", "")        # ej: chrome, edge, firefox
+OUT = Path(os.environ.get("OUT_DIR", "clips"))
+NARRAR = os.environ.get("NARRAR", "1") == "1"          # 0 = sin narracion
+VOZ = os.environ.get("VOZ", "es-ES-AlvaroNeural")      # ej: es-MX-JorgeNeural, es-ES-ElviraNeural
+VELOCIDAD = int(os.environ.get("VELOCIDAD", "8"))      # % extra de velocidad de la voz (ritmo TikTok)
+VOL_ORIGINAL = os.environ.get("VOL_ORIGINAL", "0.15")  # volumen del audio original bajo la narracion
+FUENTE = os.environ.get("FUENTE", "Arial Black")       # fuente de subtitulos (Impact, Arial...)
+TITULO = os.environ.get("TITULO", "1") == "1"          # cartel con el gancho arriba del video
+
+
+# ---------------------------------------------------------------- utilidades
+def run(cmd, cwd=None):
+    r = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, encoding="utf-8", errors="replace")
+    if r.returncode:
+        raise RuntimeError((r.stderr or r.stdout)[-600:])
+    return r.stdout.strip()
+
+
+def duracion(path):
+    return float(run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                      "-of", "default=nw=1:nk=1", str(path)]))
+
+
+def a_seg(t):
+    """'2:14' / '1:02:03' / '134' -> segundos."""
+    s = 0.0
+    for p in str(t).split(":"):
+        s = s * 60 + float(p)
+    return s
+
+
+def minuto(t):
+    return f"{int(t // 60)}:{int(t % 60):02d}"
+
+
+def json_de(txt, patron):
+    m = re.search(patron, txt, re.S)
+    if not m:
+        raise RuntimeError(f"Gemini no devolvio JSON valido: {txt[:200]}")
+    return json.loads(m.group(0))
+
+
+# ---------------------------------------------------------------- descarga
+def info_video(url):
+    out = run([*YTDLP, "--no-playlist", "--skip-download", "--print", "%(id)s",
+               "--print", "%(title)s", "--print", "%(channel)s", url]).splitlines()
+    return {"id": out[0], "titulo": out[1] if len(out) > 1 else "",
+            "canal": out[2] if len(out) > 2 else ""}
+
+
+def descargar(url, wd):
+    src = Path(wd) / "src.mp4"
+    if src.exists():
+        return src
+    cook = ["--cookies-from-browser", COOKIES] if COOKIES else []
+    run([*YTDLP, *cook, "-f", "bv*[height<=1080]+ba/b", "--merge-output-format", "mp4",
+         "--no-playlist", "-o", "src.mp4", url], cwd=wd)
+    return src
+
+
+def transcribir(path):
+    from faster_whisper import WhisperModel
+    model = WhisperModel(WHISPER, device=os.environ.get("WHISPER_DEVICE", "cpu"), compute_type="int8")
+    segs, _ = model.transcribe(str(path), word_timestamps=True, vad_filter=True)
+    segmentos, palabras = [], []
+    for s in segs:
+        segmentos.append({"start": round(s.start, 1), "end": round(s.end, 1), "text": s.text.strip()})
+        for w in s.words or []:
+            palabras.append((w.start, w.end, w.word.strip()))
+    return segmentos, palabras
+
+
+# ---------------------------------------------------------------- Gemini
+def gemini(parts):
+    if not GEMINI_KEY:
+        raise RuntimeError("Falta GEMINI_API_KEY (mira el README).")
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
+    body = {"contents": [{"parts": parts}], "generationConfig": {"responseMimeType": "application/json"}}
+    for intento in range(5):
+        try:
+            r = requests.post(url, headers={"x-goog-api-key": GEMINI_KEY}, json=body, timeout=600)
+        except requests.exceptions.RequestException:
+            print("   Gemini no contesta, reintentando...")
+            time.sleep(5)
+            continue
+        if r.status_code == 429 or r.status_code >= 500:
+            espera = 20 * (intento + 1)
+            print(f"   Limite de Gemini, espero {espera}s...")
+            time.sleep(espera)
+            continue
+        if r.status_code >= 400:
+            raise RuntimeError(f"Gemini {r.status_code}: {r.text[:300]}")
+        try:
+            return r.json()["candidates"][0]["content"]["parts"][0]["text"]
+        except (KeyError, IndexError):
+            raise RuntimeError(f"Gemini bloqueo la respuesta: {r.text[:300]}")
+    raise RuntimeError("Gemini no responde (limite del plan gratuito). Prueba en unos minutos.")
+
+
+def elegir_clips(segmentos, info, dur_video):
+    texto = "\n".join(f"[{s['start']}-{s['end']}] {s['text']}" for s in segmentos)
+    prompt = (
+        "Eres editor de un canal de clips virales de GTA 6 y videojuegos en espanol para TikTok y "
+        "YouTube Shorts. El video original puede estar en ingles.\n"
+        f"Video: \"{info.get('titulo', '')}\" del canal \"{info.get('canal', '')}\".\n"
+        "1) Resume en 2-3 frases de que va el video entero (quien habla, que esta pasando).\n"
+        f"2) Elige los {N_CLIPS} mejores momentos de 20 a 45 segundos (maximo 60): novedades, "
+        "revelaciones, peleas, persecuciones, glitches, reacciones exageradas, momentos graciosos o "
+        "impactantes. Cada clip debe tener un remate natural, empezar y terminar en limites de frase "
+        "y no solaparse con otros.\n"
+        "Devuelve SOLO este JSON:\n"
+        '{"resumen": "...", "clips": [{"start": seg, "end": seg, '
+        '"gancho": "texto para el cartel de arriba, MAYUSCULAS, max 6 palabras, que de ganas de verlo", '
+        '"contexto": "1-2 frases: que ha pasado antes y que hay que saber para entender el clip", '
+        '"titulo": "titulo en espanol, max 60 caracteres", "descripcion": "en espanol", '
+        '"hashtags": ["5-8 hashtags"], "puntuacion": 1-10, "motivo": "una linea"}]}\n\n'
+        "TRANSCRIPT:\n" + texto[:300000]
+    )
+    d = json_de(gemini([{"text": prompt}]), r"\{.*\}")
+    clips = []
+    for c in sorted(d.get("clips", []), key=lambda c: -float(c.get("puntuacion", 0))):
+        try:
+            a, b = max(float(c["start"]), 0), min(float(c["end"]), dur_video)
+        except (KeyError, TypeError, ValueError):
+            continue
+        if not 10 <= b - a <= 90:
+            continue
+        if any(a < x["end"] and b > x["start"] for x in clips):  # solapado
+            continue
+        c["start"], c["end"] = a, b
+        c.setdefault("titulo", f"Clip {len(clips) + 1}")
+        clips.append(c)
+        if len(clips) == N_CLIPS:
+            break
+    return d.get("resumen", ""), clips
+
+
+def narracion(wd, i, clip, segmentos, resumen, info):
+    """Gemini ve el clip (imagen + audio) y escribe la narracion en espanol con contexto."""
+    dur = clip["end"] - clip["start"]
+    max_pal = int(dur * 2.6)
+    prev = f"prev_{i}.mp4"
+    run(["ffmpeg", "-y", "-ss", str(clip["start"]), "-t", str(dur), "-i", "src.mp4",
+         "-vf", "scale=-2:360", "-c:v", "libx264", "-crf", "30", "-preset", "veryfast",
+         "-c:a", "aac", "-b:a", "64k", prev], cwd=wd)
+    data = base64.b64encode((Path(wd) / prev).read_bytes()).decode()
+    (Path(wd) / prev).unlink(missing_ok=True)
+    trozo = " ".join(s["text"] for s in segmentos
+                     if s["start"] >= clip["start"] - 1 and s["end"] <= clip["end"] + 1)
+    prompt = (
+        "Eres el narrador de un canal de TikTok/Shorts de GTA 6 en espanol, con estilo de comentarista: "
+        "energico, cercano y con gracia (tipo 'y atentos, porque aqui le mete un TOTAZO...').\n"
+        f"Video original: \"{info.get('titulo', '')}\" ({info.get('canal', '')}).\n"
+        f"De que va el video entero: {resumen}\n"
+        f"Contexto de este clip: {clip.get('contexto', '')}\n"
+        f"Gancho del clip: {clip.get('gancho', clip.get('titulo', ''))}\n"
+        f"Lo que se dice (puede estar en ingles): {trozo[:1500]}\n\n"
+        "Mira el clip y escribe la narracion en espanol que se locutara encima:\n"
+        "1) EMPIEZA con una frase de introduccion que ponga en contexto a alguien que no ha visto nada "
+        "(quien es, donde estamos, que esta a punto de pasar) y que enganche en los primeros 3 segundos.\n"
+        "2) Narra lo que ocurre al ritmo de la imagen: golpes, reacciones, jugadas, mecanicas nuevas. "
+        "Si alguien dice algo importante en ingles, cuentalo traducido en tus palabras.\n"
+        "3) Cierra con un remate corto (opinion, pregunta al espectador o dato).\n"
+        "No inventes nada que no se vea ni se oiga. Frases cortas. Sin emojis ni hashtags.\n"
+        f"El clip dura {dur:.0f} segundos: usa como MAXIMO {max_pal} palabras.\n"
+        'Responde SOLO con JSON: {"narracion": "..."}'
+    )
+    out = gemini([{"inline_data": {"mime_type": "video/mp4", "data": data}}, {"text": prompt}])
+    return json_de(out, r"\{.*\}")["narracion"].strip()
+
+
+# ---------------------------------------------------------------- voz
+async def _tts(texto, mp3, rate):
+    import edge_tts
+    kw = {"rate": f"{rate:+d}%"}
+    try:
+        com = edge_tts.Communicate(texto, VOZ, boundary="WordBoundary", **kw)
+    except TypeError:
+        com = edge_tts.Communicate(texto, VOZ, **kw)
+    pal = []
+    with open(mp3, "wb") as f:
+        async for ch in com.stream():
+            if ch["type"] == "audio":
+                f.write(ch["data"])
+            elif ch["type"] == "WordBoundary":
+                pal.append((ch["offset"] / 1e7, (ch["offset"] + ch["duration"]) / 1e7, ch["text"]))
+    return pal
+
+
+def locutar(texto, mp3, dur_clip):
+    """Genera la voz; si se pasa del clip, la acelera (hasta +35%) para que encaje."""
+    rate = VELOCIDAD
+    pal = asyncio.run(_tts(texto, mp3, rate))
+    nd = duracion(mp3)
+    if nd > dur_clip + 0.5:
+        rate = min(35, int((nd / dur_clip - 1) * 100) + rate + 3)
+        pal = asyncio.run(_tts(texto, mp3, rate))
+        nd = duracion(mp3)
+    if not pal:
+        pal = repartir(texto, nd)
+    return pal, nd
+
+
+def repartir(texto, dur):
+    ws = texto.split()
+    paso = dur / max(len(ws), 1)
+    return [(k * paso, (k + 1) * paso, w) for k, w in enumerate(ws)]
+
+
+# ---------------------------------------------------------------- subtitulos
+def t_ass(t):
+    t = max(t, 0)
+    return f"{int(t // 3600)}:{int(t % 3600 // 60):02d}:{t % 60:05.2f}"
+
+
+def cabecera():
+    return ("[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 0\n\n"
+            "[V4+ Styles]\nFormat: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,"
+            "BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,"
+            "Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding\n"
+            # subtitulos: grandes, borde negro grueso, sombra, un poco por debajo del centro
+            f"Style: Default,{FUENTE},92,&H00FFFFFF,&H00FFFFFF,&H00000000,&H99000000,1,0,0,0,"
+            "100,100,0,0,1,10,4,2,60,60,560,1\n"
+            # cartel de arriba: texto negro sobre caja amarilla
+            f"Style: Titulo,{FUENTE},74,&H00000000,&H00000000,&H0000D5FF,&H00000000,1,0,0,0,"
+            "100,100,0,0,3,22,0,8,70,70,230,1\n\n"
+            "[Events]\nFormat: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text\n")
+
+
+def limpia(w):
+    return w.upper().replace("{", "").replace("}", "").replace("\\", "")
+
+
+def lineas_subs(pal):
+    """3 palabras a la vez, la que suena en amarillo con un pequeno 'pop'."""
+    lineas = []
+    for g0 in range(0, len(pal), 3):
+        g = pal[g0:g0 + 3]
+        sig = pal[g0 + 3][0] if g0 + 3 < len(pal) else g[-1][1] + 0.3
+        for j, (a, b, w) in enumerate(g):
+            fin = g[j + 1][0] if j + 1 < len(g) else sig
+            txt = " ".join(
+                (r"{\c&H00E5FF&\fscx112\fscy112}" + limpia(x[2]) + r"{\c&HFFFFFF&\fscx100\fscy100}")
+                if k == j else limpia(x[2]) for k, x in enumerate(g))
+            lineas.append(f"Dialogue: 0,{t_ass(a)},{t_ass(fin)},Default,,0,0,0,,{txt}")
+    return lineas
+
+
+def crear_ass(pal, total, gancho, out):
+    lineas = []
+    if TITULO and gancho:
+        lineas.append(f"Dialogue: 1,{t_ass(0)},{t_ass(total)},Titulo,,0,0,0,,"
+                      + r"{\fad(200,0)}" + limpia(gancho))
+    lineas += lineas_subs(pal)
+    Path(out).write_text(cabecera() + "\n".join(lineas) + "\n", encoding="utf-8")
+
+
+def palabras_orig(palabras, ini, fin):
+    return [(max(a - ini, 0), min(b, fin) - ini, w) for a, b, w in palabras if a >= ini and b <= fin + 0.3]
+
+
+# ---------------------------------------------------------------- render
+def render(wd, i, clip, total, mp3):
+    slug = re.sub(r"[^a-z0-9]+", "-", clip["titulo"].lower()).strip("-")[:40] or "clip"
+    out = f"{i:02d}_{slug}.mp4"
+    video = ("[0:v]split[a][b];"
+             "[a]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=25,"
+             "eq=brightness=-0.08[bg];"
+             "[b]scale=1080:-2[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2,"
+             f"ass=s{i}.ass,format=yuv420p[v]")
+    if mp3:
+        # el audio original baja mientras habla el narrador y se mezcla de fondo
+        audio = (f"[0:a]volume={VOL_ORIGINAL}[o];[1:a]volume=1.6,apad[n];"
+                 "[o][n]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5[a]")
+        entradas = ["-i", mp3]
+    else:
+        audio, entradas = "[0:a]loudnorm=I=-14:TP=-1.5[a]", []
+    run(["ffmpeg", "-y", "-ss", str(clip["start"]), "-t", f"{total:.2f}", "-i", "src.mp4", *entradas,
+         "-filter_complex", video + ";" + audio, "-map", "[v]", "-map", "[a]", "-t", f"{total:.2f}",
+         "-c:v", "libx264", "-crf", "21", "-preset", "veryfast", "-r", "30",
+         "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", out], cwd=wd)
+    for f in (f"s{i}.ass", mp3):
+        if f:
+            (Path(wd) / f).unlink(missing_ok=True)
+    return out
+
+
+# ---------------------------------------------------------------- flujo
+def procesar(url, desde=None, hasta=None):
+    info = info_video(url)
+    wd = OUT / info["id"]
+    wd.mkdir(parents=True, exist_ok=True)
+    (wd / "info.json").write_text(json.dumps(info, ensure_ascii=False), encoding="utf-8")
+    print(f"[1/4] Descargando: {info['titulo'][:70]}")
+    src = descargar(url, wd)
+    dur_video = duracion(src)
+    print(f"[2/4] Transcribiendo {minuto(dur_video)} min (lo lento, solo la primera vez)...")
+    cache = wd / "transcript.json"
+    if cache.exists():
+        d = json.loads(cache.read_text(encoding="utf-8"))
+        segmentos, palabras = d["segmentos"], d["palabras"]
+        print("   (usando transcripcion guardada)")
+    else:
+        segmentos, palabras = transcribir(src)
+        cache.write_text(json.dumps({"segmentos": segmentos, "palabras": palabras}), encoding="utf-8")
+    if desde is not None or hasta is not None:
+        a, b = desde or 0, hasta or dur_video
+        segmentos = [s for s in segmentos if s["start"] >= a and s["end"] <= b]
+        print(f"   (solo el tramo {minuto(a)} - {minuto(b)})")
+    if not segmentos:
+        raise RuntimeError("No hay voz en el video/tramo: nada que analizar.")
+
+    print("[3/4] Eligiendo los mejores momentos con Gemini...")
+    resumen, clips = elegir_clips(segmentos, info, dur_video)
+    if not clips:
+        raise RuntimeError("Gemini no devolvio clips validos. Vuelve a lanzarlo.")
+    print(f"   De que va: {resumen[:150]}")
+
+    print(f"[4/4] Creando {len(clips)} clips" + (" con narracion en espanol..." if NARRAR else "..."))
+    md = [f"# {info['titulo']}\n", f"- Link: {url}", f"- Canal: {info['canal']}",
+          f"- De que va: {resumen}\n"]
+    for i, c in enumerate(clips, 1):
+        dur = c["end"] - c["start"]
+        mp3, texto_nar, total, pal = None, None, dur, None
+        if NARRAR:
+            try:
+                texto_nar = narracion(wd, i, c, segmentos, resumen, info)
+                mp3 = f"n{i}.mp3"
+                pal, nd = locutar(texto_nar, str(Path(wd) / mp3), dur)
+                total = min(max(dur, nd + 0.6), dur_video - c["start"])
+            except Exception as e:
+                print(f"   (clip {i} sin narracion: {str(e)[:200]})")
+                mp3, texto_nar = None, None
+        if not mp3:
+            pal, total = palabras_orig(palabras, c["start"], c["end"]), dur
+        crear_ass(pal, total, c.get("gancho", ""), Path(wd) / f"s{i}.ass")
+        f = render(wd, i, c, total, mp3)
+        tags = " ".join("#" + str(h).lstrip("#") for h in c.get("hashtags", []))
+        md.append(f"## {i}. {c['titulo']}  ({f})\n"
+                  f"- Puntuacion: {c.get('puntuacion')}/10 - {c.get('motivo', '')}\n"
+                  f"- Minuto original: {minuto(c['start'])} a {minuto(c['end'])}\n"
+                  f"- Cartel: {c.get('gancho', '')}\n"
+                  f"- Descripcion: {c.get('descripcion', '')} {tags}\n"
+                  f"- Credito: video original de {info['canal']} ({url})\n"
+                  + (f"- Narracion: {texto_nar}\n" if texto_nar else ""))
+        print(f"   listo: {f}")
+    (wd / "resumen.md").write_text("\n".join(md), encoding="utf-8")
+    print(f"\nTerminado. Clips y resumen.md en: {wd.resolve()}\n")
+
+
+def main(argv):
+    links, desde, hasta, k = [], None, None, 0
+    while k < len(argv):
+        if argv[k] == "--desde":
+            desde, k = a_seg(argv[k + 1]), k + 2
+        elif argv[k] == "--hasta":
+            hasta, k = a_seg(argv[k + 1]), k + 2
+        else:
+            links.append(argv[k]); k += 1
+    if not links:
+        sys.exit("Uso: py -3.13 clip.py LINK [LINK2 ...] [--desde 2:14] [--hasta 20:00]")
+    for u in links:
+        try:
+            procesar(u, desde, hasta)
+        except Exception as e:
+            print(f"ERROR con {u}: {e}\n")
+
+
+if __name__ == "__main__":
+    main(sys.argv[1:])

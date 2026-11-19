@@ -1,11 +1,6 @@
 @echo off
 chcp 65001 >nul
 cd /d "%~dp0"
-if "%GEMINI_API_KEY%"=="" (
-  echo Falta la variable GEMINI_API_KEY. Mira el README.
-  pause
-  exit /b
-)
 :loop
 set "LINK="
 set "TRAMO="

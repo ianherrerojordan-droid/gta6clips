@@ -29,6 +29,7 @@ FUENTE = os.environ.get("FUENTE", "Impact")            # fuente de subtitulos (I
 TITULO = os.environ.get("TITULO", "1") == "1"          # cartel con el gancho arriba los primeros segundos
 FORMATO = os.environ.get("FORMATO", "lleno")           # lleno = gameplay a pantalla completa; barras = con fondo difuminado
 LOGO = os.environ.get("LOGO", "")                    # ruta a un PNG tuyo (marca de agua arriba)
+MODO = os.environ.get("MODO", "claude")              # claude = me pasas el ZIP en el chat; gemini = automatico
 CTA = os.environ.get("CTA", "Sigueme, cada dia un dato de GTA 6")  # frase final (vacio = sin)
 
 
@@ -378,6 +379,62 @@ def render(wd, i, clip, total, mp3):
     return out
 
 
+# ---------------------------------------------------------------- modo Claude
+def preparar_paquete(wd, info, url, segmentos, dur_video, desde, hasta):
+    """Crea para_claude/ID.zip con transcript + hojas de fotogramas para pasarselo a Claude."""
+    import zipfile
+    a, b = desde or 0, hasta or dur_video
+    paso = max(5, int((b - a) / 160) + 1)              # como mucho ~160 fotogramas
+    tmp = wd / "hojas"
+    tmp.mkdir(exist_ok=True)
+    for f in tmp.glob("*"):
+        f.unlink()
+    run(["ffmpeg", "-y", "-ss", str(a), "-t", str(b - a), "-i", "src.mp4",
+         "-vf", f"fps=1/{paso},scale=320:180:force_original_aspect_ratio=decrease,"
+                "pad=320:180:(ow-iw)/2:(oh-ih)/2,tile=4x4",
+         "-q:v", "4", "hojas/hoja_%02d.jpg"], cwd=wd)
+    hojas = sorted(tmp.glob("hoja_*.jpg"))
+    indice = [f"Cada hoja tiene 16 fotogramas (4x4, de izquierda a derecha y de arriba abajo), "
+              f"uno cada {paso} s, empezando en el segundo {a:.0f}."]
+    for k, h in enumerate(hojas):
+        t0 = a + k * 16 * paso
+        t1 = min(t0 + 15 * paso, b)
+        indice.append(f"{h.name}: del segundo {t0:.0f} ({minuto(t0)}) al {t1:.0f} ({minuto(t1)})")
+    texto = "\n".join(f"[{s['start']}-{s['end']}] {s['text']}" for s in segmentos) or "(nadie habla)"
+    leeme = (f"VIDEO: {info['titulo']}\nCANAL: {info['canal']}\nLINK: {url}\nID: {info['id']}\n"
+             f"DURACION: {dur_video:.0f} s\nTRAMO: {a:.0f}-{b:.0f} s\nCLIPS PEDIDOS: {N_CLIPS}\n\n"
+             + "\n".join(indice) + "\n\nTRANSCRIPCION (segundos):\n" + texto)
+    destino = Path("para_claude")
+    destino.mkdir(exist_ok=True)
+    zp = destino / f"{info['id']}.zip"
+    with zipfile.ZipFile(zp, "w", zipfile.ZIP_DEFLATED) as z:
+        z.writestr("LEEME.txt", leeme)
+        for h in hojas:
+            z.write(h, h.name)
+    if os.name == "nt":
+        subprocess.run(["explorer", "/select,", str(zp.resolve())])
+    print(f"\n>>> Arrastra este archivo al chat de Claude: {zp.resolve()}")
+    print(">>> Claude te devolvera un archivo plan_" + info["id"] + ".json. Guardalo en Descargas")
+    print(">>> y vuelve a pegar este mismo link aqui: se crearan los clips.\n")
+
+
+def buscar_plan(wd, vid):
+    cands = [wd / "plan.json", *Path.home().joinpath("Downloads").glob(f"plan_{vid}*.json"),
+             *Path(".").glob(f"plan_{vid}*.json")]
+    cands = [c for c in cands if c.exists()]
+    if not cands:
+        return None
+    mejor = max(cands, key=lambda c: c.stat().st_mtime)
+    plan = json.loads(mejor.read_text(encoding="utf-8"))
+    if mejor != wd / "plan.json":
+        (wd / "plan.json").write_text(json.dumps(plan, ensure_ascii=False, indent=1), encoding="utf-8")
+        try:
+            mejor.unlink()   # ya esta copiado; asi el siguiente plan no se confunde
+        except OSError:
+            pass
+    return plan
+
+
 # ---------------------------------------------------------------- flujo
 def procesar(url, desde=None, hasta=None):
     info = info_video(url)
@@ -400,13 +457,25 @@ def procesar(url, desde=None, hasta=None):
         a, b = desde or 0, hasta or dur_video
         segmentos = [s for s in segmentos if s["start"] >= a and s["end"] <= b]
         print(f"   (solo el tramo {minuto(a)} - {minuto(b)})")
-    if not segmentos:
-        raise RuntimeError("No hay voz en el video/tramo: nada que analizar.")
-
-    print("[3/4] Eligiendo los mejores momentos con Gemini...")
-    resumen, clips = elegir_clips(segmentos, info, dur_video)
+    plan = buscar_plan(wd, info["id"])
+    if plan:
+        print("[3/4] Usando el plan de Claude...")
+        resumen = plan.get("resumen", "")
+        clips = [c for c in plan.get("clips", []) if c.get("end", 0) > c.get("start", 0)]
+        for c in clips:
+            c["start"], c["end"] = float(c["start"]), min(float(c["end"]), dur_video)
+            c.setdefault("titulo", "clip")
+    elif MODO != "gemini":
+        print("[3/4] Preparando el paquete para Claude...")
+        preparar_paquete(wd, info, url, segmentos, dur_video, desde, hasta)
+        return
+    else:
+        if not segmentos:
+            raise RuntimeError("No hay voz en el video/tramo: nada que analizar.")
+        print("[3/4] Eligiendo los mejores momentos con Gemini...")
+        resumen, clips = elegir_clips(segmentos, info, dur_video)
     if not clips:
-        raise RuntimeError("Gemini no devolvio clips validos. Vuelve a lanzarlo.")
+        raise RuntimeError("No hay clips validos en el plan.")
     print(f"   De que va: {resumen[:150]}")
 
     print(f"[4/4] Creando {len(clips)} clips" + (" con narracion en espanol..." if NARRAR else "..."))
@@ -417,7 +486,10 @@ def procesar(url, desde=None, hasta=None):
         mp3, texto_nar, total, pal, clave, carteles = None, None, dur, None, frozenset(), []
         if NARRAR:
             try:
-                texto_nar, carteles = narracion(wd, i, c, segmentos, resumen, info)
+                if c.get("narracion"):
+                    texto_nar, carteles = c["narracion"].strip(), c.get("carteles") or []
+                else:
+                    texto_nar, carteles = narracion(wd, i, c, segmentos, resumen, info)
                 if CTA:
                     texto_nar = texto_nar.rstrip() + " " + CTA + "."
                 clave = claves(texto_nar)

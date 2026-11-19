@@ -44,6 +44,15 @@ py -3.13 clip.py https://www.youtube.com/watch?v=XXXX --desde 2:14 --hasta 20:00
 
 Los clips salen en `C:\clipper\clips\ID_DEL_VIDEO\`. Si lo relanzas con el mismo vídeo, no vuelve a descargar ni a transcribir: solo elige otros momentos y rehace los clips (borra antes los MP4 viejos).
 
+## Modo Claude (por defecto, sin gastar Gemini)
+
+1. Abre `clipear.bat` y pega el link. Tu PC descarga, transcribe y crea `para_claude\ID.zip` (se abre la carpeta sola).
+2. Arrastra ese ZIP al chat de Claude Code y escribe **plan**.
+3. Claude te devuelve `plan_ID.json`: guárdalo en **Descargas**.
+4. Vuelve a `clipear.bat` y pega el mismo link: crea los clips con esa narración.
+
+Para que lo haga todo Gemini solo: `setx MODO gemini`.
+
 ## Ajustes (con `setx NOMBRE valor` y abrir un CMD nuevo)
 
 | Variable | Por defecto | Para qué |

@@ -31,6 +31,7 @@ FUENTE = os.environ.get("FUENTE", "Impact")            # fuente de subtitulos (I
 TITULO = os.environ.get("TITULO", "1") == "1"          # cartel con el gancho arriba los primeros segundos
 FORMATO = os.environ.get("FORMATO", "lleno")           # lleno = gameplay a pantalla completa; barras = con fondo difuminado
 LOGO = os.environ.get("LOGO", "")                    # ruta a un PNG tuyo (marca de agua arriba)
+TAG = os.environ.get("TAG", "")                       # prefijo de planes/zips (top_ en clipper_top)
 MODO = os.environ.get("MODO", "claude")              # claude = me pasas el ZIP en el chat; gemini = automatico
 CTA = os.environ.get("CTA", "Follow for a daily GTA 6 fact" if IDIOMA == "en" else "Sigueme, cada dia un dato de GTA 6")  # frase final (vacio = sin)
 
@@ -468,7 +469,7 @@ def preparar_paquete(wd, info, url, segmentos, dur_video, desde, hasta):
              + "\n".join(indice) + "\n\nTRANSCRIPCION (segundos):\n" + texto)
     destino = Path("para_claude")
     destino.mkdir(exist_ok=True)
-    zp = destino / f"{info['id']}.zip"
+    zp = destino / f"{TAG}{info['id']}.zip"
     with zipfile.ZipFile(zp, "w", zipfile.ZIP_DEFLATED) as z:
         z.writestr("LEEME.txt", leeme)
         for h in hojas:
@@ -476,7 +477,7 @@ def preparar_paquete(wd, info, url, segmentos, dur_video, desde, hasta):
     if os.name == "nt":
         subprocess.run(["explorer", "/select,", str(zp.resolve())])
     print(f"\n>>> PASO 1 de 2. Arrastra este archivo al chat de Claude: {zp.resolve()}")
-    print(f">>> Claude te devolvera cortes_{info['id']}.json. Guardalo en Descargas")
+    print(f">>> Claude te devolvera {TAG}cortes_{info['id']}.json. Guardalo en Descargas")
     print(">>> y vuelve a pegar este mismo link aqui.\n")
 
 
@@ -508,7 +509,7 @@ def preparar_detalle(wd, info, url, segmentos, cortes):
                          f"  Lo que se dice (segundos desde el inicio de esta escena):\n{habla}\n")
     destino = Path("para_claude")
     destino.mkdir(exist_ok=True)
-    zp = destino / f"{info['id']}_detalle.zip"
+    zp = destino / f"{TAG}{info['id']}_detalle.zip"
     with zipfile.ZipFile(zp, "w", zipfile.ZIP_DEFLATED) as z:
         z.writestr("LEEME.txt", "\n".join(leeme))
         for h in sorted(tmp.glob("*.jpg")):
@@ -516,13 +517,13 @@ def preparar_detalle(wd, info, url, segmentos, cortes):
     if os.name == "nt":
         subprocess.run(["explorer", "/select,", str(zp.resolve())])
     print(f"\n>>> PASO 2 de 2. Arrastra este archivo al chat de Claude: {zp.resolve()}")
-    print(f">>> Claude te devolvera plan_{info['id']}.json. Guardalo en Descargas")
+    print(f">>> Claude te devolvera {TAG}plan_{info['id']}.json. Guardalo en Descargas")
     print(">>> y vuelve a pegar este mismo link aqui: se crearan los clips.\n")
 
 
 def buscar_plan(wd, vid, tipo="plan"):
-    cands = [wd / f"{tipo}.json", *Path.home().joinpath("Downloads").glob(f"{tipo}_{vid}*.json"),
-             *Path(".").glob(f"{tipo}_{vid}*.json")]
+    cands = [wd / f"{tipo}.json", *Path.home().joinpath("Downloads").glob(f"{TAG}{tipo}_{vid}*.json"),
+             *Path(".").glob(f"{TAG}{tipo}_{vid}*.json")]
     cands = [c for c in cands if c.exists()]
     if not cands:
         return None

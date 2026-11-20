@@ -597,7 +597,7 @@ def procesar(url, desde=None, hasta=None):
         raise RuntimeError("No hay clips validos en el plan.")
     print(f"   De que va: {resumen[:150]}")
 
-    print(f"[4/4] Creando {len(clips)} clips" + ((" con narracion en " + ("ingles" if IDIOMA == "en" else "espanol") + "...") if NARRAR else "..."))
+    print(f"[4/4] Creando {len(clips)} clips" + ((" con narracion en " + ("ingles" if VOZ.startswith("en") else "espanol") + "...") if NARRAR else "..."))
     md = [f"# {info['titulo']}\n", f"- Link: {url}", f"- Canal: {info['canal']}",
           f"- De que va: {resumen}\n"]
     for i, c in enumerate(clips, 1):

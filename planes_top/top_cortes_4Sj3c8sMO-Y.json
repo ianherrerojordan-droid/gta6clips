@@ -1,0 +1,246 @@
+{
+ "clips": [
+  {
+   "idea": "Los vehículos militares llevan rastreador: la policía siempre te encuentra. Escena 1: robo del blindado militar junto a las vías; escena 2: aviso en pantalla del rastreador militar mientras huyes por las vías",
+   "tramos": [
+    {
+     "start": 1544,
+     "end": 1560
+    },
+    {
+     "start": 1562,
+     "end": 1580
+    }
+   ]
+  },
+  {
+   "idea": "La policía recuerda tu perfil: desactivar un coche patrulla sin muertos te da perfil de 'criminal endurecido' y más delitos = 4 estrellas y no paran hasta cazarte. Escena 1: aviso del perfil criminal al subir al jet; escena 2: aviso de 4 estrellas mientras el jet despega",
+   "tramos": [
+    {
+     "start": 1218,
+     "end": 1232
+    },
+    {
+     "start": 1250,
+     "end": 1264
+    }
+   ]
+  },
+  {
+   "idea": "Puedes robar un jet privado en el aeropuerto y despegar. Escena 1: el jet en la plataforma y rodaje; escena 2: despegue; escena 3: sobrevolando la terminal de VCIA",
+   "tramos": [
+    {
+     "start": 1236,
+     "end": 1248
+    },
+    {
+     "start": 1266,
+     "end": 1278
+    },
+    {
+     "start": 1282,
+     "end": 1292
+    }
+   ]
+  },
+  {
+   "idea": "Si tu avión se avería puedes saltar en paracaídas y planear. Escena 1: avión con los motores humeando y salto; escena 2: paracaídas abierto y aterrizaje en la zona industrial",
+   "tramos": [
+    {
+     "start": 1380,
+     "end": 1396
+    },
+    {
+     "start": 1396,
+     "end": 1412
+    }
+   ]
+  },
+  {
+   "idea": "Los NPC del aeropuerto tienen conversaciones propias: una pierde el pasaporte en un paseo en hidrodeslizador y otra cotillea sobre su amante. Escena 1: diálogo del pasaporte; escena 2: diálogo del chico 'de lado' y el marido",
+   "tramos": [
+    {
+     "start": 463,
+     "end": 480
+    },
+    {
+     "start": 507,
+     "end": 520
+    }
+   ]
+  },
+  {
+   "idea": "Puedes robar un coche de policía de Vice-Dale y derrapar con él por la pista. Escena 1: policías y subida al SUV patrulla; escena 2: derrape por la pista del aeropuerto",
+   "tramos": [
+    {
+     "start": 1170,
+     "end": 1188
+    },
+    {
+     "start": 1198,
+     "end": 1212
+    }
+   ]
+  },
+  {
+   "idea": "Puedes colarte en la zona restringida del aeropuerto y conducir entre aviones de verdad. Escena 1: robo de la furgoneta OTH; escena 2: por la plataforma junto a jet bridges; escena 3: cruzando la pista frente a un avión",
+   "tramos": [
+    {
+     "start": 862,
+     "end": 876
+    },
+    {
+     "start": 908,
+     "end": 918
+    },
+    {
+     "start": 940,
+     "end": 950
+    }
+   ]
+  },
+  {
+   "idea": "La terminal del aeropuerto de Vice City es completamente explorable por dentro. Escena 1: entrada a Central Terminal; escena 2: mostradores de facturación flyUS; escena 3: paneles de información de vuelos",
+   "tramos": [
+    {
+     "start": 392,
+     "end": 404
+    },
+    {
+     "start": 420,
+     "end": 432
+    },
+    {
+     "start": 458,
+     "end": 468
+    }
+   ]
+  },
+  {
+   "idea": "El 'Wasted' vuelve en GTA 6. Escena: huida en el blindado militar, choque contra una casa y pantalla de Wasted",
+   "tramos": [
+    {
+     "start": 1680,
+     "end": 1709
+    }
+   ]
+  },
+  {
+   "idea": "Los conductores NPC se bajan a encararte si les chocas, y tu motor queda dañado. Escena 1: choque contra la furgoneta 'Caulk It Up' con aviso 'Engine damaged'; escena 2: el conductor sale y discute",
+   "tramos": [
+    {
+     "start": 44,
+     "end": 58
+    },
+    {
+     "start": 58,
+     "end": 72
+    }
+   ]
+  },
+  {
+   "idea": "Puedes comprar en máquinas expendedoras y beber mientras caminas. Escena 1: menú de compra de la máquina; escena 2: bebiendo por la terminal con el aviso DRINK",
+   "tramos": [
+    {
+     "start": 493,
+     "end": 506
+    },
+    {
+     "start": 548,
+     "end": 564
+    }
+   ]
+  },
+  {
+   "idea": "En el parking del aeropuerto puedes usar los ascensores con botones de planta. Escena 1: entrar y pulsar el ascensor; escena 2: salir en la planta 2",
+   "tramos": [
+    {
+     "start": 202,
+     "end": 222
+    },
+    {
+     "start": 268,
+     "end": 280
+    }
+   ]
+  },
+  {
+   "idea": "Vuelven los saltos acrobáticos (Stunt Jumps). Escena: el coche rojo sale volando y se estrella contra los autocares con el aviso de Stunt Jumps",
+   "tramos": [
+    {
+     "start": 694,
+     "end": 718
+    }
+   ]
+  },
+  {
+   "idea": "La señalización de Vice City es bilingüe inglés-español y el aeropuerto conecta con el Metro y tiene cintas transportadoras. Escena 1: cartel 'Vice City Metro / Parking - Estacionamiento'; escena 2: pasillo con cinta transportadora",
+   "tramos": [
+    {
+     "start": 476,
+     "end": 492
+    },
+    {
+     "start": 510,
+     "end": 524
+    }
+   ]
+  },
+  {
+   "idea": "El mapa va mucho más allá de Vice City: desde el avión se ven centrales, campo y montañas de Leonida. Escena 1: ciudad y central eléctrica; escena 2: campos y montañas; escena 3: puente y costa",
+   "tramos": [
+    {
+     "start": 1294,
+     "end": 1306
+    },
+    {
+     "start": 1326,
+     "end": 1338
+    },
+    {
+     "start": 1362,
+     "end": 1372
+    }
+   ]
+  },
+  {
+   "idea": "La rueda de armas muestra estadísticas de cada arma (daño, precisión, manejo, alcance). Escena 1: rueda con stats de la pistola; escena 2: rueda de armas en la zona industrial",
+   "tramos": [
+    {
+     "start": 1155,
+     "end": 1166
+    },
+    {
+     "start": 1427,
+     "end": 1440
+    }
+   ]
+  },
+  {
+   "idea": "Correr cuenta como entrenamiento: aparece el aviso 'Cardio Workout'. Escena 1: carrera fuera de la terminal con el aviso; escena 2: carrera por la acera de llegadas",
+   "tramos": [
+    {
+     "start": 600,
+     "end": 618
+    },
+    {
+     "start": 260,
+     "end": 274
+    }
+   ]
+  },
+  {
+   "idea": "Hay plazas de aparcamiento con cargador para vehículos eléctricos. Escena 1: zona de carga 'Electric Vehicle Only' junto al aeropuerto; escena 2: vista de la pista desde la azotea",
+   "tramos": [
+    {
+     "start": 816,
+     "end": 830
+    },
+    {
+     "start": 830,
+     "end": 844
+    }
+   ]
+  }
+ ]
+}

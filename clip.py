@@ -22,7 +22,9 @@ WHISPER = os.environ.get("WHISPER", "small")
 COOKIES = os.environ.get("COOKIES_BROWSER", "")        # ej: chrome, edge, firefox
 OUT = Path(os.environ.get("OUT_DIR", "clips"))
 NARRAR = os.environ.get("NARRAR", "1") == "1"          # 0 = sin narracion
-VOZ = os.environ.get("VOZ", "es-ES-AlvaroNeural")      # ej: es-MX-JorgeNeural, es-ES-ElviraNeural
+IDIOMA = os.environ.get("IDIOMA", "es")                # es = canal en espanol; en = canal en ingles
+SUB = "en/" if IDIOMA == "en" else ""                  # los clips en ingles van a la subcarpeta en\\
+VOZ = os.environ.get("VOZ", "en-US-AndrewNeural" if IDIOMA == "en" else "es-ES-AlvaroNeural")
 VELOCIDAD = int(os.environ.get("VELOCIDAD", "8"))      # % extra de velocidad de la voz (ritmo TikTok)
 VOL_ORIGINAL = os.environ.get("VOL_ORIGINAL", "0.6")   # volumen del audio original (baja solo cuando habla el narrador)
 FUENTE = os.environ.get("FUENTE", "Impact")            # fuente de subtitulos (Impact, Arial Black...)
@@ -30,7 +32,7 @@ TITULO = os.environ.get("TITULO", "1") == "1"          # cartel con el gancho ar
 FORMATO = os.environ.get("FORMATO", "lleno")           # lleno = gameplay a pantalla completa; barras = con fondo difuminado
 LOGO = os.environ.get("LOGO", "")                    # ruta a un PNG tuyo (marca de agua arriba)
 MODO = os.environ.get("MODO", "claude")              # claude = me pasas el ZIP en el chat; gemini = automatico
-CTA = os.environ.get("CTA", "Sigueme, cada dia un dato de GTA 6")  # frase final (vacio = sin)
+CTA = os.environ.get("CTA", "Follow for a daily GTA 6 fact" if IDIOMA == "en" else "Sigueme, cada dia un dato de GTA 6")  # frase final (vacio = sin)
 
 
 # ---------------------------------------------------------------- utilidades
@@ -391,7 +393,8 @@ def palabras_orig(palabras, ini, fin):
 # ---------------------------------------------------------------- render
 def render(wd, i, clip, total, mp3):
     slug = re.sub(r"[^a-z0-9]+", "-", clip["titulo"].lower()).strip("-")[:40] or "clip"
-    out = f"{i:02d}_{slug}.mp4"
+    out = f"{SUB}{i:02d}_{slug}.mp4"
+    (Path(wd) / SUB).mkdir(exist_ok=True)
     if FORMATO == "lleno":
         video = ("[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,"
                  f"eq=brightness=-0.10:saturation=1.1,ass=s{i}.ass,format=yuv420p[v]")
@@ -552,6 +555,11 @@ def procesar(url, desde=None, hasta=None):
         for c in clips:
             c["start"], c["end"] = float(c["start"]), min(float(c["end"]), dur_video)
             c.setdefault("titulo", "clip")
+        if IDIOMA == "en":
+            faltan = [k + 1 for k, c in enumerate(clips) if not c.get("en")]
+            if faltan:
+                raise RuntimeError(f"El plan no tiene version en ingles (clips {faltan}). Pidesela a Claude.")
+            clips = [{**c, **c["en"]} for c in clips]
     elif MODO != "gemini":
         print("[3/4] Preparando la vista general para Claude...")
         preparar_paquete(wd, info, url, segmentos, dur_video, desde, hasta)
@@ -565,7 +573,7 @@ def procesar(url, desde=None, hasta=None):
         raise RuntimeError("No hay clips validos en el plan.")
     print(f"   De que va: {resumen[:150]}")
 
-    print(f"[4/4] Creando {len(clips)} clips" + (" con narracion en espanol..." if NARRAR else "..."))
+    print(f"[4/4] Creando {len(clips)} clips" + ((" con narracion en " + ("ingles" if IDIOMA == "en" else "espanol") + "...") if NARRAR else "..."))
     md = [f"# {info['titulo']}\n", f"- Link: {url}", f"- Canal: {info['canal']}",
           f"- De que va: {resumen}\n"]
     for i, c in enumerate(clips, 1):
@@ -598,8 +606,8 @@ def procesar(url, desde=None, hasta=None):
                   f"- Credito: video original de {info['canal']} ({url})\n"
                   + (f"- Narracion: {texto_nar.replace('*', '')}\n" if texto_nar else ""))
         print(f"   listo: {f}")
-    (wd / "resumen.md").write_text("\n".join(md), encoding="utf-8")
-    print(f"\nTerminado. Clips y resumen.md en: {wd.resolve()}\n")
+    (wd / SUB / "resumen.md").write_text("\n".join(md), encoding="utf-8")
+    print(f"\nTerminado. Clips y resumen.md en: {(wd / SUB).resolve()}\n")
 
 
 def main(argv):

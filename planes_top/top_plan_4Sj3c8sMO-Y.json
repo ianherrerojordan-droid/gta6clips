@@ -1,6 +1,6 @@
 {
  "version": 2,
- "resumen": "GTA 6: aeropuerto de Vice City y persecucion policial.",
+ "resumen": "GTA 6: aeropuerto de Vice City y persecución policial.",
  "clips": [
   {
    "tramos": [
@@ -13,59 +13,59 @@
      "end": 1264
     }
    ],
-   "titulo": "GTA 6 Cops REMEMBER Your Crimes 👮😱",
-   "gancho": "THE COPS REMEMBER YOU",
-   "descripcion": "GTA 6 tracks how you play: disabling cop cars builds a hardened criminal profile, and more crime means cops hunt you down.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
-   "comentario": "What kind of criminal profile would you have? 👮",
+   "titulo": "GTA 6: la poli RECUERDA tus delitos 👮😱",
+   "gancho": "LA POLI TE RECUERDA",
+   "descripcion": "GTA 6 registra cómo juegas: inutilizar coches patrulla te crea un perfil criminal curtido, y si sigues delinquiendo la poli irá a por ti.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "¿Qué perfil criminal tendrías tú? 👮",
    "hashtags": [
     "gta6",
     "gta6gameplay",
     "vicecity",
     "gtavi",
-    "gta6facts",
-    "wantedlevel",
+    "gta6español",
+    "nivelbusqueda",
     "rockstargames"
    ],
    "puntuacion": 8,
-   "motivo": "Two on-screen notices reveal a new police memory system people will debate",
+   "motivo": "Dos avisos en pantalla revelan un nuevo sistema de memoria policial que dará que hablar.",
    "narracion": [
     {
      "t": 0,
-     "texto": "Did you know GTA 6 cops build your *criminal profile*?"
+     "texto": "¿Sabías que en GTA 6 tienes *perfil criminal*?"
     },
     {
      "t": 4.3,
-     "texto": "Disabling a chasing cop car without *casualties* counts toward your profile."
+     "texto": "Inutilizar un coche patrulla sin *víctimas* suma a tu perfil."
     },
     {
      "t": 8.6,
-     "texto": "That's a *hardened* criminal profile, and he's boarding a jet."
+     "texto": "Perfil de criminal *curtido*, y encima se sube a un jet."
     },
     {
      "t": 14.0,
-     "texto": "Next notice: any more crime means a higher *wanted level*."
+     "texto": "Siguiente aviso: más delitos, más *nivel de búsqueda*."
     },
     {
      "t": 18.0,
-     "texto": "And the cops won't give up until you're *hunted down*."
+     "texto": "Y la poli no parará hasta *cazarte*."
     },
     {
      "t": 22.0,
-     "texto": "Airborne *anyway*. Bold move."
+     "texto": "*Despega igualmente*. Qué valiente."
     }
    ],
    "carteles": [
     {
      "t": 5.0,
-     "texto": "CRIMINAL PROFILE"
+     "texto": "PERFIL CRIMINAL"
     },
     {
      "t": 14.2,
-     "texto": "WANTED LEVEL"
+     "texto": "NIVEL DE BÚSQUEDA"
     },
     {
      "t": 18.0,
-     "texto": "HUNTED DOWN"
+     "texto": "TE CAZARÁN"
     }
    ]
   },
@@ -76,51 +76,51 @@
      "end": 1709
     }
    ],
-   "titulo": "GTA 6 brings back the WASTED screen 💀🔥",
-   "gancho": "THE CLASSIC IS BACK",
-   "descripcion": "A military truck chase ends in a house, a wreck and the iconic GTA Wasted screen, now in GTA 6.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
-   "comentario": "Missed seeing this screen? 💀",
+   "titulo": "GTA 6 recupera la pantalla de WASTED 💀🔥",
+   "gancho": "¡VUELVE EL CLÁSICO!",
+   "descripcion": "Una persecución con un camión militar acaba dentro de una casa, con el camión destrozado y la mítica pantalla de Wasted, ahora en GTA 6.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "¿Echabas de menos esta pantalla? 💀",
    "hashtags": [
     "gta6",
     "gta6gameplay",
     "vicecity",
     "gtavi",
     "wasted",
-    "gta6leaks",
-    "gaming"
+    "gta6español",
+    "videojuegos"
    ],
    "puntuacion": 8,
-   "motivo": "Nostalgic, instantly recognizable payoff at the end drives rewatches.",
+   "motivo": "Final nostálgico y reconocible al instante que invita a volver a verlo.",
    "narracion": [
     {
      "t": 0,
-     "texto": "Did you know the iconic *Wasted* screen is back in GTA 6?"
+     "texto": "¿Sabías que la mítica pantalla de *Wasted* vuelve en GTA 6?"
     },
     {
      "t": 5,
-     "texto": "Watch this military truck tear down a *country road*."
+     "texto": "Mira este camión militar arrasando por una *carretera rural*."
     },
     {
      "t": 10,
-     "texto": "And straight into *a house*. Total chaos."
+     "texto": "Y directo contra *una casa*. Caos total."
     },
     {
      "t": 13,
-     "texto": "The truck gets *wrecked* and things go downhill fast."
+     "texto": "El camión queda *destrozado* y todo se tuerce."
     },
     {
      "t": 17,
-     "texto": "One more hit and it's *game over*."
+     "texto": "Un golpe más y se acabó la *partida*."
     },
     {
      "t": 22,
-     "texto": "Screen goes gray, and then... *Wasted*."
+     "texto": "Pantalla en gris y luego... *Wasted*."
     }
    ],
    "carteles": [
     {
      "t": 10,
-     "texto": "CRASH"
+     "texto": "CHOQUE"
     },
     {
      "t": 24,
@@ -135,50 +135,50 @@
      "end": 718
     }
    ],
-   "titulo": "GTA 6 STUNT JUMPS Are Back 🚗💥",
-   "gancho": "STUNT JUMPS ARE BACK",
-   "descripcion": "A red sedan launches over a whole park and slams into a row of coaches, and the Stunt Jumps counter pops up.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
-   "comentario": "Will you hunt down every stunt jump in GTA 6? 🚗",
+   "titulo": "GTA 6: vuelven los SALTOS ACROBÁTICOS 🚗💥",
+   "gancho": "¡VUELVEN LOS SALTOS!",
+   "descripcion": "Un sedán rojo sobrevuela un parque entero y se estampa contra una fila de autocares, y aparece el contador de saltos acrobáticos.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "¿Vas a buscar todos los saltos de GTA 6? 🚗",
    "hashtags": [
     "gta6",
-    "stuntjumps",
+    "saltosacrobaticos",
     "vicecity",
     "gtavi",
-    "gaming",
+    "videojuegos",
     "rockstargames"
    ],
    "puntuacion": 8,
-   "motivo": "Big airborne crash plus a nostalgic returning feature, very shareable.",
+   "motivo": "Choque aéreo espectacular y una función nostálgica que vuelve, muy compartible.",
    "narracion": [
     {
      "t": 0,
-     "texto": "Did you know that in GTA 6 *stunt jumps* are back?"
+     "texto": "¿Sabías que en GTA 6 vuelven los *saltos acrobáticos*?"
     },
     {
      "t": 4.5,
-     "texto": "Watch this red sedan floor it past the *airport terminal*."
+     "texto": "Este sedán rojo pasa a tope por la *terminal del aeropuerto*."
     },
     {
      "t": 9,
-     "texto": "Full speed toward the *palm trees* and..."
+     "texto": "A fondo hacia las *palmeras* y..."
     },
     {
      "t": 12,
-     "texto": "*No way*, he is flying over the whole park!"
+     "texto": "¡*No puede ser*, sobrevuela todo el parque!"
     },
     {
      "t": 17,
-     "texto": "Lands right into a row of *coaches*."
+     "texto": "Y aterriza sobre una fila de *autocares*."
     }
    ],
    "carteles": [
     {
      "t": 12,
-     "texto": "AIRBORNE"
+     "texto": "¡VOLANDO!"
     },
     {
      "t": 19,
-     "texto": "STUNT JUMPS"
+     "texto": "SALTOS ACROBÁTICOS"
     }
    ]
   },
@@ -197,67 +197,67 @@
      "end": 1372
     }
    ],
-   "titulo": "GTA 6 Map Is WAY Bigger Than Vice City 🗺️✈️",
-   "gancho": "THE MAP IS HUGE",
-   "descripcion": "Flying out of Vice City you pass factories, a stadium, farmland, mountains and wetlands, with a fighter jet on your tail.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
-   "comentario": "Which part of Leonida do you want to explore first? 🗺️",
+   "titulo": "GTA 6: el mapa es ENORME, mucho más que Vice City 🗺️✈️",
+   "gancho": "EL MAPA ES ENORME",
+   "descripcion": "Saliendo de Vice City en avión pasas por fábricas, un estadio, campos, montañas y humedales, con un caza pegado a la cola.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "¿Qué zona de Leonida quieres explorar primero? 🗺️",
    "hashtags": [
     "gta6",
     "leonida",
     "vicecity",
     "gtavi",
-    "gta6map",
-    "gaming",
-    "openworld"
+    "gta6mapa",
+    "mundoabierto",
+    "videojuegos"
    ],
    "puntuacion": 8,
-   "motivo": "Map size is the hottest GTA 6 topic, plus a surprise fighter jet.",
+   "motivo": "El tamaño del mapa es el tema más caliente de GTA 6, y encima sale un caza.",
    "narracion": [
     {
      "t": 0,
-     "texto": "Did you know GTA 6's map goes *way beyond* Vice City?"
+     "texto": "¿Sabías que GTA 6 es *mucho más* que Vice City?"
     },
     {
      "t": 4.3,
-     "texto": "From this plane you see *factories* and smoking stacks."
+     "texto": "Desde el avión se ven *fábricas* y chimeneas humeando."
     },
     {
      "t": 8,
-     "texto": "There's a *stadium*, and the skyline in the distance."
+     "texto": "Hay un *estadio* y el skyline al fondo."
     },
     {
      "t": 12,
-     "texto": "Then the city just ends. *Farmland* everywhere."
+     "texto": "Se acaba la ciudad: *campos* por doquier."
     },
     {
      "t": 15,
-     "texto": "Look at the horizon: real *mountains* in Leonida."
+     "texto": "Mira al horizonte: *montañas* de verdad en Leonida."
     },
     {
      "t": 18.5,
-     "texto": "Rivers, power lines, tiny roads, all fully *flyable*."
+     "texto": "Ríos, cables, carreteritas, todo *sobrevolable*."
     },
     {
      "t": 22,
-     "texto": "And yes, that's a *fighter jet* chasing him."
+     "texto": "Y sí, le persigue un *caza*."
     },
     {
      "t": 25.5,
-     "texto": "Down here it's swamps and *wetlands*, nothing like the city."
+     "texto": "Aquí abajo hay pantanos y *humedales*, nada que ver con la ciudad."
     }
    ],
    "carteles": [
     {
      "t": 12,
-     "texto": "FARMLAND"
+     "texto": "CAMPOS"
     },
     {
      "t": 15,
-     "texto": "MOUNTAINS"
+     "texto": "MONTAÑAS"
     },
     {
      "t": 22,
-     "texto": "FIGHTER JET"
+     "texto": "CAZA"
     }
    ]
   },
@@ -272,59 +272,59 @@
      "end": 1580
     }
    ],
-   "titulo": "GTA 6 Military Vehicles Have a TRACKER 😳🚨",
-   "gancho": "COPS ALWAYS FIND THIS",
-   "descripcion": "In GTA 6, stealing a military vehicle comes with a catch: it has a tracker and cops will always know where it is.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
-   "comentario": "Would you still steal it knowing it has a tracker? 🚨",
+   "titulo": "GTA 6: los vehículos militares llevan RASTREADOR 😳🚨",
+   "gancho": "LA POLI SIEMPRE LO ENCUENTRA",
+   "descripcion": "En GTA 6 robar un vehículo militar tiene truco: lleva un rastreador y la policía siempre sabrá dónde está.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "¿Lo robarías sabiendo que lleva rastreador? 🚨",
    "hashtags": [
     "gta6",
     "gta6gameplay",
     "vicecity",
     "gtavi",
-    "gta6facts",
+    "gta6español",
     "rockstargames",
-    "gaming"
+    "videojuegos"
    ],
    "puntuacion": 7,
-   "motivo": "Clear readable on-screen notice proves a real hidden mechanic",
+   "motivo": "Un aviso en pantalla bien legible demuestra una mecánica oculta real.",
    "narracion": [
     {
      "t": 0,
-     "texto": "Did you know that in GTA 6 *military* vehicles have a hidden *tracker*?"
+     "texto": "¿Sabías que en GTA 6 los vehículos *militares* llevan un *rastreador* oculto?"
     },
     {
      "t": 5.2,
-     "texto": "He fights his way to this *armored* military truck."
+     "texto": "Se abre paso a tiros hasta este camión *blindado*."
     },
     {
      "t": 9.0,
-     "texto": "One last push, and the ride is *his*."
+     "texto": "Un último empujón y el camión es *suyo*."
     },
     {
      "t": 12.4,
-     "texto": "He jumps in and *floors* it."
+     "texto": "Se sube y *pisa a fondo*."
     },
     {
      "t": 16.0,
-     "texto": "But look at this *notice*: the vehicle has a military *tracker*."
+     "texto": "Pero mira el *aviso*: lleva un *rastreador* militar."
     },
     {
      "t": 20.3,
-     "texto": "Cops will *always* be able to locate it."
+     "texto": "La poli *siempre* sabrá dónde está."
     },
     {
      "t": 23.5,
-     "texto": "No *hiding*, even out here."
+     "texto": "Ni aquí puedes *esconderte*."
     }
    ],
    "carteles": [
     {
      "t": 16.0,
-     "texto": "MILITARY TRACKER"
+     "texto": "RASTREADOR MILITAR"
     },
     {
      "t": 20.5,
-     "texto": "ALWAYS LOCATED"
+     "texto": "SIEMPRE LOCALIZADO"
     }
    ]
   },
@@ -343,63 +343,63 @@
      "end": 1290
     }
    ],
-   "titulo": "GTA 6 Lets You STEAL a Private Jet ✈️🔥",
-   "gancho": "STEAL A PRIVATE JET",
-   "descripcion": "In GTA 6 you can steal a private jet at the Vice City airport, taxi it out and take off over the city.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
-   "comentario": "Jet or helicopter for escaping the cops? ✈️",
+   "titulo": "GTA 6 te deja ROBAR un jet privado ✈️🔥",
+   "gancho": "ROBA UN JET PRIVADO",
+   "descripcion": "En GTA 6 puedes robar un jet privado en el aeropuerto de Vice City, sacarlo rodando y despegar sobre la ciudad.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "¿Jet o helicóptero para huir de la poli? ✈️",
    "hashtags": [
     "gta6",
     "gta6gameplay",
     "vicecity",
     "gtavi",
-    "gta6facts",
-    "gta6plane",
+    "gta6español",
+    "gta6avion",
     "rockstargames"
    ],
    "puntuacion": 7,
-   "motivo": "Jet theft and airport flyover are spectacular, clearly shown visuals",
+   "motivo": "El robo del jet y el sobrevuelo del aeropuerto son espectaculares y se ven claros.",
    "narracion": [
     {
      "t": 0,
-     "texto": "Did you know that in GTA 6 you can steal a *private jet*?"
+     "texto": "¿Sabías que en GTA 6 puedes robar un *jet privado*?"
     },
     {
      "t": 5.0,
-     "texto": "He taxis it right off the *airport* apron."
+     "texto": "Lo saca rodando de la plataforma del *aeropuerto*."
     },
     {
      "t": 8.3,
-     "texto": "Cops are already on him, but he keeps *rolling*."
+     "texto": "La poli ya le persigue, pero él *sigue rodando*."
     },
     {
      "t": 12.0,
-     "texto": "And just like that, he's *airborne*."
+     "texto": "Y así, sin más, *despega*."
     },
     {
      "t": 14.6,
-     "texto": "Look at the detail on this *airport*: terminals, jets, the whole skyline."
+     "texto": "Mira el detalle del *aeropuerto*: terminales, aviones, todo el skyline."
     },
     {
      "t": 19.4,
-     "texto": "He banks hard right over the *city*."
+     "texto": "Gira fuerte a la derecha sobre la *ciudad*."
     },
     {
      "t": 24.6,
-     "texto": "From up here you can see the whole *terminal*."
+     "texto": "Desde aquí arriba se ve toda la *terminal*."
     }
    ],
    "carteles": [
     {
      "t": 5.0,
-     "texto": "PRIVATE JET"
+     "texto": "JET PRIVADO"
     },
     {
      "t": 12.2,
-     "texto": "TAKEOFF"
+     "texto": "DESPEGUE"
     },
     {
      "t": 26.0,
-     "texto": "AIRPORT FLYOVER"
+     "texto": "SOBREVUELO"
     }
    ]
   },
@@ -418,59 +418,59 @@
      "end": 950
     }
    ],
-   "titulo": "GTA 6 lets you drive between REAL PLANES ✈️🔥",
-   "gancho": "AIRPORT TARMAC ACCESS?!",
-   "descripcion": "In GTA 6 you can walk onto the airport tarmac, take a delivery van and drive right between parked airliners.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
-   "comentario": "What would you steal at the GTA 6 airport? ✈️",
+   "titulo": "GTA 6: conduce entre AVIONES REALES ✈️🔥",
+   "gancho": "¿ACCESO A LA PISTA?",
+   "descripcion": "En GTA 6 puedes entrar a la pista del aeropuerto, coger una furgoneta de reparto y conducir entre aviones aparcados.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "¿Qué robarías en el aeropuerto de GTA 6? ✈️",
    "hashtags": [
     "gta6",
     "gta6gameplay",
     "vicecity",
     "gtavi",
-    "gta6airport",
+    "gta6aeropuerto",
     "rockstargames",
-    "gaming"
+    "videojuegos"
    ],
    "puntuacion": 7,
-   "motivo": "Free roam among real airliners is a strong visual, but no plane is stolen.",
+   "motivo": "Moverse libre entre aviones reales luce mucho, aunque no se roba ningún avión.",
    "narracion": [
     {
      "t": 0,
-     "texto": "Did you know that in GTA 6 you can roam the *airport tarmac* freely?"
+     "texto": "¿Sabías que en GTA 6 puedes recorrer la *pista del aeropuerto*?"
     },
     {
      "t": 5.3,
-     "texto": "Spot this *delivery van* parked right by the hangars."
+     "texto": "Mira esta *furgoneta de reparto* junto a los hangares."
     },
     {
      "t": 9,
-     "texto": "Walk up, open the door and just *take it*."
+     "texto": "Te acercas, abres la puerta y te la *llevas*."
     },
     {
      "t": 14,
-     "texto": "Now you're driving right between *real airliners* at the gates."
+     "texto": "Ahora conduces entre *aviones de verdad* en las puertas de embarque."
     },
     {
      "t": 20,
-     "texto": "*Jet bridges*, baggage carts, ground crew, all of it is here."
+     "texto": "*Pasarelas*, carritos de equipaje, personal de tierra, está todo."
     },
     {
      "t": 24.5,
-     "texto": "And you can cruise right past a *jumbo jet* on the taxiway."
+     "texto": "Y puedes pasar al lado de un *jumbo* en la pista de rodaje."
     }
    ],
    "carteles": [
     {
      "t": 9,
-     "texto": "STEAL IT"
+     "texto": "ROBADA"
     },
     {
      "t": 14,
-     "texto": "REAL PLANES"
+     "texto": "AVIONES REALES"
     },
     {
      "t": 25,
-     "texto": "JUMBO JET"
+     "texto": "JUMBO"
     }
    ]
   },
@@ -489,63 +489,63 @@
      "end": 468
     }
    ],
-   "titulo": "GTA 6 airport terminal is FULLY explorable 🛫😱",
-   "gancho": "GO INSIDE THE AIRPORT",
-   "descripcion": "The Vice City airport terminal in GTA 6 is open with no loading screen: check-in kiosks, flyUS counters, crowds and flight boards.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
-   "comentario": "Would you spend an hour exploring this airport? 🛫",
+   "titulo": "GTA 6: la terminal del aeropuerto se EXPLORA entera 🛫😱",
+   "gancho": "ENTRA EN EL AEROPUERTO",
+   "descripcion": "La terminal del aeropuerto de Vice City en GTA 6 está abierta y sin pantallas de carga: quioscos de facturación, mostradores de flyUS, gente y paneles de vuelos.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "¿Pasarías una hora explorando este aeropuerto? 🛫",
    "hashtags": [
     "gta6",
     "gta6gameplay",
     "vicecity",
     "gtavi",
-    "gta6airport",
-    "gta6details",
+    "gta6aeropuerto",
+    "gta6detalles",
     "rockstargames"
    ],
    "puntuacion": 7,
-   "motivo": "Seamless interiors are a hot GTA 6 topic; airport detail impresses.",
+   "motivo": "Los interiores sin cargas son tema candente y el detalle del aeropuerto impresiona.",
    "narracion": [
     {
      "t": 0,
-     "texto": "Did you know GTA 6 lets you walk right *inside* the airport terminal?"
+     "texto": "¿Sabías que en GTA 6 puedes entrar en la *terminal* del aeropuerto?"
     },
     {
      "t": 5,
-     "texto": "No loading screen. Doors open, and you're *inside*, full of people."
+     "texto": "Sin cargas: se abren las puertas y estás *dentro*, entre gente."
     },
     {
      "t": 10,
-     "texto": "Self check-in *kiosks* line the whole hall."
+     "texto": "Hay *quioscos* de autofacturación por toda la sala."
     },
     {
      "t": 15,
-     "texto": "Then the *flyUS* check-in counters, just like a real airport."
+     "texto": "Luego los mostradores de *flyUS*, como en un aeropuerto real."
     },
     {
      "t": 19.5,
-     "texto": "Every corner is packed with *NPCs* living their lives."
+     "texto": "Cada rincón está lleno de *NPCs* haciendo su vida."
     },
     {
      "t": 23.2,
-     "texto": "Climb the stairs and the terminal *keeps going*."
+     "texto": "Subes las escaleras y la terminal *sigue*."
     },
     {
      "t": 26.5,
-     "texto": "Rockstar went *crazy* here."
+     "texto": "Rockstar se ha *flipado*."
     }
    ],
    "carteles": [
     {
      "t": 5,
-     "texto": "NO LOADING"
+     "texto": "SIN CARGAS"
     },
     {
      "t": 15,
-     "texto": "CHECK-IN"
+     "texto": "FACTURACIÓN"
     },
     {
      "t": 30,
-     "texto": "FLIGHT BOARDS"
+     "texto": "PANELES DE VUELOS"
     }
    ]
   },
@@ -560,51 +560,51 @@
      "end": 67
     }
    ],
-   "titulo": "GTA 6 NPCs CONFRONT you after a crash 😤🚗",
-   "gancho": "CRASH INTO AN NPC...",
-   "descripcion": "Crash into a work van in GTA 6 and the driver gets out to confront you face to face.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
-   "comentario": "Would you apologize or run? 😤",
+   "titulo": "GTA 6: los NPCs te PLANTAN CARA tras un choque 😤🚗",
+   "gancho": "CHOCA CONTRA UN NPC...",
+   "descripcion": "Si chocas contra una furgoneta de trabajo en GTA 6, el conductor se baja y te planta cara.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "¿Pedirías perdón o saldrías corriendo? 😤",
    "hashtags": [
     "gta6",
     "gta6gameplay",
     "vicecity",
     "gtavi",
     "gta6npc",
-    "gta6details",
+    "gta6detalles",
     "rockstargames"
    ],
    "puntuacion": 7,
-   "motivo": "NPC reactions are a big talking point; clear cause and effect.",
+   "motivo": "Las reacciones de los NPCs dan mucho que hablar; causa y efecto muy claros.",
    "narracion": [
     {
      "t": 0,
-     "texto": "Did you know NPC drivers in GTA 6 will *confront you* after a crash?"
+     "texto": "¿Sabías que en GTA 6 los conductores te *plantan cara* tras un choque?"
     },
     {
      "t": 5.5,
-     "texto": "Watch. We slam right into this *work van*."
+     "texto": "Mira. Nos estampamos contra esta *furgoneta*."
     },
     {
      "t": 9,
-     "texto": "And the driver *jumps out* to face us."
+     "texto": "Y el conductor *se baja* a por nosotros."
     },
     {
      "t": 12.5,
-     "texto": "He gets right up in our face, *heated*."
+     "texto": "Se nos pone delante, muy *cabreado*."
     },
     {
      "t": 16,
-     "texto": "No way. These NPCs actually *react* now."
+     "texto": "Increíble. Ahora los NPCs *reaccionan* de verdad."
     }
    ],
    "carteles": [
     {
      "t": 6,
-     "texto": "CRASH"
+     "texto": "CHOQUE"
     },
     {
      "t": 9.5,
-     "texto": "ANGRY DRIVER"
+     "texto": "CONDUCTOR CABREADO"
     }
    ]
   },
@@ -619,54 +619,54 @@
      "end": 272
     }
    ],
-   "titulo": "GTA 6 Running Counts as a WORKOUT 🏃‍♂️💪",
-   "gancho": "RUNNING IS A WORKOUT?",
-   "descripcion": "Sprint long enough in GTA 6 and a Cardio Workout notice with a progress ring appears.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
-   "comentario": "Would you actually train Jason's cardio? 💪",
+   "titulo": "GTA 6: correr cuenta como ENTRENO 🏃‍♂️💪",
+   "gancho": "¿CORRER ES ENTRENAR?",
+   "descripcion": "Si esprintas un buen rato en GTA 6 aparece un aviso de Cardio Workout con un anillo de progreso.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "¿Entrenarías el cardio de Jason? 💪",
    "hashtags": [
     "gta6",
     "vicecity",
     "gtavi",
     "gta6fitness",
-    "gaming",
-    "rockstargames"
+    "gta6español",
+    "videojuegos"
    ],
    "puntuacion": 7,
-   "motivo": "Clear on-screen proof of a fitness mechanic fans speculate about.",
+   "motivo": "Prueba clara en pantalla de una mecánica de forma física muy especulada.",
    "narracion": [
     {
      "t": 0,
-     "texto": "Did you know running in GTA 6 counts as a *workout*?"
+     "texto": "¿Sabías que en GTA 6 correr cuenta como *entreno*?"
     },
     {
      "t": 4.3,
-     "texto": "Jason sprints out of the *airport* and down the curb."
+     "texto": "Jason sale esprintando del *aeropuerto* por la acera."
     },
     {
      "t": 8.2,
-     "texto": "And look, bottom right: *Cardio Workout*."
+     "texto": "Y mira abajo: *Cardio Workout*."
     },
     {
      "t": 10.7,
-     "texto": "A progress ring fills up the longer you *keep running*."
+     "texto": "Un anillo de progreso se llena si *sigues corriendo*."
     },
     {
      "t": 15,
-     "texto": "So every airport sprint is secretly *leg day*."
+     "texto": "Cada carrera es en secreto *día de pierna*."
     },
     {
      "t": 18.5,
-     "texto": "Looks like *staying fit* actually matters in Vice City."
+     "texto": "Parece que *estar en forma* importa en Vice City."
     }
    ],
    "carteles": [
     {
      "t": 8,
-     "texto": "CARDIO WORKOUT"
+     "texto": "ENTRENO CARDIO"
     },
     {
      "t": 11,
-     "texto": "KEEP RUNNING"
+     "texto": "SIGUE CORRIENDO"
     }
    ]
   },
@@ -681,49 +681,49 @@
      "end": 1410
     }
    ],
-   "titulo": "GTA 6 Plane Going Down? Just BAIL OUT 🪂😳",
-   "gancho": "PLANE GOING DOWN?",
-   "descripcion": "When your plane is going down in GTA 6, you can jump out, free fall and open a parachute to land safely.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
-   "comentario": "Would you try to land it or bail out? 🪂",
+   "titulo": "GTA 6: ¿el avión se cae? SALTA en paracaídas 🪂😳",
+   "gancho": "¿SE CAE EL AVIÓN?",
+   "descripcion": "Cuando tu avión se está cayendo en GTA 6 puedes saltar, caer en picado y abrir el paracaídas para aterrizar sano y salvo.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "¿Intentarías aterrizar o saltarías? 🪂",
    "hashtags": [
     "gta6",
     "gta6gameplay",
     "vicecity",
     "gtavi",
-    "gta6facts",
-    "parachute",
+    "gta6español",
+    "paracaidas",
     "rockstargames"
    ],
    "puntuacion": 6,
-   "motivo": "Cinematic jump and parachute, though bailing out is a familiar GTA mechanic",
+   "motivo": "Salto cinematográfico con paracaídas, aunque saltar del avión ya es conocido en GTA.",
    "narracion": [
     {
      "t": 0,
-     "texto": "Did you know GTA 6 lets you *bail out* mid-flight?"
+     "texto": "¿Sabías que en GTA 6 puedes *saltar* en pleno vuelo?"
     },
     {
      "t": 4.4,
-     "texto": "Watch, the engines start *smoking*."
+     "texto": "Mira, los motores *echan humo*."
     },
     {
      "t": 6.7,
-     "texto": "The jet is going down, so he *jumps*."
+     "texto": "El jet se cae, así que *salta*."
     },
     {
      "t": 10.0,
-     "texto": "Full *free fall* over the industrial zone."
+     "texto": "*Caída libre* total sobre la zona industrial."
     },
     {
      "t": 14.2,
-     "texto": "Then the *parachute* pops open."
+     "texto": "Y se abre el *paracaídas*."
     },
     {
      "t": 16.5,
-     "texto": "He steers it down between the oil *tanks*."
+     "texto": "Lo guía entre los *tanques* de petróleo."
     },
     {
      "t": 21.8,
-     "texto": "And he *lands* like nothing happened."
+     "texto": "Y *aterriza* como si nada."
     }
    ],
    "carteles": [
@@ -733,11 +733,11 @@
     },
     {
      "t": 9.0,
-     "texto": "BAIL OUT"
+     "texto": "¡SALTA!"
     },
     {
      "t": 14.5,
-     "texto": "PARACHUTE"
+     "texto": "PARACAÍDAS"
     }
    ]
   },
@@ -752,54 +752,54 @@
      "end": 560
     }
    ],
-   "titulo": "GTA 6 VENDING MACHINES actually work 🥤😮",
-   "gancho": "YOU CAN BUY THIS?",
-   "descripcion": "In GTA 6 you can use vending machines, pick from a buy menu and walk around with your drink.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
-   "comentario": "What should Rockstar let us buy next? 🥤",
+   "titulo": "GTA 6: las MÁQUINAS EXPENDEDORAS funcionan 🥤😮",
+   "gancho": "¿SE PUEDE COMPRAR?",
+   "descripcion": "En GTA 6 puedes usar las máquinas expendedoras, elegir en un menú de compra y pasearte con tu bebida.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "¿Qué debería dejarnos comprar Rockstar ahora? 🥤",
    "hashtags": [
     "gta6",
     "gta6gameplay",
     "vicecity",
     "gtavi",
-    "gta6details",
+    "gta6detalles",
     "rockstargames"
    ],
    "puntuacion": 6,
-   "motivo": "Neat small detail, but low action; menu text is too small to read.",
+   "motivo": "Detalle curioso pero con poca acción; el texto del menú se lee mal.",
    "narracion": [
     {
      "t": 0,
-     "texto": "Did you know GTA 6 has *vending machines* you can actually use?"
+     "texto": "¿Sabías que en GTA 6 las *máquinas expendedoras* funcionan?"
     },
     {
      "t": 4.6,
-     "texto": "Walk right up to this *soda machine*."
+     "texto": "Te acercas a esta *máquina de refrescos*."
     },
     {
      "t": 7.6,
-     "texto": "A *buy menu* pops up with a few options."
+     "texto": "Sale un *menú de compra* con varias opciones."
     },
     {
      "t": 11.3,
-     "texto": "Pick one and grab your *drink*."
+     "texto": "Eliges una y coges tu *bebida*."
     },
     {
      "t": 14.5,
-     "texto": "Then stroll through the terminal with it *in your hand*."
+     "texto": "Y paseas por la terminal con ella *en la mano*."
     },
     {
      "t": 18.6,
-     "texto": "Tiny detail, but Rockstar *thought of everything*."
+     "texto": "Detallazo: Rockstar *pensó en todo*."
     }
    ],
    "carteles": [
     {
      "t": 7,
-     "texto": "BUY MENU"
+     "texto": "MENÚ DE COMPRA"
     },
     {
      "t": 14,
-     "texto": "DRINK IN HAND"
+     "texto": "BEBIDA EN MANO"
     }
    ]
   },
@@ -810,50 +810,50 @@
      "end": 222
     }
    ],
-   "titulo": "GTA 6 has WORKING ELEVATORS 🛗🤯",
-   "gancho": "ELEVATORS ACTUALLY WORK",
-   "descripcion": "At the Vice City airport in GTA 6 you can call an elevator, step in and press a floor button.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
-   "comentario": "Should GTA 6 have elevator heists? 🛗",
+   "titulo": "GTA 6 tiene ASCENSORES que funcionan 🛗🤯",
+   "gancho": "LOS ASCENSORES FUNCIONAN",
+   "descripcion": "En el aeropuerto de Vice City de GTA 6 puedes llamar al ascensor, entrar y pulsar el botón de una planta.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "¿Debería GTA 6 tener golpes en ascensores? 🛗",
    "hashtags": [
     "gta6",
     "gta6gameplay",
     "vicecity",
     "gtavi",
-    "gta6details",
-    "gta6airport"
+    "gta6detalles",
+    "gta6aeropuerto"
    ],
    "puntuacion": 6,
-   "motivo": "Interactive detail fans love, but slow and dim footage.",
+   "motivo": "Detalle interactivo que encanta a los fans, aunque las imágenes son lentas y oscuras.",
    "narracion": [
     {
      "t": 0,
-     "texto": "Did you know GTA 6 has *working elevators* at the airport?"
+     "texto": "¿Sabías que en GTA 6 hay *ascensores* que funcionan?"
     },
     {
      "t": 4.3,
-     "texto": "Walk up and *press the call button*."
+     "texto": "Te acercas y *pulsas el botón*."
     },
     {
      "t": 7.5,
-     "texto": "Wait a second, and the *doors slide open*."
+     "texto": "Esperas un poco y *se abren las puertas*."
     },
     {
      "t": 11,
-     "texto": "Step inside and pick your *floor* on the panel."
+     "texto": "Entras y eliges tu *planta* en el panel."
     },
     {
      "t": 14.6,
-     "texto": "Doors close. *No way*."
+     "texto": "Se cierran. *Brutal*."
     }
    ],
    "carteles": [
     {
      "t": 4.5,
-     "texto": "CALL BUTTON"
+     "texto": "LLAMAR"
     },
     {
      "t": 11,
-     "texto": "PICK A FLOOR"
+     "texto": "ELIGE PLANTA"
     }
    ]
   },
@@ -868,58 +868,58 @@
      "end": 524
     }
    ],
-   "titulo": "GTA 6 Airport Signs Are BILINGUAL 🇺🇸✈️",
-   "gancho": "LOOK AT THESE SIGNS",
-   "descripcion": "Vice City's airport signs are in English and Spanish, point to the Vice City Metro, and the halls have moving walkways.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
-   "comentario": "What other tiny detail did you spot here? ✈️",
+   "titulo": "GTA 6: los carteles del aeropuerto son BILINGÜES 🇪🇸✈️",
+   "gancho": "MIRA ESTOS CARTELES",
+   "descripcion": "Los carteles del aeropuerto de Vice City están en inglés y en español, llevan al Vice City Metro y los pasillos tienen cintas rodantes.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "¿Qué otro detalle has visto aquí? ✈️",
    "hashtags": [
     "gta6",
     "vicecity",
     "gtavi",
-    "gta6airport",
-    "gaming",
-    "details"
+    "gta6aeropuerto",
+    "gta6español",
+    "detalles"
    ],
    "puntuacion": 6,
-   "motivo": "Nice realism detail, but slow walking footage.",
+   "motivo": "Buen detalle de realismo, aunque son imágenes caminando y lentas.",
    "narracion": [
     {
      "t": 0,
-     "texto": "Did you know GTA 6 airport signs are *bilingual*?"
+     "texto": "¿Sabías que GTA 6 tiene carteles *bilingües*?"
     },
     {
      "t": 3.6,
-     "texto": "Look up: *Vice City Metro*, Parking, and Exit."
+     "texto": "Mira arriba: *Vice City Metro*, Parking y Exit."
     },
     {
      "t": 7,
-     "texto": "And under each one, the *Spanish* version: Estacionamiento, Salida."
+     "texto": "Y debajo, en *español*: Estacionamiento, Salida."
     },
     {
      "t": 10.6,
-     "texto": "The airport even has *moving walkways*."
+     "texto": "Hasta tiene *pasillos rodantes*."
     },
     {
      "t": 13.5,
-     "texto": "Every corridor feels like a *real* Florida airport."
+     "texto": "Parece un aeropuerto *real* de Florida."
     },
     {
      "t": 17,
-     "texto": "And the signs lead straight to the *Vice City Metro*."
+     "texto": "Y las señales llevan directo al *Vice City Metro*."
     },
     {
      "t": 21.5,
-     "texto": "More walkways, lined with *ads*, just like the real thing."
+     "texto": "Más pasillos rodantes llenos de *anuncios*, como en la vida real."
     }
    ],
    "carteles": [
     {
      "t": 7,
-     "texto": "BILINGUAL SIGNS"
+     "texto": "CARTELES BILINGÜES"
     },
     {
      "t": 10.5,
-     "texto": "MOVING WALKWAYS"
+     "texto": "PASILLOS RODANTES"
     },
     {
      "t": 19,
@@ -938,51 +938,51 @@
      "end": 1212
     }
    ],
-   "titulo": "GTA 6 Police SUV DRIFTING on the Runway 🚔💨",
-   "gancho": "STEAL THE COP CAR",
-   "descripcion": "In GTA 6 you can steal a police SUV at the airport and drift it down the runway while other cops chase you.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
-   "comentario": "Best getaway car in GTA 6 so far? 🚔",
+   "titulo": "GTA 6: DERRAPES con un SUV policial en la pista 🚔💨",
+   "gancho": "ROBA EL COCHE PATRULLA",
+   "descripcion": "En GTA 6 puedes robar un SUV de policía en el aeropuerto y derrapar por la pista mientras otros polis te persiguen.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "¿El mejor coche para huir en GTA 6 hasta ahora? 🚔",
    "hashtags": [
     "gta6",
     "gta6gameplay",
     "vicecity",
     "gtavi",
-    "gta6facts",
-    "gta6police",
+    "gta6español",
+    "gta6policia",
     "rockstargames"
    ],
    "puntuacion": 5,
-   "motivo": "Fun drift footage but stealing cop cars is not a new fact",
+   "motivo": "Derrapes divertidos, pero robar coches patrulla no es algo nuevo.",
    "narracion": [
     {
      "t": 0,
-     "texto": "Did you know GTA 6 lets you *steal* police SUVs?"
+     "texto": "¿Sabías que en GTA 6 puedes *robar* SUVs de policía?"
     },
     {
      "t": 4.4,
-     "texto": "He jumps in, and now it's *drift* time."
+     "texto": "Se sube y toca *derrapar*."
     },
     {
      "t": 7.7,
-     "texto": "Sparks flying off the *runway*. No way."
+     "texto": "Chispas por toda la *pista*. Increíble."
     },
     {
      "t": 10.6,
-     "texto": "Real cops are *chasing* him in the same car."
+     "texto": "La poli le *persigue* con el mismo coche."
     },
     {
      "t": 14.2,
-     "texto": "Rockstar went *crazy* with this."
+     "texto": "Rockstar se ha *flipado*."
     }
    ],
    "carteles": [
     {
      "t": 4.5,
-     "texto": "STOLEN"
+     "texto": "ROBADO"
     },
     {
      "t": 7.5,
-     "texto": "RUNWAY DRIFT"
+     "texto": "DERRAPE EN PISTA"
     }
    ]
   },
@@ -997,54 +997,54 @@
      "end": 830
     }
    ],
-   "titulo": "GTA 6 Has EV CHARGING Spots ⚡🚗",
-   "gancho": "EV CHARGERS IN GTA?",
-   "descripcion": "A rooftop garage in Vice City has green electric vehicle bays with wall-mounted chargers.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
-   "comentario": "Will you drive electric in Vice City? ⚡",
+   "titulo": "GTA 6 tiene puntos de CARGA ELÉCTRICA ⚡🚗",
+   "gancho": "¿CARGADORES EN GTA?",
+   "descripcion": "Un parking en una azotea de Vice City tiene plazas verdes para coches eléctricos con cargadores en la pared.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "¿Conducirás eléctrico en Vice City? ⚡",
    "hashtags": [
     "gta6",
     "vicecity",
     "gtavi",
-    "gta6details",
-    "gaming",
-    "ev"
+    "gta6detalles",
+    "cocheselectricos",
+    "videojuegos"
    ],
    "puntuacion": 5,
-   "motivo": "Cool realism detail but only a few seconds of payoff.",
+   "motivo": "Detalle de realismo chulo, pero solo dura unos segundos.",
    "narracion": [
     {
      "t": 0,
-     "texto": "Did you know GTA 6 has *EV charging* spots?"
+     "texto": "¿Sabías que GTA 6 tiene *cargadores eléctricos*?"
     },
     {
      "t": 3.6,
-     "texto": "Jason's crossing a rooftop garage with the *skyline* behind."
+     "texto": "Jason cruza una azotea con el *skyline* detrás."
     },
     {
      "t": 7.2,
-     "texto": "Now look: green bays and *wall chargers*."
+     "texto": "Mira: plazas verdes y *cargadores*."
     },
     {
      "t": 10,
-     "texto": "Rockstar even put *electric car* spots in Vice City."
+     "texto": "Rockstar puso plazas para *coches eléctricos*."
     },
     {
      "t": 13.6,
-     "texto": "And this garage is fully explorable, every *stairwell*."
+     "texto": "Parking explorable, hasta cada *escalera*."
     },
     {
      "t": 16.8,
-     "texto": "Tiny details like this make the city feel *real*."
+     "texto": "Detalles así hacen la ciudad *real*."
     }
    ],
    "carteles": [
     {
      "t": 6,
-     "texto": "EV CHARGING"
+     "texto": "CARGA ELÉCTRICA"
     },
     {
      "t": 8,
-     "texto": "WALL CHARGERS"
+     "texto": "CARGADORES"
     }
    ]
   }

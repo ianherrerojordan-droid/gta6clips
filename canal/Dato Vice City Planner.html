@@ -290,7 +290,7 @@ function tarjeta(r) {
 function leerMarcas() { try { return JSON.parse(localStorage.getItem("dvc-marcas") || "{}"); } catch (e) { return {}; } }
 function modoLocal() {
   const m = leerMarcas();
-  filasAll = LOCAL.map((r) => ({ ...r, programado: !!m[r.id] }));
+  filasAll = LOCAL.map((r) => ({ ...r, programado: !!m[r.id] })).sort((x, y) => x.orden - y.orden);
   aviso("Modo sin conexión: lo que marques se guarda en este navegador.");
   pintar();
 }

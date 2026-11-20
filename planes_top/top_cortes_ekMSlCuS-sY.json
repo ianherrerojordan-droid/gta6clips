@@ -1,0 +1,206 @@
+{
+ "clips": [
+  {
+   "idea": "Un ciclista te exige una disculpa por cómo conduces y eliges respuesta (disculparte sinceramente, calmarlo o mandarlo a la mierda): escena 1 te para en la gasolinera y te acusa; escena 2 pide 'una disculpa sincera' con las opciones de diálogo en pantalla",
+   "tramos": [
+    {
+     "start": 281,
+     "end": 296
+    },
+    {
+     "start": 315,
+     "end": 330
+    }
+   ]
+  },
+  {
+   "idea": "Puedes robar un scooter de movilidad (silla eléctrica) a un NPC y conducirlo por la carretera: lo coges en la acera y circulas con él por la calzada",
+   "tramos": [
+    {
+     "start": 1737,
+     "end": 1769
+    }
+   ]
+  },
+  {
+   "idea": "Puedes subir a un autobús público como pasajero: escena 1 corres hasta el bus y subes por la puerta; escena 2 vas sentado dentro mientras circula",
+   "tramos": [
+    {
+     "start": 1654,
+     "end": 1670
+    },
+    {
+     "start": 1678,
+     "end": 1694
+    }
+   ]
+  },
+  {
+   "idea": "La policía te placa y te inmoviliza en el suelo para esposarte ('Get down! Don't resist!'): el agente se lanza sobre el jugador y lo reduce en el asfalto",
+   "tramos": [
+    {
+     "start": 1782,
+     "end": 1810
+    }
+   ]
+  },
+  {
+   "idea": "Puedes probarte la ropa antes de comprarla y salir con ella puesta: escena 1 entras en la tienda This/That y saludas a la dependienta; escena 2 previsualizas camisa ($158) y shorts ($95) y sales vestido con ellos",
+   "tramos": [
+    {
+     "start": 418,
+     "end": 430
+    },
+    {
+     "start": 478,
+     "end": 500
+    }
+   ]
+  },
+  {
+   "idea": "Hay coches ocultos con piezas únicas que no se pueden recambiar si los modificas: aviso 'You've found a standard vehicle, some parts may be unique' y sacas el coche con neones morados",
+   "tramos": [
+    {
+     "start": 162,
+     "end": 190
+    }
+   ]
+  },
+  {
+   "idea": "El centro comercial es totalmente explorable: escena 1 recreativas y pasillo de Mo B's; escena 2 food court con Burger Shot; escena 3 escenario con instrumentos en el atrio",
+   "tramos": [
+    {
+     "start": 876,
+     "end": 888
+    },
+    {
+     "start": 900,
+     "end": 912
+    },
+    {
+     "start": 920,
+     "end": 930
+    }
+   ]
+  },
+  {
+   "idea": "Para robar un coche cerrado tienes que romper la ventanilla ('Smash window'): escena 1 rompes el cristal de una pickup roja; escena 2 entras en un garaje de mansión y rompes la ventanilla de un deportivo",
+   "tramos": [
+    {
+     "start": 1880,
+     "end": 1894
+    },
+    {
+     "start": 2396,
+     "end": 2412
+    }
+   ]
+  },
+  {
+   "idea": "Puedes entrar en las estaciones de metro de Vice City y pasar los tornos: entras a la estación, subes al andén con anuncios 'Travel Vice' y cruzas la pasarela",
+   "tramos": [
+    {
+     "start": 1412,
+     "end": 1446
+    }
+   ]
+  },
+  {
+   "idea": "Puedes comprar comida en una cafetería y comértela mientras caminas: escena 1 pides en el mostrador; escena 2 vas por la calle comiéndote el sandwich (prompt Eat/Drop)",
+   "tramos": [
+    {
+     "start": 1556,
+     "end": 1572
+    },
+    {
+     "start": 1594,
+     "end": 1612
+    }
+   ]
+  },
+  {
+   "idea": "Puedes comprar una bebida en una tienda y bebértela para obtener un buff de salud ('Health buffed'): compras en el mostrador, bebes la lata y sales",
+   "tramos": [
+    {
+     "start": 570,
+     "end": 600
+    }
+   ]
+  },
+  {
+   "idea": "En las tiendas de deporte puedes previsualizar gorras y zapatillas con primer plano de los pies antes de comprarlas: gorra $49, running $75, high tops $180",
+   "tramos": [
+    {
+     "start": 1088,
+     "end": 1120
+    }
+   ]
+  },
+  {
+   "idea": "El móvil tiene cámara con zoom, filtros, cuadrícula y luz: sacas el teléfono en el restaurante del centro comercial y fotografías a la cajera",
+   "tramos": [
+    {
+     "start": 944,
+     "end": 968
+    }
+   ]
+  },
+  {
+   "idea": "Si entras en una mansión ajena se reporta el crimen y el propietario te encara: escena 1 'Crime reported' en el jardín; escena 2 el dueño te planta cara; escena 3 pelea y lo derribas",
+   "tramos": [
+    {
+     "start": 2338,
+     "end": 2348
+    },
+    {
+     "start": 2362,
+     "end": 2372
+    },
+    {
+     "start": 2424,
+     "end": 2438
+    }
+   ]
+  },
+  {
+   "idea": "Puedes robar una lancha amarrada en el puerto deportivo y navegar por los canales: subes al barco en el muelle y sales navegando al atardecer",
+   "tramos": [
+    {
+     "start": 1998,
+     "end": 2032
+    }
+   ]
+  },
+  {
+   "idea": "El ciclista enfadado te recuerda la ley de 'tres pies de distancia' y te amenaza con la 'Leonida Cyclist Civil Rights Cooperative': escena 1 insulta y grita 'three feet of clearance'; escena 2 'classic motorist oppression' y la amenaza legal",
+   "tramos": [
+    {
+     "start": 348,
+     "end": 362
+    },
+    {
+     "start": 367,
+     "end": 388
+    }
+   ]
+  },
+  {
+   "idea": "Hay vacas pastando en las zonas rurales: sales del coche junto al humedal y caminas entre el ganado",
+   "tramos": [
+    {
+     "start": 2632,
+     "end": 2664
+    }
+   ]
+  },
+  {
+   "idea": "Puedes robar una moto de agua en la playa y pilotarla por el océano frente a los rascacielos",
+   "tramos": [
+    {
+     "start": 2216,
+     "end": 2248
+    }
+   ]
+  }
+ ]
+}

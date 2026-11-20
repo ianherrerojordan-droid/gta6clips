@@ -54,7 +54,58 @@
      "t": 23,
      "texto": "CAJAS MISTERIOSAS"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6 NPC Drops Mystery Box LORE 📦👀",
+    "gancho": "THIS NPC KNOWS TOO MUCH",
+    "descripcion": "Jason helps a stranger who admits some psychos force him to haul boxes out to the Grassrivers.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "What do you think is in those boxes? 📦",
+    "hashtags": [
+     "gta6",
+     "gtavi",
+     "lore",
+     "grassrivers",
+     "jason",
+     "vicecity",
+     "npc"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Jason just *knocked out* a guy at the gas station."
+     },
+     {
+      "t": 3.9,
+      "texto": "And then this *random stranger* shows up."
+     },
+     {
+      "t": 10.1,
+      "texto": "Jason: looked like you could use a *hand*."
+     },
+     {
+      "t": 22.6,
+      "texto": "*Psychos* force him to haul *boxes* to the Grassrivers."
+     },
+     {
+      "t": 27.2,
+      "texto": "Jason grabs the pickup and *bolts*."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 11,
+      "texto": "LORE"
+     },
+     {
+      "t": 18,
+      "texto": "GRASSRIVERS"
+     },
+     {
+      "t": 23,
+      "texto": "MYSTERY BOXES"
+     }
+    ]
+   }
   },
   {
    "start": 390,
@@ -120,7 +171,69 @@
      "t": 34,
      "texto": "HAMBRE SACIADA"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6 Has a DRIVE-THRU and It's Real 🍔🚗",
+    "gancho": "GTA 6 HAS A DRIVE-THRU",
+    "descripcion": "Jason orders a chicken sandwich at a drive-thru without leaving his car, something no GTA has ever done.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "What's the first thing you're ordering at the GTA 6 drive-thru? 🍔",
+    "hashtags": [
+     "gta6",
+     "gtavi",
+     "drivethru",
+     "jason",
+     "vicecity",
+     "fastfood"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Okay, GTA 6 finally has a fast food *drive-thru*."
+     },
+     {
+      "t": 5,
+      "texto": "The game literally tells you: pull up to the *speaker* to order."
+     },
+     {
+      "t": 13,
+      "texto": "He gets in the *drive-thru* lane like a normal guy."
+     },
+     {
+      "t": 18,
+      "texto": "Pulls up and a whole *menu* pops up."
+     },
+     {
+      "t": 22.3,
+      "texto": "Order's in. Now roll to the *window*."
+     },
+     {
+      "t": 26.3,
+      "texto": "And there it is: a *chicken sandwich*."
+     },
+     {
+      "t": 30,
+      "texto": "You can *eat it*, inspect it or save it."
+     },
+     {
+      "t": 34,
+      "texto": "Hunger *fixed*. Never seen in GTA."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 5,
+      "texto": "DRIVE-THRU"
+     },
+     {
+      "t": 26,
+      "texto": "CHICKEN SANDWICH"
+     },
+     {
+      "t": 34,
+      "texto": "HUNGER FIXED"
+     }
+    ]
+   }
   },
   {
    "start": 1422,
@@ -170,7 +283,53 @@
      "t": 20,
      "texto": "MÁNDATE DINERO"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6 NPC Gives the Most TOXIC Advice 💀📱",
+    "gancho": "WORST ADVICE EVER",
+    "descripcion": "At a Vice City beach club, an NPC gives her friend the wildest advice about her boyfriend's phone.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Is this the most toxic NPC in GTA history? 💀",
+    "hashtags": [
+     "gta6",
+     "gtavi",
+     "npc",
+     "beachclub",
+     "vicecity",
+     "funny"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Okay, he's walking into a *beach club* in Vice City."
+     },
+     {
+      "t": 14.4,
+      "texto": "Did you hear that? She tells her friend: if you *check his phone*..."
+     },
+     {
+      "t": 19.6,
+      "texto": "...open his bank and *send yourself money*. Expert advice."
+     },
+     {
+      "t": 23.5,
+      "texto": "And look at this group, every *NPC* has their own thing going on."
+     },
+     {
+      "t": 31,
+      "texto": "Little detail: he's already got a *drink* in hand."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 15,
+      "texto": "CHECK HIS PHONE"
+     },
+     {
+      "t": 20,
+      "texto": "SEND YOURSELF MONEY"
+     }
+    ]
+   }
   },
   {
    "start": 1728,
@@ -236,7 +395,69 @@
      "t": 56,
      "texto": "PELEA"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6 Mansion Crash Gets HUMILIATED 😭🏡",
+    "gancho": "KICKED OUT OF THE MANSION",
+    "descripcion": "He sneaks into a Vice City mansion and gets thrown out with the most absurd insults in the game.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Which insult hit harder: electric chair or processed meat breath? 😭",
+    "hashtags": [
+     "gta6",
+     "gtavi",
+     "mansion",
+     "npc",
+     "vicecity",
+     "funny"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Okay, he sneaks into a luxury *mansion* and gets caught."
+     },
+     {
+      "t": 5.2,
+      "texto": "They tell him to *leave*, and he swears he's not looking for trouble."
+     },
+     {
+      "t": 11.4,
+      "texto": "But no mercy: *you asked for this*, they tell him."
+     },
+     {
+      "t": 19.5,
+      "texto": "Then: *bring back the electric chair*. Brutal."
+     },
+     {
+      "t": 23,
+      "texto": "And the girl in the *bikini* keeps following him."
+     },
+     {
+      "t": 28,
+      "texto": "Look at the *fountain*, the lawn, the palm trees... this detail is insane."
+     },
+     {
+      "t": 45.3,
+      "texto": "They just told him his breath smells like *processed meat* and gingivitis."
+     },
+     {
+      "t": 50.5,
+      "texto": "Now he heads to the *front entrance*, with that gold whip."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 17,
+      "texto": "ELECTRIC CHAIR"
+     },
+     {
+      "t": 40,
+      "texto": "PROCESSED MEAT"
+     },
+     {
+      "t": 56,
+      "texto": "FIGHT"
+     }
+    ]
+   }
   },
   {
    "start": 15,
@@ -310,7 +531,77 @@
      "t": 33,
      "texto": "SERPIENTE MASCOTA"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6 Jason's MORNING Routine Is Insane ☕🐍",
+    "gancho": "JASON HAS A SNAKE",
+    "descripcion": "Coffee, a hoodie and a snake in the living room: this is how detailed Jason's house is in GTA 6.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "What would you name Jason's snake? 🐍",
+    "hashtags": [
+     "gta6",
+     "gtavi",
+     "jason",
+     "snake",
+     "vicecity",
+     "details"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Check out Jason's *morning routine* in GTA 6."
+     },
+     {
+      "t": 3.6,
+      "texto": "He throws on a hoodie and heads to the *kitchen*."
+     },
+     {
+      "t": 8,
+      "texto": "Look at the *coffee maker*: you can actually pour coffee."
+     },
+     {
+      "t": 12,
+      "texto": "And he drinks it with a *crazy good* animation."
+     },
+     {
+      "t": 18,
+      "texto": "He gets a *refill* option, and goes again."
+     },
+     {
+      "t": 22.2,
+      "texto": "Watch how the *sunlight* shifts across the kitchen."
+     },
+     {
+      "t": 30,
+      "texto": "But the best part is here: a *terrarium*..."
+     },
+     {
+      "t": 33.3,
+      "texto": "with a *snake* inside, and he can interact with it."
+     },
+     {
+      "t": 38.5,
+      "texto": "This level of *detail* is insane."
+     },
+     {
+      "t": 43,
+      "texto": "Look at the snake, it actually *moves*."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 8,
+      "texto": "POUR COFFEE"
+     },
+     {
+      "t": 18,
+      "texto": "REFILL"
+     },
+     {
+      "t": 33,
+      "texto": "PET SNAKE"
+     }
+    ]
+   }
   },
   {
    "start": 189,
@@ -368,7 +659,61 @@
      "t": 31,
      "texto": "AL SUELO"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6 Gas Station Turns Into a FIGHT 👊⛽",
+    "gancho": "THIS ENDS BADLY",
+    "descripcion": "An NPC gets chewed out over the phone at a gas station and seconds later it all turns into a fistfight.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Who do you think started it? 👊",
+    "hashtags": [
+     "gta6",
+     "gtavi",
+     "fight",
+     "gasstation",
+     "vicecity",
+     "npc"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Watch this GTA 6 *gas station*, it ends badly."
+     },
+     {
+      "t": 4,
+      "texto": "He steps outside and a guy is *on the phone*."
+     },
+     {
+      "t": 18.1,
+      "texto": "They yell at him to move and he swears he's *coming*."
+     },
+     {
+      "t": 23.8,
+      "texto": "And out of nowhere, a *fistfight* breaks out."
+     },
+     {
+      "t": 27.5,
+      "texto": "The punch *animations* hit so heavy."
+     },
+     {
+      "t": 30.8,
+      "texto": "Look, one guy's already on the *ground*."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 8,
+      "texto": "PHONE RAGE"
+     },
+     {
+      "t": 24,
+      "texto": "FISTFIGHT"
+     },
+     {
+      "t": 31,
+      "texto": "DOWN"
+     }
+    ]
+   }
   },
   {
    "start": 555,
@@ -434,7 +779,69 @@
      "t": 40,
      "texto": "TIENDA NOLA"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6 Mall NPCs Are Spilling TEA ☕😂",
+    "gancho": "LISTEN TO THESE NPCS",
+    "descripcion": "Coffee at a stand, a stroll through the mall and NPC gossip about a plastic surgery gone very wrong.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "What's the funniest NPC line you've heard so far? 😂",
+    "hashtags": [
+     "gta6",
+     "gtavi",
+     "mall",
+     "npc",
+     "vicecity",
+     "funny"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Check out the GTA 6 *mall*, it's so alive."
+     },
+     {
+      "t": 6.5,
+      "texto": "Jason heads straight to a *coffee* stand."
+     },
+     {
+      "t": 10.5,
+      "texto": "A *menu* pops up with real coffees to pick."
+     },
+     {
+      "t": 14.8,
+      "texto": "Orders, pays and carries it in his *hand*."
+     },
+     {
+      "t": 21.9,
+      "texto": "And look: he's *sipping* it while walking the terrace."
+     },
+     {
+      "t": 27,
+      "texto": "Plus the balcony view with *skyscrapers* behind."
+     },
+     {
+      "t": 32.5,
+      "texto": "Listen to what they say about a *friend*:"
+     },
+     {
+      "t": 39.35,
+      "texto": "Nipples pointing *different directions*."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 12,
+      "texto": "COFFEE MENU"
+     },
+     {
+      "t": 36,
+      "texto": "SURGERY FAIL"
+     },
+     {
+      "t": 40,
+      "texto": "NOLA STORE"
+     }
+    ]
+   }
   },
   {
    "start": 603,
@@ -499,7 +906,69 @@
      "t": 40,
      "texto": "NECESITA CUENTA BANCARIA"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6 Clothing Store Is Too REAL 👔🐊",
+    "gancho": "GTA 6 CLOTHES",
+    "descripcion": "In GTA 6 you try on blazers, Hawaiian shirts and full outfits like in a real store.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Would you drop $2,229 on that croc shirt? 🐊",
+    "hashtags": [
+     "gta6",
+     "gtavi",
+     "clothes",
+     "fashion",
+     "vicecity",
+     "shopping"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Okay, GTA 6 lets you try clothes *color by color*, like a real store."
+     },
+     {
+      "t": 7,
+      "texto": "And you walk freely around, *rack by rack*."
+     },
+     {
+      "t": 12,
+      "texto": "Dress shirts: from *$139* to almost *$900*."
+     },
+     {
+      "t": 19,
+      "texto": "Now the good stuff: *Hawaiian shirts*."
+     },
+     {
+      "t": 22.5,
+      "texto": "*Tiger* print, flowers, palm trees... pure *Vice City*."
+     },
+     {
+      "t": 31,
+      "texto": "The clerk tells him to *take his time*."
+     },
+     {
+      "t": 36,
+      "texto": "Now for the *mannequin*: full outfit."
+     },
+     {
+      "t": 39.4,
+      "texto": "*Croc* shirt plus linen: *$2,229*."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 12,
+      "texto": "UP TO $879"
+     },
+     {
+      "t": 22,
+      "texto": "HAWAIIAN SHIRTS"
+     },
+     {
+      "t": 40,
+      "texto": "BANK ACCOUNT NEEDED"
+     }
+    ]
+   }
   },
   {
    "start": 740,
@@ -556,7 +1025,61 @@
      "t": 15,
      "texto": "KO DE UN GOLPE"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6 Truck Crash Ends in a ONE PUNCH KO 👊🚚",
+    "gancho": "DON'T TAKE ANOTHER STEP",
+    "descripcion": "He slams into a Candybox truck, the driver gets in his face and hits the ground with one punch.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Was the driver right to step up? 😂",
+    "hashtags": [
+     "gta6",
+     "gtavi",
+     "crash",
+     "fight",
+     "vicecity",
+     "npc"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Watch him cruising downtown in this *pickup*."
+     },
+     {
+      "t": 4.5,
+      "texto": "*Boom*, right into the Candybox truck."
+     },
+     {
+      "t": 8,
+      "texto": "He hops out *like nothing*."
+     },
+     {
+      "t": 10.6,
+      "texto": "The driver comes out *furious*."
+     },
+     {
+      "t": 16.5,
+      "texto": "Tells him *don't take another step*... and ends up *on the floor*."
+     },
+     {
+      "t": 21.5,
+      "texto": "And he walks back to his car *totally chill*."
+     },
+     {
+      "t": 25.5,
+      "texto": "Then just keeps *cruising* Vice City, nothing to see here."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 4,
+      "texto": "CRASH"
+     },
+     {
+      "t": 15,
+      "texto": "ONE PUNCH KO"
+     }
+    ]
+   }
   },
   {
    "start": 920,
@@ -618,7 +1141,65 @@
      "t": 43,
      "texto": "CHOQUE"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6 Phone Has FILTERS and a Car Theft 📸🏎️",
+    "gancho": "THE PHONE HAS FILTERS",
+    "descripcion": "He snaps filtered photos of a supercar, then drags a driver out of his car and takes it.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Which filter would you use first? 📸",
+    "hashtags": [
+     "gta6",
+     "gtavi",
+     "camera",
+     "supercar",
+     "vicecity",
+     "phone"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Okay, the GTA 6 *phone* has a camera with *filters*."
+     },
+     {
+      "t": 5,
+      "texto": "Portrait mode, grid, *selfie*, zoom... like a real phone."
+     },
+     {
+      "t": 9.3,
+      "texto": "And every *filter* totally changes the car."
+     },
+     {
+      "t": 18,
+      "texto": "An NPC goes: *you like my haircut* or what?"
+     },
+     {
+      "t": 24,
+      "texto": "But he doesn't want pics, he wants to *steal* one of these."
+     },
+     {
+      "t": 38.5,
+      "texto": "*Get out of the car!* And he drags him out."
+     },
+     {
+      "t": 44.5,
+      "texto": "Two seconds later, *crash* into another supercar."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 6,
+      "texto": "FILTER CAMERA"
+     },
+     {
+      "t": 36,
+      "texto": "SPEED STEAL"
+     },
+     {
+      "t": 43,
+      "texto": "CRASH"
+     }
+    ]
+   }
   },
   {
    "start": 1241,
@@ -687,7 +1268,73 @@
      "t": 31,
      "texto": "SAQUEO"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6 Yacht Party CRASHER Goes Wild 🛥️👊",
+    "gancho": "CRASHING A YACHT",
+    "descripcion": "He sneaks onto a packed yacht, gets asked if he's crazy, knocks out two guys and loots the body.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Would you crash this yacht party too? 🛥️",
+    "hashtags": [
+     "gta6",
+     "gtavi",
+     "yacht",
+     "fight",
+     "vicecity",
+     "npc"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Okay, he just *sneaks* onto a yacht full of people."
+     },
+     {
+      "t": 5,
+      "texto": "And just stands there, *uninvited*."
+     },
+     {
+      "t": 8.5,
+      "texto": "Look at the NPCs' faces, *nobody* gets it."
+     },
+     {
+      "t": 16.8,
+      "texto": "They go: *are you crazy or what?* They're filming a scene."
+     },
+     {
+      "t": 23.4,
+      "texto": "And his answer... *fists*."
+     },
+     {
+      "t": 26,
+      "texto": "Two guys *KO* on the deck in a second."
+     },
+     {
+      "t": 31,
+      "texto": "And yeah: you can *loot* the body and take their stuff."
+     },
+     {
+      "t": 36.4,
+      "texto": "Now he heads inside the yacht for the *wheel*."
+     },
+     {
+      "t": 40.5,
+      "texto": "The yacht is *his*... or so he thinks."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 13,
+      "texto": "ARE YOU CRAZY?"
+     },
+     {
+      "t": 24,
+      "texto": "DOUBLE KO"
+     },
+     {
+      "t": 31,
+      "texto": "LOOT"
+     }
+    ]
+   }
   },
   {
    "start": 1984,
@@ -753,7 +1400,69 @@
      "t": 31,
      "texto": "AL ESTÓMAGO"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6 Street Fight Then Steals a BIKE 🏍️👊",
+    "gancho": "HE PICKED A FIGHT",
+    "descripcion": "An NPC picks a fight with him in the street, gets knocked out, and the crowd yells to hit him in the stomach.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Bro really picked the wrong guy, right? 😂",
+    "hashtags": [
+     "gta6",
+     "gtavi",
+     "fight",
+     "motorcycle",
+     "vicecity",
+     "npc"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Okay, he walks out of a *music store* and it gets messy."
+     },
+     {
+      "t": 12.2,
+      "texto": "This guy wants *beef* with him."
+     },
+     {
+      "t": 16.4,
+      "texto": "Says he *takes out* guys like him every day."
+     },
+     {
+      "t": 22,
+      "texto": "And *boom*, drops him in one hit."
+     },
+     {
+      "t": 25.3,
+      "texto": "Guy's *KO*, and he goes straight for the bike."
+     },
+     {
+      "t": 30.8,
+      "texto": "The crowd yells: *the stomach*, not the face. Wild."
+     },
+     {
+      "t": 35.2,
+      "texto": "He hops on the *bike* and takes off."
+     },
+     {
+      "t": 39.5,
+      "texto": "Fight plus new bike in *thirty seconds*."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 14,
+      "texto": "BEEF"
+     },
+     {
+      "t": 23,
+      "texto": "KO"
+     },
+     {
+      "t": 31,
+      "texto": "THE STOMACH"
+     }
+    ]
+   }
   },
   {
    "start": 2090,
@@ -822,7 +1531,73 @@
      "t": 40,
      "texto": "GYM EN LA PLAYA"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6 Has a Beach GYM With Rep Counter 💪🏖️",
+    "gancho": "GTA 6 HAS A GYM",
+    "descripcion": "He does squats at a gym right on a Vice City beach, complete with a rep counter.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Should GTA 6 bring back San Andreas style muscle building? 💪",
+    "hashtags": [
+     "gta6",
+     "gtavi",
+     "gym",
+     "workout",
+     "vicecity",
+     "sanandreas"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Okay, *GTA 6* has a gym on the beach."
+     },
+     {
+      "t": 4,
+      "texto": "He walks up to the *squat rack*, look."
+     },
+     {
+      "t": 8,
+      "texto": "Puts the *bar* on his back and starts."
+     },
+     {
+      "t": 12,
+      "texto": "Bottom right, a *rep counter* shows up."
+     },
+     {
+      "t": 17,
+      "texto": "Check the *form*: down and up like real life."
+     },
+     {
+      "t": 24,
+      "texto": "And look at the *plates*, brand logo and all."
+     },
+     {
+      "t": 31,
+      "texto": "Reminds me of *San Andreas*, where you could already get swole."
+     },
+     {
+      "t": 39,
+      "texto": "Turn the camera and the *beach* is packed."
+     },
+     {
+      "t": 43.5,
+      "texto": "Sunglasses and *squats*. Pure Vice City."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 8,
+      "texto": "SQUATS"
+     },
+     {
+      "t": 13,
+      "texto": "REP COUNTER"
+     },
+     {
+      "t": 40,
+      "texto": "BEACH GYM"
+     }
+    ]
+   }
   },
   {
    "start": 2150,
@@ -884,7 +1659,65 @@
      "t": 21.6,
      "texto": "BUSCA CLICS"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6 Influencer Filming in a CONTAINER 🤳😭",
+    "gancho": "INFLUENCER IN A CONTAINER",
+    "descripcion": "At the GTA 6 beach gym a bodybuilder hypes you up and a girl hides in a container chasing clicks.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Is this the most Vice City influencer ever? 🤳",
+    "hashtags": [
+     "gta6",
+     "gtavi",
+     "influencer",
+     "gym",
+     "vicecity",
+     "npc"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Okay, the GTA 6 beach has a real *gym*."
+     },
+     {
+      "t": 4.6,
+      "texto": "Look at this *bodybuilder* going all in with the dumbbells."
+     },
+     {
+      "t": 10.3,
+      "texto": "He drops '*push it, bro*', free gym hype."
+     },
+     {
+      "t": 13.6,
+      "texto": "Now he walks into a *container* full of balls."
+     },
+     {
+      "t": 17.8,
+      "texto": "Inside, a girl sitting on the *floor*."
+     },
+     {
+      "t": 22.6,
+      "texto": "She wants *clicks*. Influencing from a container."
+     },
+     {
+      "t": 25.9,
+      "texto": "And he's like: 'what is she *doing*?'"
+     }
+    ],
+    "carteles": [
+     {
+      "t": 8.9,
+      "texto": "PUSH IT BRO"
+     },
+     {
+      "t": 13.6,
+      "texto": "SECRET CONTAINER"
+     },
+     {
+      "t": 21.6,
+      "texto": "CLICK HUNTING"
+     }
+    ]
+   }
   },
   {
    "start": 1291,
@@ -950,7 +1783,69 @@
      "t": 30,
      "texto": "BAJO EL PUENTE"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6 Stolen Yacht Cruise Looks INSANE 🛥️🌊",
+    "gancho": "LOOK AT THIS WATER",
+    "descripcion": "He takes a stolen yacht across Vice City bay and the water graphics are unreal.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Is this the best water ever in a video game? 🌊",
+    "hashtags": [
+     "gta6",
+     "gtavi",
+     "yacht",
+     "graphics",
+     "vicecity",
+     "water"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Okay, he just *stole a yacht* and he's taking it for a cruise."
+     },
+     {
+      "t": 6,
+      "texto": "Watch him *leave the harbor* dodging the other boats."
+     },
+     {
+      "t": 11,
+      "texto": "And check the *wake* on the water, bro, it looks real."
+     },
+     {
+      "t": 18,
+      "texto": "In the back, the *Vice City skyline* with palm trees."
+     },
+     {
+      "t": 25,
+      "texto": "Look at the building *reflections* on the water."
+     },
+     {
+      "t": 30,
+      "texto": "Now he goes *under the bridge*, and the shadows are insane."
+     },
+     {
+      "t": 38,
+      "texto": "Colorful kayaks by the *hotel*, what a life."
+     },
+     {
+      "t": 42,
+      "texto": "Open sea. This is *GTA 6*."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 6,
+      "texto": "STOLEN YACHT"
+     },
+     {
+      "t": 19,
+      "texto": "VICE CITY"
+     },
+     {
+      "t": 30,
+      "texto": "UNDER THE BRIDGE"
+     }
+    ]
+   }
   },
   {
    "start": 2283,
@@ -1024,7 +1919,77 @@
      "t": 29.2,
      "texto": "PUEDES BEBER"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6 POOL PARTY With Drinks in Hand 🍹🏊",
+    "gancho": "POOL PARTY",
+    "descripcion": "In GTA 6 you can order at the Ocean View bar and walk around the pool party with a drink in hand.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Would you rather hit this pool party or the beach club? 🍹",
+    "hashtags": [
+     "gta6",
+     "gtavi",
+     "poolparty",
+     "oceanview",
+     "vicecity",
+     "drinks"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Okay, this is the *Ocean View* pool party."
+     },
+     {
+      "t": 5,
+      "texto": "Jason hits the bar and a *drink menu* pops up."
+     },
+     {
+      "t": 15.3,
+      "texto": "The bartender says '*cheers, honey*' and thanks him."
+     },
+     {
+      "t": 20.8,
+      "texto": "And yep, you can walk around *drink in hand*."
+     },
+     {
+      "t": 25,
+      "texto": "Look at the detail: *pool*, floaties, people on couches."
+     },
+     {
+      "t": 29.2,
+      "texto": "Wait, he even takes a *sip*."
+     },
+     {
+      "t": 33.3,
+      "texto": "The water *reflections* and lighting are insane."
+     },
+     {
+      "t": 39.5,
+      "texto": "You hear '*you guys are having fun*'."
+     },
+     {
+      "t": 43.5,
+      "texto": "People everywhere, feels like *Miami*."
+     },
+     {
+      "t": 47.5,
+      "texto": "Exits past *security*."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 6,
+      "texto": "DRINK MENU"
+     },
+     {
+      "t": 20.8,
+      "texto": "DRINK IN HAND"
+     },
+     {
+      "t": 29.2,
+      "texto": "YOU CAN DRINK"
+     }
+    ]
+   }
   },
   {
    "start": 2337,
@@ -1086,7 +2051,65 @@
      "t": 28,
      "texto": "MEJOR LA MOTO"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6 Supercar With SCISSOR Doors 🚗🏍️",
+    "gancho": "SCISSOR DOORS",
+    "descripcion": "He climbs into a blue supercar with scissor doors in Vice City, then bails on it for a motorcycle.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Supercar or motorcycle, which would you take? 🏍️",
+    "hashtags": [
+     "gta6",
+     "gtavi",
+     "supercar",
+     "lambo",
+     "vicecity",
+     "motorcycle"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Okay, he rushes out onto the *street*."
+     },
+     {
+      "t": 3.8,
+      "texto": "Walks past parked *luxury cars*."
+     },
+     {
+      "t": 7,
+      "texto": "There it is: a sick *blue supercar*."
+     },
+     {
+      "t": 10.7,
+      "texto": "He gets in: *scissor doors*, Lambo style."
+     },
+     {
+      "t": 14,
+      "texto": "Look at the *reflections* on the paint."
+     },
+     {
+      "t": 27.4,
+      "texto": "An NPC complains: they're showing up *sweaty* to the club."
+     },
+     {
+      "t": 31.4,
+      "texto": "He ditches the car and grabs a *motorcycle*."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 7,
+      "texto": "SUPERCAR"
+     },
+     {
+      "t": 11,
+      "texto": "SCISSOR DOORS"
+     },
+     {
+      "t": 28,
+      "texto": "BIKE WINS"
+     }
+    ]
+   }
   },
   {
    "start": 2513,
@@ -1152,7 +2175,69 @@
      "t": 37,
      "texto": "BUGGY DE PLAYA"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6 NPCs Complain About INFLATION 💸😂",
+    "gancho": "INFLATION HIT GTA",
+    "descripcion": "Walking the GTA 6 beach, an NPC complains about prices going up because of inflation, and Jason ends up hopping on a buggy.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Is inflation hitting Vice City harder than real life? 💸",
+    "hashtags": [
+     "gta6",
+     "gtavi",
+     "inflation",
+     "beach",
+     "vicecity",
+     "npc"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Okay: *Vice City* beach, and everything happens here."
+     },
+     {
+      "t": 4.5,
+      "texto": "Jason starts *running* through towels and beachgoers."
+     },
+     {
+      "t": 11,
+      "texto": "Look at the *chaos*: a guy's lying on the ground."
+     },
+     {
+      "t": 15.2,
+      "texto": "And listen to this *beachgoer*:"
+     },
+     {
+      "t": 19.5,
+      "texto": "Look how many *people* are on the sand, the beach is alive."
+     },
+     {
+      "t": 30.1,
+      "texto": "His buddy's raising prices 'cause of *inflation*. Even in Vice City."
+     },
+     {
+      "t": 37,
+      "texto": "And there, some beach *buggies* parked."
+     },
+     {
+      "t": 39.9,
+      "texto": "He *hops* on one without asking."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 11,
+      "texto": "BEACH CHAOS"
+     },
+     {
+      "t": 26.8,
+      "texto": "INFLATION"
+     },
+     {
+      "t": 37,
+      "texto": "BEACH BUGGY"
+     }
+    ]
+   }
   },
   {
    "start": 2395,
@@ -1230,7 +2315,81 @@
      "t": 38.5,
      "texto": "TORRE SOCORRISTA"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6 Motorcycle BURNOUTS on the Beach 🏍️🏖️",
+    "gancho": "BIKE ON THE BEACH",
+    "descripcion": "In GTA 6 you can ride your motorcycle onto the beach and kick up sand between beachgoers and lifeguard towers.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Would you race bikes on this beach online? 🏍️",
+    "hashtags": [
+     "gta6",
+     "gtavi",
+     "motorcycle",
+     "beach",
+     "vicecity",
+     "miami"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Okay, in GTA 6 you can ride your *bike* right onto the beach."
+     },
+     {
+      "t": 5.5,
+      "texto": "He hits the *sand*, and the beach is packed."
+     },
+     {
+      "t": 10.2,
+      "texto": "He stops and *hops off* the bike."
+     },
+     {
+      "t": 18,
+      "texto": "And check this *close-up*: the shades, the shirt, the beard."
+     },
+     {
+      "t": 22.5,
+      "texto": "The *character* detail is on another level."
+     },
+     {
+      "t": 27,
+      "texto": "Back on the bike, time for a *burnout*."
+     },
+     {
+      "t": 31,
+      "texto": "Watch it kick up *sand*."
+     },
+     {
+      "t": 34,
+      "texto": "Weaving past umbrellas and *beachgoers*."
+     },
+     {
+      "t": 38.5,
+      "texto": "And here, the classic *lifeguard towers*, pure Miami."
+     },
+     {
+      "t": 43.5,
+      "texto": "Cones, *beachgoers* and the city behind, what a map."
+     },
+     {
+      "t": 47.5,
+      "texto": "Imagine beach *races* online?"
+     }
+    ],
+    "carteles": [
+     {
+      "t": 6,
+      "texto": "REAL SAND"
+     },
+     {
+      "t": 18,
+      "texto": "CLOSE-UP"
+     },
+     {
+      "t": 38.5,
+      "texto": "LIFEGUARD TOWER"
+     }
+    ]
+   }
   },
   {
    "start": 1072,
@@ -1283,7 +2442,57 @@
      "t": 25,
      "texto": "CABINA DETALLADA"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6 Lets You Ride the FERRIS Wheel 🎡😮",
+    "gancho": "VICE CITY FERRIS WHEEL",
+    "descripcion": "He waits in line for the Dock Ring Ferris wheel and boards a cabin with insane detail.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Would you ride the Dock Ring on day one? 🎡",
+    "hashtags": [
+     "gta6",
+     "gtavi",
+     "ferriswheel",
+     "dockring",
+     "vicecity",
+     "details"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Okay, in GTA 6 you can ride the harbor *Ferris wheel*."
+     },
+     {
+      "t": 5.5,
+      "texto": "It's called *Dock Ring*, and it even has a *line* with barriers."
+     },
+     {
+      "t": 19.2,
+      "texto": "Back there, a guy roasted his ex for *showing it all* online."
+     },
+     {
+      "t": 24,
+      "texto": "And inside the *cabin*, look at the detail on his face."
+     },
+     {
+      "t": 29.3,
+      "texto": "Glass, seats, *reflections*... all ray traced."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 6,
+      "texto": "DOCK RING"
+     },
+     {
+      "t": 20,
+      "texto": "ON BOARD"
+     },
+     {
+      "t": 25,
+      "texto": "DETAILED CABIN"
+     }
+    ]
+   }
   }
  ]
 }

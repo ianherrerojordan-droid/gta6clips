@@ -83,7 +83,86 @@
      "t": 48,
      "texto": "VUELO EXTREMO"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6: Stealing a PRIVATE JET Under Fire ✈️🔥",
+    "gancho": "HE STOLE A JET",
+    "descripcion": "Jason jumps into a bullet-riddled private jet, takes off with the cops on him and flies sideways between Vice City's skyscrapers.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Would you steal the jet or the helicopter first? ✈️",
+    "hashtags": [
+     "gta6",
+     "gta",
+     "vicecity",
+     "gtavi",
+     "gaming",
+     "rockstargames",
+     "privatejet"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Okay, watch this. Jason's stealing a *private jet* while the cops open fire."
+     },
+     {
+      "t": 5.5,
+      "texto": "Look at those *bullet holes* in the fuselage."
+     },
+     {
+      "t": 9.5,
+      "texto": "He fires up the engines while things heat up."
+     },
+     {
+      "t": 18,
+      "texto": "Here come the *police helicopters*."
+     },
+     {
+      "t": 22,
+      "texto": "And he's just *taxiing* to the runway, chill."
+     },
+     {
+      "t": 25.5,
+      "texto": "Behind him, the *passenger jets* parked up."
+     },
+     {
+      "t": 30,
+      "texto": "Runway's clear, *full throttle* with Vice City dead ahead."
+     },
+     {
+      "t": 36,
+      "texto": "And *liftoff*!"
+     },
+     {
+      "t": 38,
+      "texto": "Look at that *Vice City skyline* from the air."
+     },
+     {
+      "t": 48,
+      "texto": "Now he flies *sideways* between the skyscrapers. No way."
+     },
+     {
+      "t": 52,
+      "texto": "This looks like a movie, not a *video game*."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 6,
+      "texto": "STOLEN JET"
+     },
+     {
+      "t": 18,
+      "texto": "POLICE CHOPPERS"
+     },
+     {
+      "t": 36,
+      "texto": "TAKEOFF"
+     },
+     {
+      "t": 48,
+      "texto": "EXTREME FLIGHT"
+     }
+    ]
+   }
   },
   {
    "start": 1495,
@@ -157,7 +236,78 @@
      "t": 42,
      "texto": "CUERPO A CUERPO"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6: Beach ARGUMENT Turns Into a Fistfight 👊🏖️",
+    "gancho": "THEY'RE GONNA FIGHT",
+    "descripcion": "A beach tough guy gets cocky and the argument ends in a full-on fistfight on the sand.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Who do you think won this fight? 👊",
+    "hashtags": [
+     "gta6",
+     "gta",
+     "vicecity",
+     "gaming",
+     "fight",
+     "gta6gameplay",
+     "rockstar"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Okay, watch this beach guy who thinks he's the *toughest* in Vice City."
+     },
+     {
+      "t": 9,
+      "texto": "He tells him to *back off* and never do that again."
+     },
+     {
+      "t": 14,
+      "texto": "And here we go, the *shoving* starts."
+     },
+     {
+      "t": 26.6,
+      "texto": "Talk's over: *fists flying* on the beach."
+     },
+     {
+      "t": 30,
+      "texto": "*Dropped* on the first hit, bro."
+     },
+     {
+      "t": 32.8,
+      "texto": "But he gets up and keeps *swinging*."
+     },
+     {
+      "t": 37.2,
+      "texto": "Asks him if he thinks he's *untouchable*."
+     },
+     {
+      "t": 42,
+      "texto": "Now they're *wrestling* on the ground, right on the towels."
+     },
+     {
+      "t": 48,
+      "texto": "And the beachgoers in the back? Totally *chill*."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 14,
+      "texto": "SHOVING"
+     },
+     {
+      "t": 26,
+      "texto": "FIGHT"
+     },
+     {
+      "t": 30,
+      "texto": "KNOCKED DOWN"
+     },
+     {
+      "t": 42,
+      "texto": "GROUND FIGHT"
+     }
+    ]
+   }
   },
   {
    "start": 118,
@@ -223,7 +373,70 @@
      "t": 44,
      "texto": "SE ESCAPA"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6: Guy Wants COPS ON HORSES 🐴🚔",
+    "gancho": "HE WANTS HORSE COPS",
+    "descripcion": "The cops pull a guy over on the road, arrest him... and he knocks the officer down and runs.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Should GTA 6 have mounted police? 🐴",
+    "hashtags": [
+     "gta6",
+     "police",
+     "gta",
+     "vicecity",
+     "gaming",
+     "gta6gameplay",
+     "npc"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Sunset in Vice City, and the *cops* just pulled this guy over."
+     },
+     {
+      "t": 5.4,
+      "texto": "Let's go check out the *show*."
+     },
+     {
+      "t": 14.5,
+      "texto": "He asks the cops why they don't ride *horses* anymore."
+     },
+     {
+      "t": 26,
+      "texto": "Cop tells us to *stay out of it*, keep walking."
+     },
+     {
+      "t": 30.4,
+      "texto": "And they catch the guy *digging around* where he shouldn't."
+     },
+     {
+      "t": 40,
+      "texto": "They *arrest* him... and he drops the cop and *runs*."
+     },
+     {
+      "t": 44.2,
+      "texto": "And the cops are sprinting right after him."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 15,
+      "texto": "HORSES"
+     },
+     {
+      "t": 26,
+      "texto": "STAY OUT"
+     },
+     {
+      "t": 39,
+      "texto": "ARRESTED"
+     },
+     {
+      "t": 44,
+      "texto": "ESCAPE"
+     }
+    ]
+   }
   },
   {
    "start": 395,
@@ -289,7 +502,70 @@
      "t": 25,
      "texto": "COCHE NUEVO"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6: Total CRASH Then Steals a New Car 💥🚗",
+    "gancho": "INSTANT CAR SWAP",
+    "descripcion": "Jason wrecks his muscle car on the Vice City highway and seconds later he's driving a stolen red sports car.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Muscle car or red sports car, which one are you keeping? 🚗",
+    "hashtags": [
+     "gta6",
+     "gta",
+     "vicecity",
+     "gtavi",
+     "gaming",
+     "rockstargames",
+     "carjacking"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Watch out, this *muscle car* won't last long on the highway."
+     },
+     {
+      "t": 5,
+      "texto": "Look, he *swerves* and eats it completely."
+     },
+     {
+      "t": 9.5,
+      "texto": "*Totaled* against the red pickup."
+     },
+     {
+      "t": 13,
+      "texto": "But bro doesn't even flinch, just gets out."
+     },
+     {
+      "t": 16.5,
+      "texto": "Jumps the hood and goes for the *red sports car*."
+     },
+     {
+      "t": 22,
+      "texto": "And yanks the driver out *bare-handed*!"
+     },
+     {
+      "t": 25,
+      "texto": "New ride, keeps rolling *like nothing happened*."
+     },
+     {
+      "t": 28.8,
+      "texto": "That's how you swap cars in *GTA 6*."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 9.5,
+      "texto": "TOTALED"
+     },
+     {
+      "t": 22,
+      "texto": "SPEED THEFT"
+     },
+     {
+      "t": 25,
+      "texto": "NEW RIDE"
+     }
+    ]
+   }
   },
   {
    "start": 1338,
@@ -347,7 +623,62 @@
      "t": 31.2,
      "texto": "HOTEL"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6: Influencer Took Out 40 INFLUENCERS 😳📱",
+    "gancho": "HE TOOK OUT 40 INFLUENCERS",
+    "descripcion": "Walking along the Vice City beach, you overhear that the suspect is an influencer who took out 40 influencers.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Is GTA 6 about to roast social media harder than ever? 📱",
+    "hashtags": [
+     "gta6",
+     "gta",
+     "vicecity",
+     "influencers",
+     "gaming",
+     "rockstar",
+     "funny"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Listen to what you hear on the beach in *GTA 6*."
+     },
+     {
+      "t": 5.3,
+      "texto": "He walks past the people in bikinis and, out of nowhere..."
+     },
+     {
+      "t": 15,
+      "texto": "The suspect is an *influencer* who took out *40 influencers*."
+     },
+     {
+      "t": 19.5,
+      "texto": "GTA's social media satire is back *harder* than ever."
+     },
+     {
+      "t": 25,
+      "texto": "Meanwhile, he keeps strolling toward the *lifeguard* tower."
+     },
+     {
+      "t": 33.2,
+      "texto": "Then you hear: are you staying at the *hotel* tonight?"
+     }
+    ],
+    "carteles": [
+     {
+      "t": 10,
+      "texto": "40 INFLUENCERS"
+     },
+     {
+      "t": 19.5,
+      "texto": "SATIRE"
+     },
+     {
+      "t": 31.2,
+      "texto": "HOTEL"
+     }
+    ]
+   }
   },
   {
    "start": 1650,
@@ -404,7 +735,61 @@
      "t": 20,
      "texto": "BUEN LADRÓN"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6: You Can PET DOGS 🐶❤️",
+    "gancho": "YOU CAN PET DOGS",
+    "descripcion": "Between the beach palm trees there's a little dog at a camp and, of course, you have to pet it.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "What's the first thing you're doing in GTA 6: petting dogs or causing chaos? 🐶",
+    "hashtags": [
+     "gta6",
+     "dogs",
+     "gta",
+     "vicecity",
+     "gaming",
+     "gta6gameplay"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Walking through the palm trees in GTA 6, look who he runs into."
+     },
+     {
+      "t": 9.8,
+      "texto": "A *puppy* chilling at a bush camp."
+     },
+     {
+      "t": 13,
+      "texto": "Yep, in GTA 6 you can *pet dogs*."
+     },
+     {
+      "t": 16.5,
+      "texto": "Look how much he loves it, bro."
+     },
+     {
+      "t": 22.8,
+      "texto": "He calls him a *little thief*, which is kinda funny."
+     },
+     {
+      "t": 30,
+      "texto": "And while he's at it, he snoops through the *camp* stuff."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 8,
+      "texto": "DOG"
+     },
+     {
+      "t": 14,
+      "texto": "YOU CAN PET"
+     },
+     {
+      "t": 20,
+      "texto": "LITTLE THIEF"
+     }
+    ]
+   }
   },
   {
    "start": 1158,
@@ -469,7 +854,69 @@
      "t": 41,
      "texto": "DERRAPE"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6: Too BROKE for Pay 'n' Spray 💸🎨",
+    "gancho": "TOO BROKE TO PAINT",
+    "descripcion": "We take the muscle car to the Ocean Beach Pay 'n' Spray to change the color and... not enough money.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "What color would you have picked? 🎨",
+    "hashtags": [
+     "gta6",
+     "paynspray",
+     "gta",
+     "vicecity",
+     "cars",
+     "gaming"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Let's take this *muscle car* straight to get painted."
+     },
+     {
+      "t": 6,
+      "texto": "Look how good it feels cruising the streets of *Vice City*."
+     },
+     {
+      "t": 16,
+      "texto": "He cuts down an alley to the *Pay 'n' Spray*."
+     },
+     {
+      "t": 20.3,
+      "texto": "Shop menu: repair or *respray*."
+     },
+     {
+      "t": 25,
+      "texto": "Red, gray, *blue*, black... which one will he pick?"
+     },
+     {
+      "t": 30,
+      "texto": "But it says *not enough money*. Can't even afford paint, bro."
+     },
+     {
+      "t": 35,
+      "texto": "Back to the same old *yellow*."
+     },
+     {
+      "t": 39,
+      "texto": "And he *drifts* out of the shop like nothing happened."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 20,
+      "texto": "PAY 'N' SPRAY"
+     },
+     {
+      "t": 30,
+      "texto": "NO MONEY"
+     },
+     {
+      "t": 41,
+      "texto": "DRIFT"
+     }
+    ]
+   }
   },
   {
    "start": 715,
@@ -543,7 +990,78 @@
      "t": 51,
      "texto": "MÁS HELIS"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6: Stealing a HELICOPTER at the Airport 🚁🔥",
+    "gancho": "HE TOOK THE CHOPPER",
+    "descripcion": "Jason climbs to the Vice City airport helipad, takes off in a helicopter and the cops are instantly on him.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Helicopter or jet, what are you stealing first in GTA 6? 🚁",
+    "hashtags": [
+     "gta6",
+     "gta",
+     "vicecity",
+     "helicopter",
+     "gtavi",
+     "gaming",
+     "rockstargames"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Okay, Jason heads up to the *airport roof* for something big."
+     },
+     {
+      "t": 5,
+      "texto": "Look what's up there: a *helicopter*."
+     },
+     {
+      "t": 8.5,
+      "texto": "And he just takes it, no permission asked."
+     },
+     {
+      "t": 13,
+      "texto": "Check out the *helipad*: the views over the terminal are insane."
+     },
+     {
+      "t": 21,
+      "texto": "Takeoff, and the alert pops: *crime reported*."
+     },
+     {
+      "t": 24.5,
+      "texto": "Now the *cops* are on him, bro."
+     },
+     {
+      "t": 29,
+      "texto": "Look at the *control tower* and the planes down below."
+     },
+     {
+      "t": 36,
+      "texto": "Flying low right over *the runways*."
+     },
+     {
+      "t": 43,
+      "texto": "The airport in *GTA 6* looks absolutely crazy."
+     },
+     {
+      "t": 51,
+      "texto": "Wait, *more choppers* in the back."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 5,
+      "texto": "HELICOPTER"
+     },
+     {
+      "t": 21,
+      "texto": "CRIME REPORTED"
+     },
+     {
+      "t": 51,
+      "texto": "MORE CHOPPERS"
+     }
+    ]
+   }
   },
   {
    "start": 897,
@@ -609,7 +1127,70 @@
      "t": 38.6,
      "texto": "PUERTO"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6: Flying UPSIDE DOWN Over Vice City ✈️🌊",
+    "gancho": "UPSIDE DOWN OVER VICE CITY",
+    "descripcion": "With the stolen jet and the cops behind him, Jason pulls stunts over Vice City's bay, islands and port.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "What do you think that red line is? 👀",
+    "hashtags": [
+     "gta6",
+     "gta",
+     "vicecity",
+     "gtavi",
+     "gaming",
+     "plane",
+     "scenery"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Still in the *stolen jet*, now over Vice City bay."
+     },
+     {
+      "t": 5,
+      "texto": "Look how he *banks* over the water."
+     },
+     {
+      "t": 9,
+      "texto": "Almost *upside down* over the islands, bro."
+     },
+     {
+      "t": 15,
+      "texto": "Check the *coastline*: skyscrapers, bridges and islands."
+     },
+     {
+      "t": 21,
+      "texto": "That *level of detail* on the water is unreal."
+     },
+     {
+      "t": 30,
+      "texto": "And the *cops* are still on his tail, don't forget."
+     },
+     {
+      "t": 36,
+      "texto": "Wait, what's that *red line*?"
+     },
+     {
+      "t": 38.6,
+      "texto": "Final pass over the *port*."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 9,
+      "texto": "UPSIDE DOWN"
+     },
+     {
+      "t": 15,
+      "texto": "VICE CITY COAST"
+     },
+     {
+      "t": 38.6,
+      "texto": "PORT"
+     }
+    ]
+   }
   },
   {
    "start": 1922,
@@ -675,7 +1256,70 @@
      "t": 22.6,
      "texto": "UNA DESCARGA"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6: Sneaking Into a LUXURY Building 🏢⚡",
+    "gancho": "WATCH THE GUARD",
+    "descripcion": "Jason strolls through a luxury building until a security guard ends up on the floor, threatening to tase him.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Would you have gone back in or run like Jason? ⚡",
+    "hashtags": [
+     "gta6",
+     "gta",
+     "vicecity",
+     "gtavi",
+     "gaming",
+     "rockstargames",
+     "npc"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Okay, Jason sneaks into a *luxury building*. Wait for the end."
+     },
+     {
+      "t": 5,
+      "texto": "Check out the *art deco* hallways."
+     },
+     {
+      "t": 9,
+      "texto": "Walks past the *front desk* like nothing."
+     },
+     {
+      "t": 14,
+      "texto": "And heads into the *private area*..."
+     },
+     {
+      "t": 18.5,
+      "texto": "Guard *down*!"
+     },
+     {
+      "t": 22.6,
+      "texto": "Threatens to *tase* him."
+     },
+     {
+      "t": 24.8,
+      "texto": "And Jason *bolts* out of there."
+     },
+     {
+      "t": 27.5,
+      "texto": "Mission: *never come back* here."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 9,
+      "texto": "FRONT DESK"
+     },
+     {
+      "t": 18.5,
+      "texto": "SECURITY"
+     },
+     {
+      "t": 22.6,
+      "texto": "TASER"
+     }
+    ]
+   }
   },
   {
    "start": 2026,
@@ -745,7 +1389,74 @@
      "t": 44.2,
      "texto": "HÉROES: PROMOTORES"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6: Inside the AJAX GYM 💪🏋️",
+    "gancho": "GTA 6 HAS A GYM",
+    "descripcion": "Jason walks into Vice City's Ajax Gym: front desk, weight room and NPCs with some wild lines.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Would you actually work out in GTA 6? 💪",
+    "hashtags": [
+     "gta6",
+     "gta",
+     "vicecity",
+     "gym",
+     "gtavi",
+     "gaming",
+     "npc"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Jason walks into *Ajax Gym*."
+     },
+     {
+      "t": 3.3,
+      "texto": "Front desk: want to *purify your health*?"
+     },
+     {
+      "t": 7.7,
+      "texto": "And to work out, you gotta *pay the membership*."
+     },
+     {
+      "t": 14,
+      "texto": "Look at the *lobby*: lockers, couches, people."
+     },
+     {
+      "t": 18,
+      "texto": "Up the stairs: *eat, sleep, lift, repeat*."
+     },
+     {
+      "t": 24,
+      "texto": "And he reaches the *weight room*."
+     },
+     {
+      "t": 30,
+      "texto": "Every NPC has their *own routine*, bro."
+     },
+     {
+      "t": 35,
+      "texto": "Look at these guys with the *dumbbells*."
+     },
+     {
+      "t": 44.2,
+      "texto": "Not firefighters or nurses: the real heroes are *promoters*."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 8,
+      "texto": "MEMBERSHIP"
+     },
+     {
+      "t": 24,
+      "texto": "WEIGHT ROOM"
+     },
+     {
+      "t": 44.2,
+      "texto": "HEROES: PROMOTERS"
+     }
+    ]
+   }
   },
   {
    "start": 1694,
@@ -803,7 +1514,62 @@
      "t": 43.7,
      "texto": "JERRY ACTON"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6: NPCs Want a CREW TO ROB 😳💰",
+    "gancho": "THEY NEED A CREW",
+    "descripcion": "Walking a dog through the park, the NPCs drop gems about Leonida, the neighborhood and some guy named Jerry Acton.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Who do you think Jerry Acton is? 🤔",
+    "hashtags": [
+     "gta6",
+     "gta",
+     "leonida",
+     "vicecity",
+     "gaming",
+     "rockstar",
+     "npc"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "In GTA 6 you can *pet dogs* and eavesdrop on everyone."
+     },
+     {
+      "t": 5.9,
+      "texto": "While he walks, two guys talk about the *neighborhood*."
+     },
+     {
+      "t": 14.6,
+      "texto": "In ten years, it'll all be *rich snobs*."
+     },
+     {
+      "t": 21.6,
+      "texto": "*Leonida* people have a reputation, and not a good one."
+     },
+     {
+      "t": 37.2,
+      "texto": "One asks if he's looking for more people to *rob*."
+     },
+     {
+      "t": 45.1,
+      "texto": "They want buff guy *Jerry Acton*."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 17.8,
+      "texto": "LEONIDA"
+     },
+     {
+      "t": 34,
+      "texto": "CREW TO ROB"
+     },
+     {
+      "t": 43.7,
+      "texto": "JERRY ACTON"
+     }
+    ]
+   }
   },
   {
    "start": 18,
@@ -857,7 +1623,58 @@
      "t": 36,
      "texto": "A BEBER"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6: The Weirdest PICKUP LINE Ever 👽😂",
+    "gancho": "ALIEN PICKUP LINE",
+    "descripcion": "At a GTA 6 beach bar, a customer tells him aliens would make gorgeous hybrids with him.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "What's the weirdest NPC line you've heard so far? 👽",
+    "hashtags": [
+     "gta6",
+     "gta",
+     "vicecity",
+     "npc",
+     "gaming",
+     "funny",
+     "rockstar"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Okay, at this beach bar in GTA 6, someone drops a wild *pickup line*."
+     },
+     {
+      "t": 15.3,
+      "texto": "He says *aliens* would make gorgeous hybrids with him."
+     },
+     {
+      "t": 26,
+      "texto": "He walks up to the bar and the *drinks menu* pops up."
+     },
+     {
+      "t": 31,
+      "texto": "The bartender, super friendly, serves him at the *bar*."
+     },
+     {
+      "t": 35.8,
+      "texto": "And *chugs* straight from the bottle."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 9,
+      "texto": "ALIEN PICKUP LINE"
+     },
+     {
+      "t": 26,
+      "texto": "DRINKS MENU"
+     },
+     {
+      "t": 36,
+      "texto": "DRINK UP"
+     }
+    ]
+   }
   },
   {
    "start": 1274,
@@ -927,7 +1744,74 @@
      "t": 34,
      "texto": "VICE CITY"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6: Stealing the POLICE BUGGY 🚓🏖️",
+    "gancho": "HE STOLE THE POLICE BUGGY",
+    "descripcion": "After a beach fight, he grabs the Vice Beach Police buggy and drives across Vice City to the gardens.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Police buggy or yellow muscle car, which would you take? 🚓",
+    "hashtags": [
+     "gta6",
+     "gta",
+     "vicecity",
+     "police",
+     "gaming",
+     "buggy",
+     "rockstar"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "So after a beach brawl, our guy's about to cause chaos."
+     },
+     {
+      "t": 6,
+      "texto": "He walks right past this yellow *muscle car*, watch."
+     },
+     {
+      "t": 15,
+      "texto": "Because what he wants is this *police buggy*."
+     },
+     {
+      "t": 19.5,
+      "texto": "It says *Vice Beach Police*."
+     },
+     {
+      "t": 22,
+      "texto": "Hops in and takes off across the *sand*."
+     },
+     {
+      "t": 30,
+      "texto": "Up onto the boardwalk, dodging *people*."
+     },
+     {
+      "t": 34,
+      "texto": "Cuts across the street in front of a *Vice City* bus."
+     },
+     {
+      "t": 40,
+      "texto": "And drives through the plaza like he owns it."
+     },
+     {
+      "t": 46,
+      "texto": "Ending up in the gardens, *heading to the beach*."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 15,
+      "texto": "POLICE BUGGY"
+     },
+     {
+      "t": 22,
+      "texto": "STOLEN"
+     },
+     {
+      "t": 34,
+      "texto": "VICE CITY"
+     }
+    ]
+   }
   },
   {
    "start": 1836,
@@ -976,7 +1860,53 @@
      "t": 37.5,
      "texto": "LIBERTY CITY"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6: NPC Mentions LIBERTY CITY 🗽😱",
+    "gancho": "SHE SAID LIBERTY CITY",
+    "descripcion": "Walking past a Vice City car dealership, an NPC in the background says she was in Liberty City.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Do you think we'll visit Liberty City in GTA 6? 🗽",
+    "hashtags": [
+     "gta6",
+     "libertycity",
+     "vicecity",
+     "gta",
+     "gta6leaks",
+     "gaming"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Walking around Vice City, listen to this NPC, she's *furious*."
+     },
+     {
+      "t": 6.2,
+      "texto": "Look at the *sports cars* at this dealership."
+     },
+     {
+      "t": 16.9,
+      "texto": "He lives with her and drives her around, but *buys her nothing* anymore."
+     },
+     {
+      "t": 28.9,
+      "texto": "She says she needs *money*. Now listen to what she says."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 12,
+      "texto": "ULTRA STATUS"
+     },
+     {
+      "t": 32,
+      "texto": "MOTORCYCLE"
+     },
+     {
+      "t": 37.5,
+      "texto": "LIBERTY CITY"
+     }
+    ]
+   }
   },
   {
    "start": 588,
@@ -1041,7 +1971,69 @@
      "t": 28,
      "texto": "HUIDA"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6: Drags a Driver OUT of His SUV 👊🚙",
+    "gancho": "PULLED HIM OUT",
+    "descripcion": "Near the airport he runs into a black SUV, shoves the driver out and drives off like nothing happened.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Is GTA 6 combat looking better than GTA 5? 👊",
+    "hashtags": [
+     "gta6",
+     "gta",
+     "vicecity",
+     "gaming",
+     "gta6gameplay",
+     "chaos"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Watch out, this guy's in a hurry near the *airport*."
+     },
+     {
+      "t": 8,
+      "texto": "Stops by an *SUV* and goes for the driver."
+     },
+     {
+      "t": 12,
+      "texto": "*Shoves* him out, no words."
+     },
+     {
+      "t": 15,
+      "texto": "Then lands a *punch*."
+     },
+     {
+      "t": 18,
+      "texto": "Driver *down*."
+     },
+     {
+      "t": 20,
+      "texto": "And squares up with *another guy*."
+     },
+     {
+      "t": 25,
+      "texto": "Then walks back to his car, totally *chill*."
+     },
+     {
+      "t": 28.2,
+      "texto": "And drives off like *nothing* happened."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 10,
+      "texto": "GET HIM"
+     },
+     {
+      "t": 18,
+      "texto": "DOWN"
+     },
+     {
+      "t": 28,
+      "texto": "GETAWAY"
+     }
+    ]
+   }
   },
   {
    "start": 1438,
@@ -1094,7 +2086,57 @@
      "t": 28.8,
      "texto": "AVIÓN DE CARGA"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6: Invite to a CARGO PLANE Party ✈️🎉",
+    "gancho": "PARTY ON A PLANE",
+    "descripcion": "On the GTA 6 beach, NPCs gossip about dates and someone has an invite to a party on a cargo plane.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Would you go to a party on a cargo plane? 🎉",
+    "hashtags": [
+     "gta6",
+     "gta",
+     "vicecity",
+     "npc",
+     "gaming",
+     "beach"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "On the beach in GTA 6, the NPCs *gossip* about everything."
+     },
+     {
+      "t": 12,
+      "texto": "They're gossiping about a girl's *date*."
+     },
+     {
+      "t": 15.5,
+      "texto": "He heads to a pink and blue *pickup*."
+     },
+     {
+      "t": 19.2,
+      "texto": "And here, by the *sun loungers*, things get interesting."
+     },
+     {
+      "t": 33.5,
+      "texto": "A party on a *cargo plane*, no less."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 12,
+      "texto": "GOSSIP"
+     },
+     {
+      "t": 15.5,
+      "texto": "PICKUP"
+     },
+     {
+      "t": 28.8,
+      "texto": "CARGO PLANE"
+     }
+    ]
+   }
   },
   {
    "start": 2300,
@@ -1175,7 +2217,85 @@
      "t": 36.5,
      "texto": "VISTAS"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "GTA 6: Rooftop PARKOUR Across Vice City 🏃‍♂️🌆",
+    "gancho": "ROOFTOP PARKOUR",
+    "descripcion": "Running, jumping and climbing across Vice City's rooftops with insane views.\n\nGameplay: DubStepZz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+    "comentario": "Would you rather do parkour or drive in GTA 6? 🏃",
+    "hashtags": [
+     "gta6",
+     "parkour",
+     "vicecity",
+     "gta",
+     "gaming",
+     "openworld"
+    ],
+    "narracion": [
+     {
+      "t": 0,
+      "texto": "Bro, rooftop *parkour* in GTA 6."
+     },
+     {
+      "t": 4.5,
+      "texto": "Runs down and sprints across the roof full speed."
+     },
+     {
+      "t": 9,
+      "texto": "Look, clears the vent *without stopping*."
+     },
+     {
+      "t": 13,
+      "texto": "He stops for a sec: the *face* detail is insane."
+     },
+     {
+      "t": 18,
+      "texto": "And keeps running toward another ladder."
+     },
+     {
+      "t": 23,
+      "texto": "Climbs the *ladder* like it's nothing."
+     },
+     {
+      "t": 27,
+      "texto": "Now he's running along the *edge* of the roof."
+     },
+     {
+      "t": 32,
+      "texto": "Look at the view up here: the *whole city*."
+     },
+     {
+      "t": 36.5,
+      "texto": "You can see the *bridge*, the river, and cars passing below."
+     },
+     {
+      "t": 42,
+      "texto": "And he's off again, roof to roof."
+     },
+     {
+      "t": 48,
+      "texto": "Up the fire escape without losing *rhythm*."
+     },
+     {
+      "t": 52,
+      "texto": "That's how big every rooftop is in *GTA 6*."
+     }
+    ],
+    "carteles": [
+     {
+      "t": 9,
+      "texto": "JUMP"
+     },
+     {
+      "t": 23,
+      "texto": "LADDER"
+     },
+     {
+      "t": 36.5,
+      "texto": "VIEWS"
+     }
+    ]
+   }
   }
  ]
 }

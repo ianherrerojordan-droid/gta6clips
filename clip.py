@@ -404,6 +404,19 @@ def render(wd, i, clip, total, mp3):
                  "eq=brightness=-0.08[bg];"
                  "[b]scale=1080:-2[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2,"
                  f"ass=s{i}.ass,format=yuv420p[v]")
+    fuente, ss = "src.mp4", clip["start"]
+    if clip.get("tramos"):  # estilo top: varias escenas cortas montadas seguidas
+        fuente, ss = f"tr{i}.mp4", 0
+        partes, k = [], 0
+        for t in clip["tramos"]:
+            a, b = float(t["start"]), float(t["end"])
+            partes.append(f"[0:v]trim={a}:{b},setpts=PTS-STARTPTS,fps=30,scale=1920:1080:force_original_aspect_ratio=decrease,"
+                          f"pad=1920:1080:(ow-iw)/2:(oh-ih)/2,setsar=1[v{k}];[0:a]atrim={a}:{b},asetpts=PTS-STARTPTS,aresample=48000[a{k}]")
+            k += 1
+        cadena = ";".join(partes) + ";" + "".join(f"[v{j}][a{j}]" for j in range(k)) + f"concat=n={k}:v=1:a=1[v][a]"
+        run(["ffmpeg", "-y", "-i", "src.mp4", "-filter_complex", cadena, "-map", "[v]", "-map", "[a]",
+             "-c:v", "libx264", "-crf", "17", "-preset", "veryfast", "-c:a", "aac", "-b:a", "192k", fuente], cwd=wd)
+        video = video.replace("[0:v]", "[0:v]tpad=stop_mode=clone:stop_duration=8,", 1)
     entradas = []
     if LOGO and Path(LOGO).exists():
         entradas = ["-i", str(Path(LOGO).resolve())]
@@ -418,11 +431,11 @@ def render(wd, i, clip, total, mp3):
         entradas += ["-i", mp3]
     else:
         audio = "[0:a]loudnorm=I=-14:TP=-1.5[a]"
-    run(["ffmpeg", "-y", "-ss", str(clip["start"]), "-t", f"{total:.2f}", "-i", "src.mp4", *entradas,
+    run(["ffmpeg", "-y", "-ss", str(ss), "-t", f"{total:.2f}", "-i", fuente, *entradas,
          "-filter_complex", video + ";" + audio, "-map", "[v]", "-map", "[a]", "-t", f"{total:.2f}",
          "-c:v", "libx264", "-crf", "21", "-preset", "veryfast", "-r", "30",
          "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", out], cwd=wd)
-    for f in (f"s{i}.ass", mp3):
+    for f in (f"s{i}.ass", mp3, f"tr{i}.mp4" if clip.get("tramos") else None):
         if f:
             (Path(wd) / f).unlink(missing_ok=True)
     return out
@@ -478,15 +491,21 @@ def preparar_detalle(wd, info, url, segmentos, cortes):
              "Cada hoja: 30 fotogramas (6 columnas x 5 filas, izquierda a derecha, arriba abajo), "
              "UNO POR SEGUNDO. El primer fotograma de la hoja N de un clip es el segundo 30*(N-1) del clip.\n"]
     for i, c in enumerate(cortes, 1):
-        a, b = float(c["start"]), float(c["end"])
-        run(["ffmpeg", "-y", "-ss", str(a), "-t", str(b - a), "-i", "src.mp4",
-             "-vf", "fps=1,scale=256:144:force_original_aspect_ratio=decrease,"
-                    "pad=256:144:(ow-iw)/2:(oh-ih)/2,tile=6x5",
-             "-q:v", "4", f"detalle/clip{i:02d}_hoja_%d.jpg"], cwd=wd)
-        habla = "\n".join(f"  [{s['start'] - a:.1f}-{s['end'] - a:.1f}] {s['text']}" for s in segmentos
-                          if s["end"] > a and s["start"] < b) or "  (nadie habla)"
-        leeme.append(f"CLIP {i}: original {a:.0f}-{b:.0f} s ({b - a:.0f} s). Idea: {c.get('idea', c.get('titulo', ''))}\n"
-                     f"Lo que se dice (segundos desde el inicio del clip):\n{habla}\n")
+        trozos = c.get("tramos") or [c]
+        multi = len(trozos) > 1 or bool(c.get("tramos"))
+        leeme.append(f"CLIP {i}: Idea: {c.get('idea', c.get('titulo', ''))}"
+                     + (f" -- {len(trozos)} ESCENAS montadas seguidas" if multi else ""))
+        for k, tr in enumerate(trozos, 1):
+            a, b = float(tr["start"]), float(tr["end"])
+            nombre = f"clip{i:02d}_escena{k}_hoja_%d.jpg" if multi else f"clip{i:02d}_hoja_%d.jpg"
+            run(["ffmpeg", "-y", "-ss", str(a), "-t", str(b - a), "-i", "src.mp4",
+                 "-vf", "fps=1,scale=256:144:force_original_aspect_ratio=decrease,"
+                        "pad=256:144:(ow-iw)/2:(oh-ih)/2,tile=6x5",
+                 "-q:v", "4", "detalle/" + nombre], cwd=wd)
+            habla = "\n".join(f"  [{s['start'] - a:.1f}-{s['end'] - a:.1f}] {s['text']}" for s in segmentos
+                              if s["end"] > a and s["start"] < b) or "  (nadie habla)"
+            leeme.append((f"  ESCENA {k}: " if multi else "  ") + f"original {a:.0f}-{b:.0f} s ({b - a:.0f} s)\n"
+                         f"  Lo que se dice (segundos desde el inicio de esta escena):\n{habla}\n")
     destino = Path("para_claude")
     destino.mkdir(exist_ok=True)
     zp = destino / f"{info['id']}_detalle.zip"
@@ -551,9 +570,13 @@ def procesar(url, desde=None, hasta=None):
     if plan:
         print("[3/4] Usando el plan de Claude...")
         resumen = plan.get("resumen", "")
-        clips = [c for c in plan.get("clips", []) if c.get("end", 0) > c.get("start", 0)]
+        clips = [c for c in plan.get("clips", []) if c.get("tramos") or c.get("end", 0) > c.get("start", 0)]
         for c in clips:
-            c["start"], c["end"] = float(c["start"]), min(float(c["end"]), dur_video)
+            if c.get("tramos"):  # duracion = suma de las escenas
+                c["start"] = float(c["tramos"][0]["start"])
+                c["end"] = c["start"] + sum(float(t["end"]) - float(t["start"]) for t in c["tramos"])
+            else:
+                c["start"], c["end"] = float(c["start"]), min(float(c["end"]), dur_video)
             c.setdefault("titulo", "clip")
         if IDIOMA == "en":
             faltan = [k + 1 for k, c in enumerate(clips) if not c.get("en")]
@@ -589,7 +612,7 @@ def procesar(url, desde=None, hasta=None):
                 texto_nar = " ".join(str(l["texto"]) for l in lineas)
                 clave = claves(texto_nar)
                 mp3, pal, nd = pista_narracion(wd, i, lineas, dur)
-                total = min(max(dur, nd + 0.6), dur_video - c["start"])
+                total = max(dur, nd + 0.6) if c.get("tramos") else min(max(dur, nd + 0.6), dur_video - c["start"])
             except Exception as e:
                 print(f"   (clip {i} sin narracion: {str(e)[:200]})")
                 mp3, texto_nar, clave, carteles = None, None, frozenset(), []

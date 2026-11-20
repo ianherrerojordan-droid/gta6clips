@@ -238,6 +238,20 @@ def narracion(wd, i, clip, segmentos, resumen, info):
 
 
 # ---------------------------------------------------------------- voz
+def voz(texto, mp3, rate):
+    """Llama a la voz de Microsoft con reintentos (el servicio gratis a veces no responde)."""
+    for intento in range(5):
+        try:
+            pal = asyncio.run(_tts(texto, mp3, rate))
+            if Path(mp3).exists() and Path(mp3).stat().st_size > 1000:
+                return pal
+            raise RuntimeError("audio vacio")
+        except Exception as e:
+            if intento == 4:
+                raise RuntimeError(f"la voz no responde ({str(e)[:80]})")
+            time.sleep(4 * (intento + 1))
+
+
 async def _tts(texto, mp3, rate):
     import edge_tts
     kw = {"rate": f"{rate:+d}%"}
@@ -268,11 +282,11 @@ def locutar(texto, mp3, dur_clip):
     """Genera la voz; si se pasa del clip, la acelera (hasta +35%) para que encaje."""
     texto = texto.replace("*", "")
     rate = VELOCIDAD
-    pal = asyncio.run(_tts(texto, mp3, rate))
+    pal = voz(texto, mp3, rate)
     nd = duracion(mp3)
     if nd > dur_clip + 0.5:
         rate = min(35, int((nd / dur_clip - 1) * 100) + rate + 3)
-        pal = asyncio.run(_tts(texto, mp3, rate))
+        pal = voz(texto, mp3, rate)
         nd = duracion(mp3)
     if not pal:
         pal = repartir(texto, nd)
@@ -293,11 +307,11 @@ def pista_narracion(wd, i, lineas, dur_clip):
         texto = str(l["texto"]).replace("*", "")
         mp3 = str((Path(wd) / f"l{i}_{k}.mp3").resolve())
         rate = VELOCIDAD
-        pal = asyncio.run(_tts(texto, mp3, rate))
+        pal = voz(texto, mp3, rate)
         nd = duracion(mp3)
         if nd > hueco and hueco > 0.5:          # no cabe: acelerar (hasta +45%)
             rate = min(45, rate + int((nd / hueco - 1) * 100) + 4)
-            pal = asyncio.run(_tts(texto, mp3, rate))
+            pal = voz(texto, mp3, rate)
             nd = duracion(mp3)
         if not pal:
             pal = repartir(texto, nd)
@@ -392,9 +406,13 @@ def palabras_orig(palabras, ini, fin):
 
 
 # ---------------------------------------------------------------- render
-def render(wd, i, clip, total, mp3):
+def nombre_salida(i, clip):
     slug = re.sub(r"[^a-z0-9]+", "-", clip["titulo"].lower()).strip("-")[:40] or "clip"
-    out = f"{SUB}{i:02d}_{slug}.mp4"
+    return f"{SUB}{i:02d}_{slug}.mp4"
+
+
+def render(wd, i, clip, total, mp3):
+    out = nombre_salida(i, clip)
     (Path(wd) / SUB).mkdir(exist_ok=True)
     if FORMATO == "lleno":
         video = ("[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,"
@@ -600,8 +618,12 @@ def procesar(url, desde=None, hasta=None):
     print(f"[4/4] Creando {len(clips)} clips" + ((" con narracion en " + ("ingles" if VOZ.startswith("en") else "espanol") + "...") if NARRAR else "..."))
     md = [f"# {info['titulo']}\n", f"- Link: {url}", f"- Canal: {info['canal']}",
           f"- De que va: {resumen}\n"]
+    hechos, pendientes = 0, []
     for i, c in enumerate(clips, 1):
         dur = c["end"] - c["start"]
+        if (Path(wd) / nombre_salida(i, c)).exists() and os.environ.get("REHACER") != "1":
+            hechos += 1
+            continue
         mp3, texto_nar, total, pal, clave, carteles = None, None, dur, None, frozenset(), []
         if NARRAR:
             try:
@@ -615,8 +637,9 @@ def procesar(url, desde=None, hasta=None):
                 mp3, pal, nd = pista_narracion(wd, i, lineas, dur)
                 total = max(dur, nd + 0.6) if c.get("tramos") else min(max(dur, nd + 0.6), dur_video - c["start"])
             except Exception as e:
-                print(f"   (clip {i} sin narracion: {str(e)[:200]})")
-                mp3, texto_nar, clave, carteles = None, None, frozenset(), []
+                print(f"   (clip {i} pendiente, {str(e)[:120]}. Vuelve a pegar el link luego)")
+                pendientes.append(i)
+                continue
         if not mp3:
             pal, total = palabras_orig(palabras, c["start"], c["end"]), dur
         crear_ass(pal, total, c.get("gancho", ""), Path(wd) / f"s{i}.ass", clave, carteles)
@@ -630,6 +653,10 @@ def procesar(url, desde=None, hasta=None):
                   f"- Credito: video original de {info['canal']} ({url})\n"
                   + (f"- Narracion: {texto_nar.replace('*', '')}\n" if texto_nar else ""))
         print(f"   listo: {f}")
+    if hechos:
+        print(f"   ({hechos} clips ya estaban hechos, no se repiten)")
+    if pendientes:
+        print(f"\n!!! Faltan los clips {pendientes}: la voz no respondio. Espera 1 minuto y vuelve a pegar el link.")
     (wd / SUB / "resumen.md").write_text("\n".join(md), encoding="utf-8")
     print(f"\nTerminado. Clips y resumen.md en: {(wd / SUB).resolve()}\n")
 

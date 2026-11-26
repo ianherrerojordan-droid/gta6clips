@@ -1,0 +1,284 @@
+{
+ "version": 2,
+ "resumen": "GTA 6: rampage con tanque y 6 estrellas.",
+ "clips": [
+  {
+   "tramos": [
+    {
+     "start": 260,
+     "end": 275
+    },
+    {
+     "start": 736,
+     "end": 750
+    }
+   ],
+   "titulo": "GTA 6: You can NEVER lose 6 stars 🚨⭐",
+   "gancho": "YOU CAN'T ESCAPE THIS",
+   "descripcion": "In GTA 6 a 6-star wanted level is permanent: the game tells you the cops won't stop until you're hunted down.\n\nGameplay: ExoGhost (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "Would you survive a permanent 6-star wanted level? 🚨",
+   "hashtags": [
+    "gta6",
+    "gta6gameplay",
+    "wantedlevel",
+    "gta6police",
+    "vicecity",
+    "gaming",
+    "rockstargames"
+   ],
+   "puntuacion": 8,
+   "motivo": "Wanted-level mechanic shown by an official on-screen notice, twice; strong crime hook.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know in GTA 6 you can *NEVER* lose 6 stars?"
+    },
+    {
+     "t": 4.7,
+     "texto": "Watch the *top corner*."
+    },
+    {
+     "t": 6.5,
+     "texto": "'You can't lose a *6-star* wanted level.' The cops *won't* give up."
+    },
+    {
+     "t": 11.1,
+     "texto": "Until you're *hunted down*. No hiding, no escape."
+    },
+    {
+     "t": 14.6,
+     "texto": "Minutes later, on a *different* stretch of beach..."
+    },
+    {
+     "t": 18.0,
+     "texto": "The *same warning* pops right back up."
+    },
+    {
+     "t": 21.0,
+     "texto": "Those stars are *permanent*. It's a fight to the death."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 6.5,
+     "texto": "6 STARS"
+    },
+    {
+     "t": 11.1,
+     "texto": "NO ESCAPE"
+    },
+    {
+     "t": 18.0,
+     "texto": "AGAIN"
+    }
+   ]
+  },
+  {
+   "tramos": [
+    {
+     "start": 398,
+     "end": 408
+    },
+    {
+     "start": 410,
+     "end": 424
+    }
+   ],
+   "titulo": "GTA 6: Max wanted level sends a TANK 💥🪖",
+   "gancho": "THE ARMY COMES FOR YOU",
+   "descripcion": "At max wanted level in GTA 6 the military joins the chase with armored vehicles and even a tank.\n\nGameplay: ExoGhost (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "Would you fight the tank or run? 💥",
+   "hashtags": [
+    "gta6",
+    "gta6gameplay",
+    "wantedlevel",
+    "gta6tank",
+    "vicecity",
+    "gaming",
+    "rockstargames"
+   ],
+   "puntuacion": 8,
+   "motivo": "Tank arrival plus WASTED ending is a clean payoff for a wanted-level audience.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know in GTA 6, max wanted brings the *army*?"
+    },
+    {
+     "t": 4.4,
+     "texto": "Military *armored cars* chase you across the beach."
+    },
+    {
+     "t": 7.9,
+     "texto": "There, an *eight-wheeled APC* closing in."
+    },
+    {
+     "t": 10.4,
+     "texto": "They keep pounding him with *heavy fire*."
+    },
+    {
+     "t": 13.3,
+     "texto": "No way out of *this one*."
+    },
+    {
+     "t": 15.8,
+     "texto": "His car's on fire, and here comes a *TANK*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 8.0,
+     "texto": "APC"
+    },
+    {
+     "t": 17.0,
+     "texto": "TANK"
+    },
+    {
+     "t": 21.0,
+     "texto": "WASTED"
+    }
+   ]
+  },
+  {
+   "tramos": [
+    {
+     "start": 783,
+     "end": 797
+    },
+    {
+     "start": 856,
+     "end": 868
+    }
+   ],
+   "titulo": "GTA 6: 6 stars brings ATTACK CHOPPERS 🚁🔥",
+   "gancho": "LOOK AT THE SKY",
+   "descripcion": "Push your wanted level to 6 stars in GTA 6 and military helicopters join the hunt over the beach.\n\nGameplay: ExoGhost (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "Tank vs attack chopper, who wins? 🚁",
+   "hashtags": [
+    "gta6",
+    "gta6gameplay",
+    "wantedlevel",
+    "gta6helicopter",
+    "vicecity",
+    "gaming"
+   ],
+   "puntuacion": 7,
+   "motivo": "Helicopters are clearly visible but small in frame; ending explosion is a nice payoff.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know GTA 6 sends *attack choppers* at 6 stars?"
+    },
+    {
+     "t": 4.3,
+     "texto": "Look up. There it is, *circling* the beach."
+    },
+    {
+     "t": 7.5,
+     "texto": "A *military helicopter* swooping in low on his armored car."
+    },
+    {
+     "t": 11.4,
+     "texto": "It keeps *hammering* him from above."
+    },
+    {
+     "t": 14.1,
+     "texto": "And the chaos does *not* stop."
+    },
+    {
+     "t": 16.6,
+     "texto": "*Explosions* all over the sand."
+    },
+    {
+     "t": 18.9,
+     "texto": "Another *chopper* hunting him over the beach."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 7.3,
+     "texto": "ATTACK CHOPPER"
+    },
+    {
+     "t": 19.0,
+     "texto": "ANOTHER ONE"
+    },
+    {
+     "t": 25.0,
+     "texto": "BOOM"
+    }
+   ]
+  },
+  {
+   "tramos": [
+    {
+     "start": 221,
+     "end": 234
+    },
+    {
+     "start": 838,
+     "end": 850
+    }
+   ],
+   "titulo": "GTA 6 cops send ARMORED Humvees with gunners 🚓💣",
+   "gancho": "THE COPS GOT UPGRADES",
+   "descripcion": "High wanted levels in GTA 6 bring armored Humvees with a gunner on the roof turret.\n\nGameplay: ExoGhost (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "Is GTA 6's police too OP? 🚓",
+   "hashtags": [
+    "gta6",
+    "gta6gameplay",
+    "gta6police",
+    "wantedlevel",
+    "vicecity",
+    "gaming"
+   ],
+   "puntuacion": 7,
+   "motivo": "Turret gunner Humvee is visible and fits the police-escalation niche, but vehicles are small.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know GTA 6 cops roll *armored Humvees*?"
+    },
+    {
+     "t": 3.6,
+     "texto": "Right there, a Humvee with a *gunner* on top."
+    },
+    {
+     "t": 7.2,
+     "texto": "And everything around him just *explodes*."
+    },
+    {
+     "t": 9.7,
+     "texto": "This is what *six stars* looks like."
+    },
+    {
+     "t": 12.6,
+     "texto": "Even off the sand, they *keep coming*."
+    },
+    {
+     "t": 15.6,
+     "texto": "They never *stop* chasing you."
+    },
+    {
+     "t": 18.2,
+     "texto": "Black Humvee, *turret gunner* locked on him."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 3.6,
+     "texto": "TURRET GUNNER"
+    },
+    {
+     "t": 7.0,
+     "texto": "BOOM"
+    },
+    {
+     "t": 18.2,
+     "texto": "NEVER STOP"
+    }
+   ]
+  }
+ ]
+}

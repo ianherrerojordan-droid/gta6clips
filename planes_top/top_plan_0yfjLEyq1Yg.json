@@ -1,0 +1,202 @@
+{
+ "version": 2,
+ "resumen": "GTA 6: persecucion con lanzacohetes.",
+ "clips": [
+  {
+   "tramos": [
+    {
+     "start": 12,
+     "end": 24
+    },
+    {
+     "start": 56,
+     "end": 58
+    },
+    {
+     "start": 68,
+     "end": 72
+    }
+   ],
+   "titulo": "GTA 6 ROCKET LAUNCHER vs Police Cruisers 🚀🚓",
+   "gancho": "ROCKET THE COPS",
+   "descripcion": "In GTA 6 a rocket launcher sends police cruisers flying, and the wrecks keep burning in the street.\n\nGameplay: Truffle (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "What's your go-to weapon when the cops show up? 🚀",
+   "hashtags": [
+    "gta6",
+    "gta6gameplay",
+    "viceCity",
+    "rocketlauncher",
+    "gta6police",
+    "wantedlevel",
+    "gtavi"
+   ],
+   "puntuacion": 8,
+   "motivo": "Huge explosion on a marked cruiser within 7 s, pure police chaos payoff.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know GTA 6 lets you *rocket* cop cars?"
+    },
+    {
+     "t": 4.0,
+     "texto": "Shoulder the *launcher* and wait."
+    },
+    {
+     "t": 6.1,
+     "texto": "Cop car incoming. *Fire.*"
+    },
+    {
+     "t": 7.9,
+     "texto": "The whole car goes *flying*."
+    },
+    {
+     "t": 10.1,
+     "texto": "No way. Rockstar went *crazy*."
+    },
+    {
+     "t": 12.3,
+     "texto": "Boom, another one *goes up*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 6.0,
+     "texto": "COP CAR"
+    },
+    {
+     "t": 7.0,
+     "texto": "BOOM"
+    },
+    {
+     "t": 14.0,
+     "texto": "STILL BURNING"
+    }
+   ]
+  },
+  {
+   "tramos": [
+    {
+     "start": 890,
+     "end": 906
+    },
+    {
+     "start": 962,
+     "end": 970
+    }
+   ],
+   "titulo": "GTA 6 HIDE UNDERWATER from the Cops 🌊⭐",
+   "gancho": "HIDE FROM THE COPS",
+   "descripcion": "Drive into the river, swim under the bridge and dive: in GTA 6 your wanted stars go grey while you're underwater.\n\nGameplay: Truffle (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "Would you try this escape with 5 stars? 🌊",
+   "hashtags": [
+    "gta6",
+    "gta6gameplay",
+    "viceCity",
+    "wantedlevel",
+    "gta6police",
+    "gtavi",
+    "gta6secrets"
+   ],
+   "puntuacion": 8,
+   "motivo": "Clever wanted-level escape trick with a clear HUD change.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know GTA 6 lets you *hide underwater* from the cops?"
+    },
+    {
+     "t": 4.7,
+     "texto": "Drive straight into the *river*."
+    },
+    {
+     "t": 6.9,
+     "texto": "Ditch the car and *swim*."
+    },
+    {
+     "t": 9.1,
+     "texto": "Get under the bridge, then *dive*."
+    },
+    {
+     "t": 11.6,
+     "texto": "Now watch the *wanted stars*."
+    },
+    {
+     "t": 13.8,
+     "texto": "They go *grey* while you're under."
+    },
+    {
+     "t": 16.4,
+     "texto": "Stay down and the stars stay *grey*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 5.0,
+     "texto": "RIVER"
+    },
+    {
+     "t": 12.0,
+     "texto": "STARS GREY"
+    },
+    {
+     "t": 17.0,
+     "texto": "STAY DOWN"
+    }
+   ]
+  },
+  {
+   "tramos": [
+    {
+     "start": 684,
+     "end": 700
+    }
+   ],
+   "titulo": "GTA 6 lets you SHOOT the HELICOPTER 🚁🔫",
+   "gancho": "SHOOT THE CHOPPER?",
+   "descripcion": "Mid chase in GTA 6, a helicopter shows up overhead and you can open fire on it with a regular rifle.\n\nGameplay: Truffle (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "Would you shoot the chopper or just run? 🚁",
+   "hashtags": [
+    "gta6",
+    "gta6gameplay",
+    "viceCity",
+    "helicopter",
+    "wantedlevel",
+    "gtavi"
+   ],
+   "puntuacion": 6,
+   "motivo": "Visible hits on the chopper, but no crash payoff.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know in GTA 6 you can shoot *helicopters*?"
+    },
+    {
+     "t": 5.0,
+     "texto": "The *chopper* shows up overhead."
+    },
+    {
+     "t": 7.2,
+     "texto": "Grab a rifle, *aim up*."
+    },
+    {
+     "t": 9.6,
+     "texto": "Look at those *hits* sparking off it."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 5.0,
+     "texto": "CHOPPER"
+    },
+    {
+     "t": 9.0,
+     "texto": "OPEN FIRE"
+    },
+    {
+     "t": 11.0,
+     "texto": "DIRECT HITS"
+    }
+   ]
+  }
+ ]
+}

@@ -32,6 +32,8 @@ TITULO = os.environ.get("TITULO", "1") == "1"          # cartel con el gancho ar
 FORMATO = os.environ.get("FORMATO", "lleno")           # lleno = gameplay a pantalla completa; barras = con fondo difuminado
 LOGO = os.environ.get("LOGO", "")                    # ruta a un PNG tuyo (marca de agua arriba)
 TAG = os.environ.get("TAG", "")                       # prefijo de planes/zips (top_ en clipper_top)
+RAPIDO_MAX = int(os.environ.get("RAPIDO_MAX", "1500"))  # videos de hasta 25 min: un solo ZIP (1 fotograma/seg)
+ESPERAR = os.environ.get("ESPERAR", "1") == "1"        # tras el ZIP, esperar el plan en Descargas y seguir solo
 MODO = os.environ.get("MODO", "claude")              # claude = me pasas el ZIP en el chat; gemini = automatico
 CTA = os.environ.get("CTA", "Follow for a daily GTA 6 fact" if IDIOMA == "en" else "Sigueme, cada dia un dato de GTA 6")  # frase final (vacio = sin)
 
@@ -465,21 +467,29 @@ def preparar_paquete(wd, info, url, segmentos, dur_video, desde, hasta):
     """Crea para_claude/ID.zip con transcript + hojas de fotogramas para pasarselo a Claude."""
     import zipfile
     a, b = desde or 0, hasta or dur_video
-    paso = max(4, int((b - a) / 240) + 1)              # como mucho ~240 fotogramas
+    rapido = (b - a) <= RAPIDO_MAX
     tmp = wd / "hojas"
     tmp.mkdir(exist_ok=True)
     for f in tmp.glob("*"):
         f.unlink()
-    run(["ffmpeg", "-y", "-ss", str(a), "-t", str(b - a), "-i", "src.mp4",
-         "-vf", f"fps=1/{paso},scale=320:180:force_original_aspect_ratio=decrease,"
-                "pad=320:180:(ow-iw)/2:(oh-ih)/2,tile=4x4",
+    if rapido:   # un fotograma por segundo de todo el video: Claude devuelve el plan final directamente
+        paso, por_hoja = 1, 30
+        filtro = "fps=1,scale=256:144:force_original_aspect_ratio=decrease,pad=256:144:(ow-iw)/2:(oh-ih)/2,tile=6x5"
+        cabecera_hojas = ("MODO RAPIDO. Cada hoja tiene 30 fotogramas (6 columnas x 5 filas, de izquierda a derecha "
+                          f"y de arriba abajo), UNO POR SEGUNDO, empezando en el segundo {a:.0f}.")
+    else:
+        paso, por_hoja = max(4, int((b - a) / 240) + 1), 16
+        filtro = (f"fps=1/{paso},scale=320:180:force_original_aspect_ratio=decrease,"
+                  "pad=320:180:(ow-iw)/2:(oh-ih)/2,tile=4x4")
+        cabecera_hojas = (f"Cada hoja tiene 16 fotogramas (4x4, de izquierda a derecha y de arriba abajo), "
+                          f"uno cada {paso} s, empezando en el segundo {a:.0f}.")
+    run(["ffmpeg", "-y", "-ss", str(a), "-t", str(b - a), "-i", "src.mp4", "-vf", filtro,
          "-q:v", "4", "hojas/hoja_%02d.jpg"], cwd=wd)
     hojas = sorted(tmp.glob("hoja_*.jpg"))
-    indice = [f"Cada hoja tiene 16 fotogramas (4x4, de izquierda a derecha y de arriba abajo), "
-              f"uno cada {paso} s, empezando en el segundo {a:.0f}."]
+    indice = [cabecera_hojas]
     for k, h in enumerate(hojas):
-        t0 = a + k * 16 * paso
-        t1 = min(t0 + 15 * paso, b)
+        t0 = a + k * por_hoja * paso
+        t1 = min(t0 + (por_hoja - 1) * paso, b)
         indice.append(f"{h.name}: del segundo {t0:.0f} ({minuto(t0)}) al {t1:.0f} ({minuto(t1)})")
     texto = "\n".join(f"[{s['start']}-{s['end']}] {s['text']}" for s in segmentos) or "(nadie habla)"
     leeme = (f"VIDEO: {info['titulo']}\nCANAL: {info['canal']}\nLINK: {url}\nID: {info['id']}\n"
@@ -494,9 +504,12 @@ def preparar_paquete(wd, info, url, segmentos, dur_video, desde, hasta):
             z.write(h, h.name)
     if os.name == "nt":
         subprocess.run(["explorer", "/select,", str(zp.resolve())])
-    print(f"\n>>> PASO 1 de 2. Arrastra este archivo al chat de Claude: {zp.resolve()}")
-    print(f">>> Claude te devolvera {TAG}cortes_{info['id']}.json. Guardalo en Descargas")
-    print(">>> y vuelve a pegar este mismo link aqui.\n")
+    if rapido:
+        print(f"\n>>> Arrastra este archivo al chat de Claude: {zp.resolve()}")
+        print(f">>> Claude te devolvera {TAG}plan_{info['id']}.json. Guardalo en Descargas.\n")
+    else:
+        print(f"\n>>> PASO 1 de 2. Arrastra este archivo al chat de Claude: {zp.resolve()}")
+        print(f">>> Claude te devolvera {TAG}cortes_{info['id']}.json. Guardalo en Descargas.\n")
 
 
 def preparar_detalle(wd, info, url, segmentos, cortes):
@@ -535,8 +548,7 @@ def preparar_detalle(wd, info, url, segmentos, cortes):
     if os.name == "nt":
         subprocess.run(["explorer", "/select,", str(zp.resolve())])
     print(f"\n>>> PASO 2 de 2. Arrastra este archivo al chat de Claude: {zp.resolve()}")
-    print(f">>> Claude te devolvera {TAG}plan_{info['id']}.json. Guardalo en Descargas")
-    print(">>> y vuelve a pegar este mismo link aqui: se crearan los clips.\n")
+    print(f">>> Claude te devolvera {TAG}plan_{info['id']}.json. Guardalo en Descargas.\n")
 
 
 def buscar_plan(wd, vid, tipo="plan"):
@@ -585,7 +597,7 @@ def procesar(url, desde=None, hasta=None):
     if cortes and MODO != "gemini":
         print("[3/4] Preparando los fotogramas segundo a segundo de cada clip...")
         preparar_detalle(wd, info, url, segmentos, cortes.get("clips", []))
-        return
+        return "esperar:" + info["id"]
     if plan:
         print("[3/4] Usando el plan de Claude...")
         resumen = plan.get("resumen", "")
@@ -605,7 +617,7 @@ def procesar(url, desde=None, hasta=None):
     elif MODO != "gemini":
         print("[3/4] Preparando la vista general para Claude...")
         preparar_paquete(wd, info, url, segmentos, dur_video, desde, hasta)
-        return
+        return "esperar:" + info["id"]
     else:
         if not segmentos:
             raise RuntimeError("No hay voz en el video/tramo: nada que analizar.")
@@ -661,6 +673,22 @@ def procesar(url, desde=None, hasta=None):
     print(f"\nTerminado. Clips y resumen.md en: {(wd / SUB).resolve()}\n")
 
 
+def esperar_archivo(vid):
+    """Espera a que aparezca en Descargas el plan o los cortes de Claude para este video."""
+    if not ESPERAR:
+        print(">>> Cuando lo tengas, vuelve a pegar este mismo link.\n")
+        return False
+    print(">>> Esperando el archivo de Claude en Descargas... (Ctrl+C para salir)")
+    desc = Path.home().joinpath("Downloads")
+    while True:
+        for tipo in ("plan", "cortes"):
+            if list(desc.glob(f"{TAG}{tipo}_{vid}*.json")):
+                time.sleep(2)  # que termine de guardarse
+                print(f">>> Recibido {tipo}. Sigo yo solo.\n")
+                return True
+        time.sleep(5)
+
+
 def main(argv):
     links, desde, hasta, k = [], None, None, 0
     while k < len(argv):
@@ -674,7 +702,13 @@ def main(argv):
         sys.exit("Uso: py -3.13 clip.py LINK [LINK2 ...] [--desde 2:14] [--hasta 20:00]")
     for u in links:
         try:
-            procesar(u, desde, hasta)
+            r = procesar(u, desde, hasta)
+            while isinstance(r, str) and r.startswith("esperar:"):
+                if not esperar_archivo(r.split(":", 1)[1]):
+                    break
+                r = procesar(u, desde, hasta)
+        except KeyboardInterrupt:
+            print("\nParado.\n")
         except Exception as e:
             print(f"ERROR con {u}: {e}\n")
 

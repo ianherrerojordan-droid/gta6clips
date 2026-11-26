@@ -1,0 +1,195 @@
+{
+ "version": 2,
+ "resumen": "GTA 6: bulldozer con 5 estrellas.",
+ "clips": [
+  {
+   "tramos": [
+    {
+     "start": 141,
+     "end": 151
+    },
+    {
+     "start": 158,
+     "end": 175
+    }
+   ],
+   "titulo": "GTA 6 at 5 STARS: Cops BOX IN a Bulldozer 🚔🚨",
+   "gancho": "5 STARS = NO ESCAPE",
+   "descripcion": "At five stars in GTA 6, police SUVs box in a bulldozer on Vice City Beach and run it down until WASTED.\n\nGameplay: GameV (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "How long would YOU last at 5 stars in GTA 6? 🚔",
+   "hashtags": [
+    "gta6",
+    "gta6police",
+    "wantedlevel",
+    "vicecity",
+    "gtavi",
+    "gta6gameplay",
+    "rockstargames"
+   ],
+   "puntuacion": 8,
+   "motivo": "5-star chase, cops pinning a bulldozer and a clean WASTED payoff, made for a police-obsessed audience.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know in GTA 6 *five stars* means cops box you in?"
+    },
+    {
+     "t": 5.1,
+     "texto": "Police *SUVs* lock the bulldozer in from *both sides*."
+    },
+    {
+     "t": 9.0,
+     "texto": "Rockstar went crazy with this *police AI*."
+    },
+    {
+     "t": 11.9,
+     "texto": "Keep driving and they just keep *coming*."
+    },
+    {
+     "t": 15.0,
+     "texto": "Watch this, more units close in and *pin* you."
+    },
+    {
+     "t": 18.6,
+     "texto": "There is nowhere left to *go*."
+    },
+    {
+     "t": 21.1,
+     "texto": "No way out. *WASTED*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 5.1,
+     "texto": "BOXED IN"
+    },
+    {
+     "t": 15.0,
+     "texto": "PINNED"
+    },
+    {
+     "t": 22.0,
+     "texto": "WASTED"
+    }
+   ]
+  },
+  {
+   "tramos": [
+    {
+     "start": 451,
+     "end": 476
+    }
+   ],
+   "titulo": "GTA 6 Cops Can WRECK Your ENGINE Mid-Chase 🚨",
+   "gancho": "COPS WRECKED MY ENGINE",
+   "descripcion": "Mid police chase in GTA 6, an 'Engine damaged' notice pops up as cruisers squeeze the bus on the beach.\n\nGameplay: GameV (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "Would you ditch the bus or keep running from the cops? 🚌",
+   "hashtags": [
+    "gta6",
+    "gta6police",
+    "policechase",
+    "vicecity",
+    "gtavi",
+    "gta6gameplay",
+    "rockstargames"
+   ],
+   "puntuacion": 7,
+   "motivo": "Readable 'Engine damaged' HUD notice plus a police squeeze; notice is small so the cartel carries it.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know in GTA 6 the cops can *kill your engine*?"
+    },
+    {
+     "t": 4.7,
+     "texto": "Look top right, *Engine damaged* pops up mid-chase."
+    },
+    {
+     "t": 8.0,
+     "texto": "Your ride is barely holding *together*."
+    },
+    {
+     "t": 10.5,
+     "texto": "Then the *cruisers* roll in, lights flashing."
+    },
+    {
+     "t": 13.4,
+     "texto": "They squeeze the bus from *both sides*."
+    },
+    {
+     "t": 16.3,
+     "texto": "Rockstar went crazy with this *police AI*."
+    },
+    {
+     "t": 19.2,
+     "texto": "This chase won't end *well*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 3.6,
+     "texto": "ENGINE DAMAGED"
+    },
+    {
+     "t": 13.4,
+     "texto": "BOXED IN"
+    },
+    {
+     "t": 23.0,
+     "texto": "WASTED"
+    }
+   ]
+  },
+  {
+   "tramos": [
+    {
+     "start": 191,
+     "end": 208
+    }
+   ],
+   "titulo": "GTA 6 BULLDOZER vs Police Roadblock 🚜🚔",
+   "gancho": "COPS VS BULLDOZER",
+   "descripcion": "In GTA 6 the cops try to block a bulldozer on Vice City Beach, and it just shoves their cruisers aside.\n\nGameplay: GameV (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "What's the best getaway vehicle in GTA 6? 🚜",
+   "hashtags": [
+    "gta6",
+    "gta6police",
+    "bulldozer",
+    "vicecity",
+    "gtavi",
+    "gta6gameplay",
+    "wantedlevel"
+   ],
+   "puntuacion": 7,
+   "motivo": "Satisfying shove of police cars with the blade; short and clear, action front-loaded.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know in GTA 6 a *bulldozer* just plows through cops?"
+    },
+    {
+     "t": 4.7,
+     "texto": "Watch this. It *shoves* the police cars aside."
+    },
+    {
+     "t": 7.9,
+     "texto": "That cop car? Totally *wrecked*."
+    },
+    {
+     "t": 10.1,
+     "texto": "And you just keep *rolling* down the beach."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 5.0,
+     "texto": "SHOVED"
+    },
+    {
+     "t": 8.0,
+     "texto": "WRECKED"
+    }
+   ]
+  }
+ ]
+}

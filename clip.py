@@ -689,7 +689,62 @@ def esperar_archivo(vid):
         time.sleep(5)
 
 
+def compilar(dias=7):
+    """Junta los Shorts creados en los ultimos `dias` en un video largo horizontal (para YouTube normal)."""
+    limite = time.time() - dias * 86400
+    clips = sorted((f for f in OUT.glob("*/[0-9][0-9]_*.mp4") if f.stat().st_mtime >= limite),
+                   key=lambda f: f.stat().st_mtime)
+    if len(clips) < 3:
+        sys.exit(f"Solo hay {len(clips)} Shorts de los ultimos {dias} dias. Hacen falta al menos 3.")
+    dest = Path("compilaciones")
+    tmp = dest / "tmp"
+    tmp.mkdir(parents=True, exist_ok=True)
+    print(f"Juntando {len(clips)} Shorts en un video largo...")
+    partes, capitulos, t = [], [], 0.0
+    for k, f in enumerate(clips):
+        titulo = f.stem[3:].replace("-", " ").strip().capitalize()
+        plan = f.parent / "plan.json"
+        try:
+            pc = json.loads(plan.read_text(encoding="utf-8"))["clips"][int(f.name[:2]) - 1]
+            titulo = re.sub(r"[^\w\s:'!?.,-]", "", pc.get("titulo", titulo)).strip()
+        except Exception:
+            pass
+        out = tmp / f"{k:03d}.mp4"
+        run(["ffmpeg", "-y", "-i", str(f), "-filter_complex",
+             "[0:v]split[a][b];[a]scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,"
+             "boxblur=30,eq=brightness=-0.15[bg];[b]scale=-2:1080[fg];[bg][fg]overlay=(W-w)/2:0,"
+             "fps=30,format=yuv420p[v];[0:a]aresample=48000,loudnorm=I=-14:TP=-1.5[a]",
+             "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-crf", "21", "-preset", "veryfast",
+             "-c:a", "aac", "-b:a", "160k", "-ar", "48000", str(out)])
+        capitulos.append((t, titulo))
+        t += duracion(out)
+        partes.append(out)
+        print(f"   {k + 1}/{len(clips)} {titulo}")
+    lista = tmp / "lista.txt"
+    lista.write_text("".join(f"file '{p.resolve().as_posix()}'\n" for p in partes), encoding="utf-8")
+    nombre = time.strftime("semana_%Y-%m-%d")
+    final = dest / f"{nombre}.mp4"
+    run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(lista), "-c", "copy",
+         "-movflags", "+faststart", str(final)])
+    caps = "\n".join(f"{int(a // 60)}:{int(a % 60):02d} {ti}" for a, ti in capitulos)
+    creditos = sorted({json.loads((f.parent / "info.json").read_text(encoding="utf-8")).get("canal", "")
+                       for f in clips if (f.parent / "info.json").exists()} - {""})
+    texto = (f"TITULO (ejemplo):\nEvery GTA 6 Police Secret You Missed ({len(clips)} Facts)\n\n"
+             f"DESCRIPCION:\n{len(clips)} hidden GTA 6 police and wanted level secrets in one video.\n\n"
+             f"Chapters:\n{caps}\n\nGameplay: {', '.join(creditos)} (YouTube)\n#GTA6 #ViceCity #GTAVI\n")
+    (dest / f"{nombre}.txt").write_text(texto, encoding="utf-8")
+    for p in partes:
+        p.unlink(missing_ok=True)
+    lista.unlink(missing_ok=True)
+    if os.name == "nt":
+        subprocess.run(["explorer", "/select,", str(final.resolve())])
+    print(f"\nListo: {final.resolve()} ({t / 60:.1f} min)\nTitulo, descripcion y capitulos en: {(dest / (nombre + '.txt')).resolve()}\n")
+
+
 def main(argv):
+    if argv and argv[0] == "--compilar":
+        compilar(int(argv[1]) if len(argv) > 1 else 7)
+        return
     links, desde, hasta, k = [], None, None, 0
     while k < len(argv):
         if argv[k] == "--desde":

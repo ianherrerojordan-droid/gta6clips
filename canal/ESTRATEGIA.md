@@ -30,3 +30,11 @@
 - Vice City Facts (inglés): 4.314 visitas y 3 suscriptores. Ganan 4 Shorts: Cops Remember (1.226), Military Tracker (1.212; el que más horas vistas tiene, 7,3), Wasted (1.105) y Stunt Jumps (689).
 - Funciona: policía, crimen y robos, y lo icónico de GTA que vuelve. No funciona: el realismo tranquilo (aeropuerto, cargadores eléctricos, máquinas expendedoras).
 - Decisión: centrarse en inglés. La cola va primero con policía, crimen y robos. Los vídeos nuevos se buscan de persecuciones, estrellas de búsqueda, atracos y peleas.
+
+## Estrategia v3: a por la monetizacion (1.000 subs + 10M visualizaciones de Shorts en 90 dias)
+- Volumen: minimo 3 Shorts al dia y hasta 6 si hay material. Una tarde a la semana: 3-4 videos nuevos y 7 dias programados.
+- Series numeradas ("GTA 6 Cop Secrets #N") con CTA "Follow for part 2" para convertir visitas en suscriptores.
+- Ganchos: empezar en plena accion; 20-28 s.
+- Video largo semanal automatico (compilar_semana.bat): suma horas de visualizacion (via 4.000 h) y empuja los Shorts.
+- Subir los mismos Shorts a TikTok e Instagram Reels.
+- Revision semanal de estadisticas: hacer 5 mas de lo que pegue.

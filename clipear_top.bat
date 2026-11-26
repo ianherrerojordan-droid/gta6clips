@@ -2,7 +2,7 @@
 chcp 65001 >nul
 cd /d "%~dp0"
 set VOZ=en-US-AndrewNeural
-set CTA=Follow for a daily GTA 6 fact
+set CTA=Follow for part 2
 set FORMATO=lleno
 set TAG=top_
 echo === CLIPPER TOP - Vice City Facts ===

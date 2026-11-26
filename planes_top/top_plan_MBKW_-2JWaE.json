@@ -1,0 +1,292 @@
+{
+ "version": 2,
+ "resumen": "GTA 6: asedio policial con 5 estrellas.",
+ "clips": [
+  {
+   "tramos": [
+    {
+     "start": 97,
+     "end": 116
+    },
+    {
+     "start": 290,
+     "end": 302
+    }
+   ],
+   "titulo": "GTA 6 cops call AIR SUPPORT on you 🚁🚨",
+   "gancho": "COPS CALLED AIR SUPPORT",
+   "descripcion": "Hide inside during a police siege and you can hear the cops radio for air support, and then the chopper shows up.\n\nGameplay: Truffle (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "Would you shoot the chopper down or run? 🚁",
+   "hashtags": [
+    "gta6",
+    "gta6police",
+    "wantedlevel",
+    "gta6gameplay",
+    "vicecity",
+    "gtavi",
+    "gaming"
+   ],
+   "puntuacion": 8,
+   "motivo": "Real police radio line plus the chopper payoff: strong cop-mechanics hook.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know GTA 6 cops call *air support*?"
+    },
+    {
+     "t": 7.0,
+     "texto": "You just heard the *police radio*. They want a chopper on you."
+    },
+    {
+     "t": 12.3,
+     "texto": "Listen closely, there's *more*."
+    },
+    {
+     "t": 17.8,
+     "texto": "And then, look *up*."
+    },
+    {
+     "t": 24.0,
+     "texto": "There it is, the *helicopter* coming for you."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 4.0,
+     "texto": "AIR SUPPORT"
+    },
+    {
+     "t": 24.0,
+     "texto": "HELICOPTER"
+    }
+   ]
+  },
+  {
+   "tramos": [
+    {
+     "start": 234,
+     "end": 256
+    }
+   ],
+   "titulo": "GTA 6 sends S.W.A.T. after you 🚨😳",
+   "gancho": "S.W.A.T. IS COMING",
+   "descripcion": "Push your wanted level high enough and it is not just patrol cars anymore: a sheriff car, then a S.W.A.T. van with an officer in cover.\n\nGameplay: Truffle (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "How long would you survive against S.W.A.T.? 🚨",
+   "hashtags": [
+    "gta6",
+    "gta6police",
+    "swat",
+    "wantedlevel",
+    "gta6gameplay",
+    "vicecity",
+    "gtavi"
+   ],
+   "puntuacion": 7,
+   "motivo": "S.W.A.T. van is clearly readable, but it is on screen only about a second.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know GTA 6 sends *S.W.A.T.* after you?"
+    },
+    {
+     "t": 3.6,
+     "texto": "First a *sheriff* car, deputy right beside it."
+    },
+    {
+     "t": 7.0,
+     "texto": "Floor it, and they *open fire*."
+    },
+    {
+     "t": 10.0,
+     "texto": "Look left. A *S.W.A.T.* van, officer crouched behind it."
+    },
+    {
+     "t": 13.8,
+     "texto": "Rockstar went crazy with this *police AI*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 3.5,
+     "texto": "SHERIFF"
+    },
+    {
+     "t": 10.0,
+     "texto": "S.W.A.T."
+    }
+   ]
+  },
+  {
+   "tramos": [
+    {
+     "start": 440,
+     "end": 458
+    }
+   ],
+   "titulo": "GTA 6 cops can SPOT YOUR GUN 🔫👀",
+   "gancho": "COPS SPOT YOUR GUN",
+   "descripcion": "While the cops are searching for you, GTA 6 warns that carrying a visible weapon may draw their attention.\n\nGameplay: Truffle (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "Would you holster your gun or keep it out? 🔫",
+   "hashtags": [
+    "gta6",
+    "gta6police",
+    "wantedlevel",
+    "gta6tips",
+    "gta6gameplay",
+    "vicecity",
+    "gtavi"
+   ],
+   "puntuacion": 7,
+   "motivo": "Readable on-screen tip about a real stealth/police mechanic.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know GTA 6 cops can *spot your gun*?"
+    },
+    {
+     "t": 4.5,
+     "texto": "Cops are *searching* for you."
+    },
+    {
+     "t": 7.1,
+     "texto": "And the game warns you, a *visible weapon* draws their attention."
+    },
+    {
+     "t": 11.5,
+     "texto": "Put it *away* and blend in."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 7.5,
+     "texto": "VISIBLE WEAPON"
+    },
+    {
+     "t": 11.5,
+     "texto": "HIDE IT"
+    }
+   ]
+  },
+  {
+   "tramos": [
+    {
+     "start": 384,
+     "end": 398
+    },
+    {
+     "start": 412,
+     "end": 424
+    }
+   ],
+   "titulo": "GTA 6 GREY STARS mean the cops lost you ⭐👀",
+   "gancho": "GREY STARS MEAN THIS",
+   "descripcion": "When the cops lose sight of you in GTA 6, the wanted stars go grey and they start searching. Time to hide.\n\nGameplay: Truffle (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "Mangroves or the water, where are you hiding? 🌴",
+   "hashtags": [
+    "gta6",
+    "wantedlevel",
+    "gta6police",
+    "gta6tips",
+    "gta6gameplay",
+    "vicecity",
+    "gtavi"
+   ],
+   "puntuacion": 7,
+   "motivo": "Core wanted-level mechanic, grey stars clearly visible in scene 2.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know GTA 6 stars turn *grey* when cops lose you?"
+    },
+    {
+     "t": 4.8,
+     "texto": "Watch. Out of the water and straight into the *mangroves*."
+    },
+    {
+     "t": 9.0,
+     "texto": "Up top, the stars are *grey* and flashing."
+    },
+    {
+     "t": 12.5,
+     "texto": "That means the cops *lost sight* and are searching for you."
+    },
+    {
+     "t": 17.0,
+     "texto": "Stay low, stay *hidden*, and keep moving."
+    },
+    {
+     "t": 20.0,
+     "texto": "Rockstar made hiding feel *real*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 9.0,
+     "texto": "GREY STARS"
+    },
+    {
+     "t": 17.0,
+     "texto": "STAY HIDDEN"
+    }
+   ]
+  },
+  {
+   "tramos": [
+    {
+     "start": 48,
+     "end": 64
+    },
+    {
+     "start": 168,
+     "end": 178
+    }
+   ],
+   "titulo": "GTA 6 wanted stars show up EMPTY first ⭐🚨",
+   "gancho": "EMPTY STARS = TROUBLE",
+   "descripcion": "During this gun store job the wanted stars appear empty before any cop is around, and later they light up with police outside.\n\nGameplay: Truffle (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "Would you run the second the stars appear? ⭐",
+   "hashtags": [
+    "gta6",
+    "wantedlevel",
+    "gta6police",
+    "gta6gameplay",
+    "vicecity",
+    "gtavi"
+   ],
+   "puntuacion": 6,
+   "motivo": "Subtle HUD detail, small on a phone screen; second scene is dark.",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know GTA 6 *wanted stars* show up empty?"
+    },
+    {
+     "t": 4.2,
+     "texto": "Watch the top right corner in this *gun store*."
+    },
+    {
+     "t": 8.0,
+     "texto": "There. *Empty stars*, and not a single cop here yet."
+    },
+    {
+     "t": 12.2,
+     "texto": "Grab what you need, because this won't *last*."
+    },
+    {
+     "t": 18.2,
+     "texto": "Cops outside, and the stars *light up*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 8.0,
+     "texto": "EMPTY STARS"
+    },
+    {
+     "t": 19.0,
+     "texto": "COPS ARRIVE"
+    }
+   ]
+  }
+ ]
+}

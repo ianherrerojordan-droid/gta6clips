@@ -4,7 +4,7 @@ Numera los titulos en serie ("GTA 6 Secrets #N: ...") y asigna los siguientes hu
 import json, re, sys, datetime, pathlib
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 ESTADO = RAIZ / "planes_top" / "agenda.json"
-HORAS = [("15:00", 0), ("20:00", 0), ("01:00", 1)]   # hora de Espana; la de las 01:00 cuenta como dia siguiente
+HORAS = [("15:00", 0), ("18:00", 0), ("21:00", 0), ("00:00", 1), ("03:00", 1), ("06:00", 1)]  # 6 al dia (hora de Espana)
 
 def huecos(desde_orden, n):
     d = datetime.date(int(str(desde_orden)[:4]), int(str(desde_orden)[4:6]), int(str(desde_orden)[6:8])) - datetime.timedelta(1)

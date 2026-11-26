@@ -1,0 +1,39 @@
+{
+ "clips": [
+  {
+   "idea": "Con el lanzacohetes puedes volar los coches de policía: quedan ardiendo en la calle",
+   "tramos": [
+    {
+     "start": 12,
+     "end": 26
+    },
+    {
+     "start": 56,
+     "end": 72
+    }
+   ]
+  },
+  {
+   "idea": "Puedes derribar el helicóptero de la policía a tiros: se ve impactado y echando humo",
+   "tramos": [
+    {
+     "start": 682,
+     "end": 704
+    }
+   ]
+  },
+  {
+   "idea": "Mete el coche en el río y bucea: mientras estás sumergido las estrellas se apagan",
+   "tramos": [
+    {
+     "start": 890,
+     "end": 906
+    },
+    {
+     "start": 956,
+     "end": 970
+    }
+   ]
+  }
+ ]
+}

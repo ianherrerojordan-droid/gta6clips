@@ -24,3 +24,9 @@
 3. **Modo inglés**: el mismo plan saca también la versión en inglés, con voz y subtítulos en inglés, para un segundo canal.
 4. **Modo comparativa**: dos vídeos fuente (GTA 5 y GTA 6), con pantalla dividida o uno detrás de otro.
 5. **Fuentes**: buscar "GTA 6 no commentary", "GTA 6 free roam", "GTA 6 1 hour gameplay". Si es posible, preferir creadores que permitan el uso o a los que se pueda pedir permiso.
+
+## Datos de la semana 1 (20-25 nov)
+- Dato Vice City (español): 19 visitas en total. Se aparca.
+- Vice City Facts (inglés): 4.314 visitas y 3 suscriptores. Ganan 4 Shorts: Cops Remember (1.226), Military Tracker (1.212; el que más horas vistas tiene, 7,3), Wasted (1.105) y Stunt Jumps (689).
+- Funciona: policía, crimen y robos, y lo icónico de GTA que vuelve. No funciona: el realismo tranquilo (aeropuerto, cargadores eléctricos, máquinas expendedoras).
+- Decisión: centrarse en inglés. La cola va primero con policía, crimen y robos. Los vídeos nuevos se buscan de persecuciones, estrellas de búsqueda, atracos y peleas.

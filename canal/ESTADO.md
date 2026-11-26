@@ -10,3 +10,5 @@ Actualizado: 26 nov 2026
 - **Vídeos pendientes de pasar por clipear_top.bat:** 7AuuyNkhVSo (6 estrellas), O7jwkrC6MrQ (depósito de coches).
 - **Banco (EpSWQ5Kmfyg):** se está rehaciendo con el clip.py nuevo (voz del youtuber bajada).
 - Web: https://claude.ai/artifact/Hg7QAPLeYYHJ8y8LTJGw38 (lo marcado ahí lo ve Claude).
+
+- 26 nov: plan 7AuuyNkhVSo (6 estrellas) listo: #14-#16, 1 dic 15/18/21h. Falta ZIP de O7jwkrC6MrQ (desguace). Luego: compilar_semana.bat (video largo).

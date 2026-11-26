@@ -1,0 +1,35 @@
+{
+ "clips": [
+  {
+   "idea": "La policía no puede parar un bulldozer: lo encajonan con SUVs por ambos lados y al final disparan al conductor por la cabina hasta WASTED",
+   "tramos": [
+    {
+     "start": 138,
+     "end": 152
+    },
+    {
+     "start": 158,
+     "end": 176
+    }
+   ]
+  },
+  {
+   "idea": "Aviso 'Engine damaged' en pantalla cuando la policía embiste y destroza tu vehículo durante la persecución",
+   "tramos": [
+    {
+     "start": 448,
+     "end": 476
+    }
+   ]
+  },
+  {
+   "idea": "Un bulldozer empuja y aplasta los coches de policía que intentan bloquearlo",
+   "tramos": [
+    {
+     "start": 190,
+     "end": 214
+    }
+   ]
+  }
+ ]
+}

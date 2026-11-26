@@ -1,0 +1,194 @@
+{
+ "version": 2,
+ "resumen": "NfIW-glaImU",
+ "clips": [
+  {
+   "tramos": [
+    {
+     "start": 71,
+     "end": 95
+    }
+   ],
+   "gancho": "COPS CAN TASE YOU",
+   "descripcion": "In GTA 6 the cops don't always shoot - they tase you, pin you down and the BUSTED screen hits.\n\nGameplay: Dan Allen Gaming (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "Would you mash GET UP or just accept the BUSTED? ⚡",
+   "hashtags": [
+    "gta6",
+    "gta6police",
+    "busted",
+    "gtavi",
+    "vicecity",
+    "gta6gameplay",
+    "gaming"
+   ],
+   "puntuacion": 8,
+   "motivo": "Taser arrest plus iconic BUSTED screen, all on camera in one continuous take",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know that in GTA 6 cops can *tase* you?"
+    },
+    {
+     "t": 4.3,
+     "texto": "The screen *glitches* the second the shock hits."
+    },
+    {
+     "t": 7.5,
+     "texto": "A *GET UP* prompt flashes while you're stuck on the ground."
+    },
+    {
+     "t": 11.8,
+     "texto": "Stay down too long and the cop *pins* you for the arrest."
+    },
+    {
+     "t": 18,
+     "texto": "Then the iconic *BUSTED* screen hits."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 6,
+     "texto": "GET UP"
+    },
+    {
+     "t": 12,
+     "texto": "PINNED"
+    },
+    {
+     "t": 18.2,
+     "texto": "BUSTED"
+    }
+   ],
+   "titulo": "GTA 6 Secrets #4: Cops TASE You Before BUSTED ⚡"
+  },
+  {
+   "tramos": [
+    {
+     "start": 45,
+     "end": 52
+    },
+    {
+     "start": 62,
+     "end": 79
+    }
+   ],
+   "gancho": "YOU CAN SURRENDER",
+   "descripcion": "After a parking lot brawl in GTA 6, a SURRENDER prompt shows up as the cops close in.\n\nGameplay: Dan Allen Gaming (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "Would you ever press surrender in GTA 6? 🚔",
+   "hashtags": [
+    "gta6",
+    "gta6police",
+    "surrender",
+    "gtavi",
+    "vicecity",
+    "gta6gameplay"
+   ],
+   "puntuacion": 7,
+   "motivo": "Surrender prompt is a new police mechanic; fight + cop approach keep it active",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know that in GTA 6 you can *surrender* to the cops?"
+    },
+    {
+     "t": 5.0,
+     "texto": "Throw hands in a parking lot and that's a *crime*."
+    },
+    {
+     "t": 9,
+     "texto": "Back at your truck, a *SURRENDER* prompt shows up."
+    },
+    {
+     "t": 12.6,
+     "texto": "It even says you *weren't identified* by the cops."
+    },
+    {
+     "t": 17,
+     "texto": "But an officer *still* walks right up to you."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 5.3,
+     "texto": "STREET FIGHT"
+    },
+    {
+     "t": 9.3,
+     "texto": "SURRENDER"
+    },
+    {
+     "t": 17.2,
+     "texto": "COP INCOMING"
+    }
+   ],
+   "titulo": "GTA 6 Secrets #5: There's a SURRENDER Button 🚔"
+  },
+  {
+   "tramos": [
+    {
+     "start": 118,
+     "end": 122
+    },
+    {
+     "start": 84,
+     "end": 93
+    },
+    {
+     "start": 105,
+     "end": 115
+    }
+   ],
+   "gancho": "BUSTED COSTS YOU GUNS",
+   "descripcion": "In GTA 6, weapons you don't own are lost when you get arrested or die in combat.\n\nGameplay: Dan Allen Gaming (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "Is losing your guns after BUSTED too harsh? 🔫",
+   "hashtags": [
+    "gta6",
+    "busted",
+    "gta6police",
+    "gtavi",
+    "vicecity",
+    "gta6weapons",
+    "gta6gameplay"
+   ],
+   "puntuacion": 7,
+   "motivo": "Real on-screen rule about arrest consequences, ties the BUSTED screen to a penalty",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know that in GTA 6 getting *busted* costs you your guns?"
+    },
+    {
+     "t": 5.0,
+     "texto": "Any weapon you don't *own* is gone after an arrest."
+    },
+    {
+     "t": 9,
+     "texto": "The second that *BUSTED* screen drops, they're confiscated."
+    },
+    {
+     "t": 13,
+     "texto": "You're back outside, but those guns stay *gone*."
+    },
+    {
+     "t": 16.2,
+     "texto": "Dying in combat does the *same* thing."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 5.2,
+     "texto": "UNOWNED GUNS"
+    },
+    {
+     "t": 9.2,
+     "texto": "BUSTED"
+    },
+    {
+     "t": 13.3,
+     "texto": "LOST"
+    }
+   ],
+   "titulo": "GTA 6 Secrets #6: BUSTED = You LOSE Your Guns 🔫"
+  }
+ ]
+}

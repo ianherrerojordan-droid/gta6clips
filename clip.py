@@ -446,7 +446,7 @@ def render(wd, i, clip, total, mp3):
     if mp3:
         # el audio original baja mientras habla el narrador y se mezcla de fondo
         # el audio original se oye normal y baja solo mientras habla el narrador
-        audio = (f"[0:a]volume={VOL_ORIGINAL}[o];[{na}:a]volume=1.6,apad,asplit[n1][n2];"
+        audio = (f"[0:a]volume={clip.get('vol_original', VOL_ORIGINAL)}[o];[{na}:a]volume=1.6,apad,asplit[n1][n2];"
                  "[o][n1]sidechaincompress=threshold=0.015:ratio=12:attack=15:release=350[d];"
                  "[d][n2]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5[a]")
         entradas += ["-i", mp3]

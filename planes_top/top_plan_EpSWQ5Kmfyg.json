@@ -1,0 +1,264 @@
+{
+ "version": 2,
+ "resumen": "EpSWQ5Kmfyg",
+ "clips": [
+  {
+   "tramos": [
+    {
+     "start": 283,
+     "end": 295
+    },
+    {
+     "start": 314,
+     "end": 328
+    }
+   ],
+   "gancho": "ZERO COPS DURING ROBBERY",
+   "descripcion": "In GTA 6 a quiet bank robbery gives you no stars while you loot. The wanted level only pops once the cash is gone, and the cops are still on the way.\n\nGameplay: Fear (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "Would you go back for more cash or run the second the stars hit? 💰",
+   "hashtags": [
+    "gta6",
+    "gta6gameplay",
+    "vicecity",
+    "gta6heist",
+    "bankrobbery",
+    "gtavi",
+    "gaming"
+   ],
+   "puntuacion": 9,
+   "motivo": "Police alert timing during a heist, clear HUD payoff when stars appear",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know that in GTA 6 a *bank* robbery starts with zero cops?"
+    },
+    {
+     "t": 5.5,
+     "texto": "Hostages stay *on the floor* while you loot the counters."
+    },
+    {
+     "t": 9.5,
+     "texto": "The *cash counter* climbs, and still no stars."
+    },
+    {
+     "t": 12.9,
+     "texto": "Then you grab the *last* stack and..."
+    },
+    {
+     "t": 15.8,
+     "texto": "*Boom*, stars hit the top right."
+    },
+    {
+     "t": 18.4,
+     "texto": "But the cops aren't there yet, so you *walk out*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 9.6,
+     "texto": "NO STARS YET"
+    },
+    {
+     "t": 15.2,
+     "texto": "STARS ARRIVE"
+    },
+    {
+     "t": 18.5,
+     "texto": "COPS LATE"
+    }
+   ],
+   "vol_original": "0.12",
+   "titulo": "GTA 6 Secrets #10: Cops Come AFTER You Grab The CASH 💰"
+  },
+  {
+   "tramos": [
+    {
+     "start": 254,
+     "end": 279
+    }
+   ],
+   "gancho": "THREATEN THE WHOLE BANK",
+   "descripcion": "In GTA 6 you have to keep the whole bank scared, guards included. Keep aiming and they drop their weapons, let up and they fight back.\n\nGameplay: Fear (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "Intimidate everyone or take the guards out first? 🔫",
+   "hashtags": [
+    "gta6",
+    "gta6gameplay",
+    "gta6police",
+    "bankrobbery",
+    "gtavi",
+    "vicecity"
+   ],
+   "puntuacion": 8,
+   "motivo": "Intimidation mechanic vs armed guards, visible dropped weapon",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know that in GTA 6 you have to *threaten* the whole bank?"
+    },
+    {
+     "t": 5.4,
+     "texto": "Aim at everyone, even the *security guards*, so nobody calls backup."
+    },
+    {
+     "t": 9.7,
+     "texto": "Keep them scared and they *drop* to the floor."
+    },
+    {
+     "t": 13.3,
+     "texto": "Even the armed guards *drop their weapons*."
+    },
+    {
+     "t": 16.2,
+     "texto": "Stop intimidating and they'll eventually *shoot* back."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 5.5,
+     "texto": "EVEN GUARDS"
+    },
+    {
+     "t": 13.4,
+     "texto": "WEAPONS DOWN"
+    },
+    {
+     "t": 16.4,
+     "texto": "KEEP AIMING"
+    }
+   ],
+   "vol_original": "0.12",
+   "titulo": "GTA 6 Secrets #11: Even ARMED GUARDS Drop Their Guns 🔫"
+  },
+  {
+   "tramos": [
+    {
+     "start": 405,
+     "end": 411
+    },
+    {
+     "start": 425,
+     "end": 431
+    },
+    {
+     "start": 431,
+     "end": 444
+    }
+   ],
+   "gancho": "POLICE SEARCH ZONE MAP",
+   "descripcion": "With stars on you in GTA 6, the map shows a flashing red and blue police search zone. Pay 'n' Spray shops inside it are no help, so pick one outside.\n\nGameplay: Fear (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "Would you risk the closest Pay 'n' Spray or drive across town? 🚨",
+   "hashtags": [
+    "gta6",
+    "gta6gameplay",
+    "gta6police",
+    "wantedlevel",
+    "gtavi",
+    "vicecity",
+    "paynspray"
+   ],
+   "puntuacion": 8,
+   "motivo": "Police search area on map + Pay 'n' Spray lowering recognition",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know that in GTA 6 the map shows a police *search zone*?"
+    },
+    {
+     "t": 5.8,
+     "texto": "Your minimap *flashes red and blue* while they hunt you."
+    },
+    {
+     "t": 9.8,
+     "texto": "Every *Pay 'n' Spray* inside that zone is off limits."
+    },
+    {
+     "t": 13.8,
+     "texto": "So you mark one *outside* the zone instead."
+    },
+    {
+     "t": 17.1,
+     "texto": "A respray *lowers recognition*, so cops won't know your car."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 6.2,
+     "texto": "SEARCH ZONE"
+    },
+    {
+     "t": 9.9,
+     "texto": "PAY 'N' SPRAY"
+    },
+    {
+     "t": 14.0,
+     "texto": "OUTSIDE THE ZONE"
+    }
+   ],
+   "vol_original": "0.12",
+   "titulo": "GTA 6 Secrets #12: Cops Draw A SEARCH ZONE 🚨"
+  },
+  {
+   "tramos": [
+    {
+     "start": 4,
+     "end": 11
+    },
+    {
+     "start": 215,
+     "end": 223
+    },
+    {
+     "start": 283,
+     "end": 292
+    }
+   ],
+   "gancho": "MARKED BILLS IN BANKS",
+   "descripcion": "GTA 6 banks hold marked bills, so you need a dye pack jammer before they're a real target. Then it's the safe and the teller counters.\n\nGameplay: Fear (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "Which bank are you hitting first? 💸",
+   "hashtags": [
+    "gta6",
+    "gta6gameplay",
+    "gta6heist",
+    "bankrobbery",
+    "gtavi",
+    "vicecity"
+   ],
+   "puntuacion": 7,
+   "motivo": "On-screen bank intel (marked bills, dye pack jammer) plus safe cash payoff",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know that in GTA 6 banks are loaded with *marked bills*?"
+    },
+    {
+     "t": 5.0,
+     "texto": "You need a *dye pack jammer* before they're worth hitting."
+    },
+    {
+     "t": 9.0,
+     "texto": "Then punch the *code* into the safe."
+    },
+    {
+     "t": 12.9,
+     "texto": "Inside? *Stacks* of cash for the bag."
+    },
+    {
+     "t": 15.8,
+     "texto": "Then clean out the *teller* counters too."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 5.2,
+     "texto": "DYE PACK JAMMER"
+    },
+    {
+     "t": 13.0,
+     "texto": "SAFE CASH"
+    }
+   ],
+   "vol_original": "0.12",
+   "titulo": "GTA 6 Secrets #13: Banks Have MARKED BILLS 💸"
+  }
+ ]
+}

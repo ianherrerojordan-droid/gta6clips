@@ -710,7 +710,8 @@ def compilar(dias=7):
         except Exception:
             pass
         out = tmp / f"{k:03d}.mp4"
-        run(["ffmpeg", "-y", "-i", str(f), "-filter_complex",
+        corte = max(duracion(f) - 3.2, 5)  # quita el "Follow for part 2" del final de cada Short
+        run(["ffmpeg", "-y", "-t", f"{corte:.2f}", "-i", str(f), "-filter_complex",
              "[0:v]split[a][b];[a]scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,"
              "boxblur=30,eq=brightness=-0.15[bg];[b]scale=-2:1080[fg];[bg][fg]overlay=(W-w)/2:0,"
              "fps=30,format=yuv420p[v];[0:a]aresample=48000,loudnorm=I=-14:TP=-1.5[a]",

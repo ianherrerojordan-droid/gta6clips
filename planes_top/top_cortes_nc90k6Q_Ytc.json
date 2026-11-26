@@ -1,0 +1,56 @@
+{
+ "clips": [
+  {
+   "idea": "En GTA 6 no puedes perder un nivel de busqueda de 6 estrellas: aviso en pantalla 'You can't lose a 6-star wanted level. The cops won't give up until you're hunted down'. Escena 1: aviso durante el caos en la playa; escena 2: el mismo aviso reaparece minutos despues en otra zona.",
+   "tramos": [
+    {
+     "start": 258,
+     "end": 275
+    },
+    {
+     "start": 736,
+     "end": 750
+    }
+   ]
+  },
+  {
+   "idea": "Con busqueda maxima el ejercito manda blindados y TANQUES: escena 1: APCs militares de 8 ruedas persiguen al jugador por la playa; escena 2: un tanque dispara, aparece 'Engine damaged' y acaba en WASTED.",
+   "tramos": [
+    {
+     "start": 392,
+     "end": 408
+    },
+    {
+     "start": 410,
+     "end": 426
+    }
+   ]
+  },
+  {
+   "idea": "A 6 estrellas llegan helicopteros de ataque militares a la persecucion: escena 1: helicoptero sobrevolando y atacando al blindado (y restos tras derribarlo); escena 2: mas helicopteros rodeando la playa.",
+   "tramos": [
+    {
+     "start": 782,
+     "end": 800
+    },
+    {
+     "start": 856,
+     "end": 868
+    }
+   ]
+  },
+  {
+   "idea": "Las fuerzas de respuesta usan Humvees blindados con un tirador en la torreta: escena 1: Humvee con artillero al lado del jugador y explosion de otro vehiculo; escena 2: Humvee negro con tirador saliendo del camino.",
+   "tramos": [
+    {
+     "start": 220,
+     "end": 236
+    },
+    {
+     "start": 838,
+     "end": 852
+    }
+   ]
+  }
+ ]
+}

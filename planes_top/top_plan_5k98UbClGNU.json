@@ -1,0 +1,210 @@
+{
+ "version": 2,
+ "resumen": "5k98UbClGNU",
+ "clips": [
+  {
+   "tramos": [
+    {
+     "start": 53,
+     "end": 61
+    },
+    {
+     "start": 90,
+     "end": 99
+    },
+    {
+     "start": 190,
+     "end": 201
+    }
+   ],
+   "gancho": "ROB THE POLICE IMPOUND",
+   "descripcion": "In GTA 6 you can sneak into a police impound, choke out the officer inside and drive your car right out the gate.\n\nGameplay: NextGenPlayz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "Would you sneak in or go in guns blazing? 🚔",
+   "hashtags": [
+    "gta6",
+    "gta6police",
+    "vicecity",
+    "gta6gameplay",
+    "gta6facts",
+    "rockstargames",
+    "gaming"
+   ],
+   "puntuacion": 8,
+   "motivo": "Stealing from a police lot + chokehold on a cop + cruiser waiting outside",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know that in GTA 6 you can rob the *police impound*?"
+    },
+    {
+     "t": 5,
+     "texto": "Jump the *Do Not Enter* gate and sneak past rows of cruisers."
+    },
+    {
+     "t": 9.8,
+     "texto": "There's an *officer* inside, so you put him in a *chokehold*."
+    },
+    {
+     "t": 14.2,
+     "texto": "He drops, and the car is all yours."
+    },
+    {
+     "t": 17.5,
+     "texto": "Floor it out through the *open gate*."
+    },
+    {
+     "t": 21,
+     "texto": "A *cruiser* sits outside. Now they're *hunting* you."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 4,
+     "texto": "SNEAK IN"
+    },
+    {
+     "t": 10,
+     "texto": "CHOKEHOLD"
+    },
+    {
+     "t": 22,
+     "texto": "LOSE THE COPS"
+    }
+   ],
+   "titulo": "GTA 6 Secrets #7: Rob the POLICE IMPOUND 🚔"
+  },
+  {
+   "tramos": [
+    {
+     "start": 300,
+     "end": 306
+    },
+    {
+     "start": 728,
+     "end": 750
+    }
+   ],
+   "gancho": "COPS KNOW YOUR CAR",
+   "descripcion": "In GTA 6 cops search for your vehicle's description, so a Pay 'n' Spray respray lets you roll right past them.\n\nGameplay: NextGenPlayz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "What color are you painting your getaway car? 🚨",
+   "hashtags": [
+    "gta6",
+    "gta6police",
+    "paynspray",
+    "vicecity",
+    "gta6facts",
+    "gta6gameplay",
+    "gaming"
+   ],
+   "puntuacion": 8,
+   "motivo": "Wanted description + respray + cruiser passes by, clear crime-consequence rule",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know that in GTA 6 cops get your *car's description*?"
+    },
+    {
+     "t": 4.7,
+     "texto": "Keep driving it and they'll *recognize* it."
+    },
+    {
+     "t": 7.6,
+     "texto": "So hit a *Pay 'n' Spray* and change the color."
+    },
+    {
+     "t": 11.6,
+     "texto": "Red, white, teal, then *jet black*."
+    },
+    {
+     "t": 17,
+     "texto": "A *cruiser* rolls right past you."
+    },
+    {
+     "t": 20,
+     "texto": "Cops spot you *faster* if you never change your look."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 7.6,
+     "texto": "PAY 'N' SPRAY"
+    },
+    {
+     "t": 12,
+     "texto": "NEW COLOR"
+    },
+    {
+     "t": 17,
+     "texto": "COP PASSES"
+    }
+   ],
+   "titulo": "GTA 6 Secrets #8: Cops Have Your CAR'S DESCRIPTION 🚨"
+  },
+  {
+   "tramos": [
+    {
+     "start": 835,
+     "end": 845
+    },
+    {
+     "start": 932,
+     "end": 941
+    },
+    {
+     "start": 1085,
+     "end": 1093
+    }
+   ],
+   "gancho": "COPS REMEMBER YOUR FACE",
+   "descripcion": "In GTA 6 cops can recognize you, but swapping your hat, glasses or outfit clears it so they can't ID you.\n\nGameplay: NextGenPlayz (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "Would you change outfits after every crime? 👀",
+   "hashtags": [
+    "gta6",
+    "gta6police",
+    "vicecity",
+    "gta6facts",
+    "gta6gameplay",
+    "gaming"
+   ],
+   "puntuacion": 7,
+   "motivo": "New recognition/disguise system tied to police",
+   "narracion": [
+    {
+     "t": 0,
+     "texto": "Did you know that in GTA 6 cops can *recognize your face*?"
+    },
+    {
+     "t": 4.7,
+     "texto": "Swap your *hat and glasses* to lower your recognition."
+    },
+    {
+     "t": 10,
+     "texto": "Then buy a whole new *outfit* at the store."
+    },
+    {
+     "t": 13.7,
+     "texto": "Clear your recognition and *cops can't ID you*."
+    },
+    {
+     "t": 20,
+     "texto": "The game confirms it: *not identified*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 5,
+     "texto": "HAT & GLASSES"
+    },
+    {
+     "t": 14,
+     "texto": "CAN'T ID YOU"
+    },
+    {
+     "t": 20,
+     "texto": "NOT IDENTIFIED"
+    }
+   ],
+   "titulo": "GTA 6 Secrets #9: Cops RECOGNIZE Your Face 👀"
+  }
+ ]
+}

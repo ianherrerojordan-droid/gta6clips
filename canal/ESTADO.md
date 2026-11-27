@@ -12,3 +12,4 @@ Actualizado: 26 nov 2026
 - Web: https://claude.ai/artifact/Hg7QAPLeYYHJ8y8LTJGw38 (lo marcado ahí lo ve Claude).
 
 - 26 nov: plan 7AuuyNkhVSo (6 estrellas) listo: #14-#16, 1 dic 15/18/21h. Falta ZIP de O7jwkrC6MrQ (desguace). Luego: compilar_semana.bat (video largo).
+- 27 nov: brief endurecido (solo 8+, sistemas ocultos de policia primero). Siguientes fuentes: pDkQltxvBnY, 7QJWRNYq8qc. Reserva: iWrYrsVXTS0, Sv44VHQE0So.

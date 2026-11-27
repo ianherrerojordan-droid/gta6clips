@@ -38,3 +38,9 @@
 - Video largo semanal automatico (compilar_semana.bat): suma horas de visualizacion (via 4.000 h) y empuja los Shorts.
 - Subir los mismos Shorts a TikTok e Instagram Reels.
 - Revision semanal de estadisticas: hacer 5 mas de lo que pegue.
+
+## Datos 27 nov (28 dias: 6.586 visitas, 22,5 h, 3 subs)
+- Los 5 nuevos de policia: SWAT 630, Never lose 6 stars 530, Bulldozer 484, Humvees 375, Tank 235. Todos los de policia superan las 200 visitas; los de realismo no pasan de 31. Policia confirmado.
+- Ningun video rompe: el techo esta en unas 500-600 visitas. El dato que falta es "Visto frente a deslizado" de cada Short.
+- Suscriptores: 3 de 6.586 visitas. Hay que convertir mas: series #N, CTA "part 2" y comentario fijado con pregunta.
+- Objetivo para 10M en 90 dias: unas 110k visitas al dia. Necesitamos un Short que explote; volumen + ganchos mas fuertes en el primer segundo.

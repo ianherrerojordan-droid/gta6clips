@@ -1,0 +1,128 @@
+{
+ "version": 2,
+ "resumen": "7QJWRNYq8qc",
+ "clips": [
+  {
+   "tramos": [
+    {
+     "start": 34,
+     "end": 39
+    },
+    {
+     "start": 40,
+     "end": 46
+    },
+    {
+     "start": 0,
+     "end": 11
+    }
+   ],
+   "gancho": "TWO KINDS OF STARS",
+   "descripcion": "GTA 6 splits your wanted level into red stars (cops searching for your description) and white stars (an active chase).\n\nGameplay: Gtamen (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "Did you know red and white stars meant different things? 🚨",
+   "hashtags": [
+    "gta6",
+    "gta6gameplay",
+    "vicecity",
+    "wantedlevel",
+    "gta",
+    "gtavi",
+    "gaming"
+   ],
+   "puntuacion": 9,
+   "motivo": "Hidden police system most viewers don't know, clear on-screen star graphic plus a live shootout.",
+   "narracion": [
+    {
+     "t": 0.0,
+     "texto": "Did you know that in GTA 6 wanted stars come in *two colors*?"
+    },
+    {
+     "t": 5.0,
+     "texto": "*Red* means cops are hunting for your *description*."
+    },
+    {
+     "t": 8.3,
+     "texto": "Your map shows what they already know."
+    },
+    {
+     "t": 11.2,
+     "texto": "But when the stars turn *white*, it's a live *chase*."
+    },
+    {
+     "t": 15.2,
+     "texto": "They've spotted you, and the *shootout* is on."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 5.2,
+     "texto": "RED = SEARCHING"
+    },
+    {
+     "t": 11.5,
+     "texto": "WHITE = CHASE"
+    }
+   ],
+   "titulo": "GTA 6 Secrets #21: GTA 6 Has RED and WHITE Stars ⭐"
+  },
+  {
+   "tramos": [
+    {
+     "start": 430,
+     "end": 448
+    },
+    {
+     "start": 3,
+     "end": 9
+    }
+   ],
+   "gancho": "COPS JUDGE YOUR RECORD",
+   "descripcion": "In GTA 6 your criminal profile decides whether cops shoot or tase you, and higher levels bring blacked-out SUVs with assault rifles.\n\nGameplay: Gtamen (YouTube)\n#GTA6 #ViceCity #GTAVI",
+   "comentario": "Are you playing it subtle or going full hardened criminal? 🔫",
+   "hashtags": [
+    "gta6",
+    "gta6gameplay",
+    "vicecity",
+    "wantedlevel",
+    "gtavi",
+    "gta",
+    "gaming"
+   ],
+   "puntuacion": 8,
+   "motivo": "Hidden rule: police aggression depends on your criminal profile, over intense SUV shootout footage.",
+   "narracion": [
+    {
+     "t": 0.0,
+     "texto": "Did you know that in GTA 6 your *criminal profile* changes how cops act?"
+    },
+    {
+     "t": 5.4,
+     "texto": "Build a *hardened* reputation and they open fire from just two stars."
+    },
+    {
+     "t": 10.1,
+     "texto": "Higher up, blacked-out SUVs roll in with *assault rifles*."
+    },
+    {
+     "t": 13.8,
+     "texto": "Stay *subtle* and professional, and they'll just *tase* you instead."
+    },
+    {
+     "t": 17.8,
+     "texto": "So keep your gun *away*."
+    }
+   ],
+   "carteles": [
+    {
+     "t": 5.6,
+     "texto": "HARDENED = BULLETS"
+    },
+    {
+     "t": 13.9,
+     "texto": "SUBTLE = TASER"
+    }
+   ],
+   "titulo": "GTA 6 Secrets #22: Your CRIMINAL PROFILE Decides This 🔫"
+  }
+ ]
+}
